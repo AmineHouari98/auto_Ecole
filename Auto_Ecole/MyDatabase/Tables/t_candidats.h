@@ -3,13 +3,13 @@
 
 #include "easyORM.h"
 
-class t_client : public easyORM
+class t_candidats : public easyORM
 {
     //    INIT_CURD(t_client) // add CURD methods( Create, Update, Read, Delete)
     Q_OBJECT
 public:
-    t_client() { init(this); }
-    ~t_client() {;}
+    t_candidats() { init(this); }
+    ~t_candidats() {;}
 
     SYS_PROPERTY(int, idCandidat)
 

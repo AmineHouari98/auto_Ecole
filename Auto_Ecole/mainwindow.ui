@@ -1,24 +1,1778 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow" >
-  <property name="geometry" >
+ <widget class="QDialog" name="MainWindow">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>989</width>
+    <height>633</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget_Menubar">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>130</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="ACCUEIL">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>:/icon/icon/YPS__Home_B-512.png</normaloff>:/icon/icon/YPS__Home_B-512.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>ACCUEIL</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <item>
+          <widget class="QToolButton" name="toolButton_ExportDB">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>90</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>90</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Export Database</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/1469804931_Database-Upload.png</normaloff>:/icon/icon/1469804931_Database-Upload.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_ImportDB">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>90</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>90</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Import Database</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/1469804944_download-database.png</normaloff>:/icon/icon/1469804944_download-database.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_PrintOut_Database">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>90</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Print out 
+Database</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/database_1_512.png</normaloff>:/icon/icon/database_1_512.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>730</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_device_info">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>90</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>90</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Device INFO</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/icon175x175.png</normaloff>:/icon/icon/icon175x175.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Help</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/Untitled-131fff-128.png</normaloff>:/icon/icon/Untitled-131fff-128.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>70</width>
+           <height>60</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="ACHATS">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>:/icon/icon/YPS__download_2_B-512.png</normaloff>:/icon/icon/YPS__download_2_B-512.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>ACHATS</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QToolButton" name="toolButton_Fournisseurs">
+             <property name="minimumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+             </property>
+             <property name="text">
+              <string>Fournisseurs</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>:/icon/icon/User-Group-icon.png</normaloff>:/icon/icon/User-Group-icon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>60</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextUnderIcon</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButton_Nouv_Fournisseur">
+             <property name="minimumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+             </property>
+             <property name="text">
+              <string>Nouv.
+Fournisseur</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>:/icon/icon/Button-Add-icon.png</normaloff>:/icon/icon/Button-Add-icon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>60</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextUnderIcon</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QToolButton" name="toolButton_Commandes">
+             <property name="minimumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+             </property>
+             <property name="text">
+              <string>Commandes</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>:/icon/icon/Copy-icon.png</normaloff>:/icon/icon/Copy-icon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>60</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextUnderIcon</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButton_Nouv_Commande">
+             <property name="minimumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+             </property>
+             <property name="text">
+              <string>Nouv.
+Commande</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>:/icon/icon/Button-Add-icon.png</normaloff>:/icon/icon/Button-Add-icon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>60</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextUnderIcon</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QToolButton" name="toolButton_FBon">
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Bons
+ de versement</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>:/icon/icon/Clipboard-icon.png</normaloff>:/icon/icon/Clipboard-icon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>60</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextUnderIcon</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>74</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="VENTES">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>:/icon/icon/YPS__upload_2_B-512.png</normaloff>:/icon/icon/YPS__upload_2_B-512.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>VENTES</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>9</y>
+         <width>859</width>
+         <height>86</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QToolButton" name="toolButton_Clients">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+              </property>
+              <property name="text">
+               <string>Clients</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>:/icon/icon/User-Group-icon.png</normaloff>:/icon/icon/User-Group-icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>60</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_Nouv_Client">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+              </property>
+              <property name="text">
+               <string>Nouv.
+Client</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>:/icon/icon/Button-Add-icon.png</normaloff>:/icon/icon/Button-Add-icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>60</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QToolButton" name="toolButton_Factures">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+              </property>
+              <property name="text">
+               <string>Factures</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>:/icon/icon/Copy-icon.png</normaloff>:/icon/icon/Copy-icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>60</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_Nouv_Facture">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>70</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+              </property>
+              <property name="text">
+               <string>Nouv.
+Facture</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>:/icon/icon/Button-Add-icon.png</normaloff>:/icon/icon/Button-Add-icon.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>60</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButton_CBon">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+            </property>
+            <property name="text">
+             <string>Bons
+ de versement</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/icon/icon/Clipboard-icon.png</normaloff>:/icon/icon/Clipboard-icon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>60</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextUnderIcon</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>443</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="STOCK">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>:/icon/icon/YPS__Cart_full_B-512.png</normaloff>:/icon/icon/YPS__Cart_full_B-512.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>STOCK</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_21">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QToolButton" name="toolButton_Produits">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+           </property>
+           <property name="text">
+            <string>Produits</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/data-icon.png</normaloff>:/icon/icon/data-icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_Nouv_Produit">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+           </property>
+           <property name="text">
+            <string>Nouv.
+Produit</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/data-add-icon.png</normaloff>:/icon/icon/data-add-icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_20">
+         <item>
+          <widget class="QToolButton" name="toolButton_Table_Produits_Prix">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+           </property>
+           <property name="text">
+            <string>Tableau 
+des prix</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/Purchase Order-104.png</normaloff>:/icon/icon/Purchase Order-104.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_Produits_Prix">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+           </property>
+           <property name="text">
+            <string>Définition 
+des prix</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/Sell-96.png</normaloff>:/icon/icon/Sell-96.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>478</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="HUMAIN">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>:/icon/icon/41-512.png</normaloff>:/icon/icon/41-512.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>HUMAIN</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <widget class="QToolButton" name="toolButton_Travailleurs">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+           </property>
+           <property name="text">
+            <string>Travailleurs</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/labor-worker-icon-22953.png</normaloff>:/icon/icon/labor-worker-icon-22953.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_Nouv_Travailleur">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+           </property>
+           <property name="text">
+            <string>Nouv.
+Travailleur</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/Untitled-27-512.png</normaloff>:/icon/icon/Untitled-27-512.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_validation_journe">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+         </property>
+         <property name="text">
+          <string>Validation 
+de présence </string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/Untitled-23-128.png</normaloff>:/icon/icon/Untitled-23-128.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_Table_kholsa">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+         </property>
+         <property name="text">
+          <string>Tableau 
+de salaires</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/Purchase Order-104.png</normaloff>:/icon/icon/Purchase Order-104.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_kholsa">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+         </property>
+         <property name="text">
+          <string>Retrait 
+de l'argent</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/retrait d Argens.png</normaloff>:/icon/icon/retrait d Argens.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>695</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="vehicule">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>:/Sound/icon/truck3.png</normaloff>:/Sound/icon/truck3.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>VEHICULE</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_18">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <widget class="QToolButton" name="toolButton_Truck">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+           </property>
+           <property name="text">
+            <string>Truck</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/truck_318-9420.jpg</normaloff>:/icon/icon/truck_318-9420.jpg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_New_Truck">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+           </property>
+           <property name="text">
+            <string>New Truck</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/new_icon.png</normaloff>:/icon/icon/new_icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_Consomation">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+         </property>
+         <property name="text">
+          <string>Consomation</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/Ratings Filled-100.png</normaloff>:/icon/icon/Ratings Filled-100.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>846</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Sync">
+      <attribute name="icon">
+       <iconset>
+        <normaloff>:/Sound/icon/db-icon.png</normaloff>:/Sound/icon/db-icon.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Sync</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_19">
+       <item>
+        <widget class="QToolButton" name="toolButton_PrintTable_Sync">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+         </property>
+         <property name="text">
+          <string>Show me 
+Table of Sync</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/cloud-sync-icon.png</normaloff>:/icon/icon/cloud-sync-icon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_PrintTable_Sync_NouvFacture">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+}
+QToolButton::hover
+{
+	background-color: rgb(192,192,192) ;
+}</string>
+         </property>
+         <property name="text">
+          <string>Show me 
+ Nouv. facture</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icon/icon/cloud-sync-icon.png</normaloff>:/icon/icon/cloud-sync-icon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>710</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget_Dashboard">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="tabsClosable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="Dashboard">
+      <attribute name="title">
+       <string>Dashboard</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QToolButton" name="status_Produits">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+    color: white;
+    background-color: rgb(39,118,236) ;
+border : none ;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>PRODUITS</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/S1.png</normaloff>:/icon/icon/S1.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>128</width>
+             <height>128</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="status_Factures">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+    color: white;
+    background-color: rgb(102,177,29) ;
+border : none ;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>FACTURES</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/S2.png</normaloff>:/icon/icon/S2.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>128</width>
+             <height>128</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="status_vehicules">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+    color: white;
+    background-color: rgb(255,153,51) ;
+border : none ;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>      VEHICULES</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/Sound/icon/truck3.png</normaloff>:/Sound/icon/truck3.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>120</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <widget class="QToolButton" name="status_Sync">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+    color: white;
+   
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(0, 85, 0, 255));
+border : none ;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Sync</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/Sound/icon/db-icon.png</normaloff>:/Sound/icon/db-icon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>128</width>
+             <height>128</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="status_Credi">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+    color: white;
+    background-color: rgb(153,53,255) ;
+border : none ;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>TRANSACTIONS</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/azertyuiop.png</normaloff>:/icon/icon/azertyuiop.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>128</width>
+             <height>128</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="status_chifer_daffaire">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+    color: white;
+    background-color: rgb(146,207,235) ;
+border : none ;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>CHIFFRE D'AFFAIRE</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/icon/icon/competitivite-21-300x300.png</normaloff>:/icon/icon/competitivite-21-300x300.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>128</width>
+             <height>128</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>

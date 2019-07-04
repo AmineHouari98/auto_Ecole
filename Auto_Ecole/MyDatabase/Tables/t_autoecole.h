@@ -15,16 +15,16 @@ public:
     AUTO_PROPERTY(QString, Nom)
     AUTO_PROPERTY(QString, Adresse)
     AUTO_PROPERTY(int, NumTel)
-
-    public:
-        enum TableName
+    ;
+public:
+    enum TableName
     {
-                 _00numRegistre,
-                 _01Nom,
-                 _02Adresse,
-                 _03NumTel,
+        _00numRegistre,
+        _01Nom,
+        _02Adresse,
+        _03NumTel,
 
-};
+    };
 };
 
 #endif // T_CLIENT_H
