@@ -16,6 +16,9 @@ TEMPLATE = app
 INCLUDEPATH += $$PWD/MyDatabase
 include(MyDatabase/MyDatabase.pri)
 
+INCLUDEPATH += $$PWD/candidat
+include(candidat/candidat.pri)
+
 INCLUDEPATH += $$PWD/QtRptProject
 include($$PWD/QtRptProject/QtRPT/QtRPT.pri)
 
@@ -43,4 +46,7 @@ HEADERS += \
 
 FORMS += \
     mainwindow.ui
+
+RESOURCES += \
+    ressources.qrc \
 
