@@ -16,8 +16,8 @@ TEMPLATE = app
 INCLUDEPATH += $$PWD/MyDatabase
 include(MyDatabase/MyDatabase.pri)
 
-#INCLUDEPATH += $$PWD/QtRptProject
-#include($$PWD/QtRptProject/QtRPT/QtRPT.pri)
+INCLUDEPATH += $$PWD/QtRptProject
+include($$PWD/QtRptProject/QtRPT/QtRPT.pri)
 
 ##################################
 
