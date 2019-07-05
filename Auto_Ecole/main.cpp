@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
     MyDatabase myDatabase;
-    if(!myDatabase.initMYSQL("localhost",3303,"root","","test"))
+    if(!myDatabase.initMYSQL("localhost",3306,"root","","test"))
         return 1 ;
 
     t_autoEcole autoecole;
