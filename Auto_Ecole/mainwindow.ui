@@ -44,7 +44,7 @@ QToolButton::hover
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>6</number>
       </property>
       <property name="iconSize">
        <size>
@@ -87,7 +87,7 @@ QToolButton::hover
              <string>Export Database</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="../../Qt-Gestion-de-stock/ProTeam_Stock/TableViewTools/Qt_Resource_File/tableViewToolsResource.qrc">
               <normaloff>:/icon/icon/1469804931_Database-Upload.png</normaloff>:/icon/icon/1469804931_Database-Upload.png</iconset>
             </property>
             <property name="iconSize">
@@ -125,7 +125,7 @@ QToolButton::hover
              <string>Import Database</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="../../Qt-Gestion-de-stock/ProTeam_Stock/TableViewTools/Qt_Resource_File/tableViewToolsResource.qrc">
               <normaloff>:/icon/icon/1469804944_download-database.png</normaloff>:/icon/icon/1469804944_download-database.png</iconset>
             </property>
             <property name="iconSize">
