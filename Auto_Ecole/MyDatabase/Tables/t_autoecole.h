@@ -14,7 +14,7 @@ public:
     AUTO_PROPERTY(int, NumRegistre)
     AUTO_PROPERTY(QString, Nom)
     AUTO_PROPERTY(QString, Adresse)
-    AUTO_PROPERTY(int, NumTel)
+    AUTO_PROPERTY(QString, NumTel)
     ;
 public:
     enum TableName

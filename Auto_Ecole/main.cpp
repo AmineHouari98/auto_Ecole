@@ -9,6 +9,8 @@
 #include "t_moniteurs.h"
 #include "t_vehicules.h"
 
+void fillDatabase();
+
 int main(int argc, char *argv[])
 {
     MyDatabase myDatabase;
@@ -31,10 +33,29 @@ int main(int argc, char *argv[])
 
     qDebug() << myDatabase.tables();
 
+    fillDatabase();
 
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+    autoecole.select();
+    qDebug() << autoecole.getNom();
 
     return a.exec();
+}
+
+void fillDatabase()
+{
+    t_autoEcole autoecole;
+    autoecole.select();
+
+    autoecole.setAdresse("Bloc : B ilot : I 01 Local n°2 au Rez de chaussée des 700 logements Hai Sabah /2éme tranche commune de Sidi Chami");
+    autoecole.setNom("auto-école wafaa");
+    autoecole.setNumTel("0697 53 83 55 / 0791 43 69 53");
+    autoecole.setNumRegistre(3115);
+    autoecole.insert();
+
+
+
+
 }
