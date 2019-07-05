@@ -1,5 +1,5 @@
-#ifndef T_CLIENT_H
-#define T_CLIENT_H
+#ifndef T_CANDIDATS_H
+#define T_CANDIDATS_H
 
 #include "easyORM.h"
 

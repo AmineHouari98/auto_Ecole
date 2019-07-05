@@ -12,14 +12,12 @@
 #include <QApplication>
 
 // TODO : trick ... :D
-#include "t_client.h"
-#include "t_stock.h"
-#include "t_fournisseur.h"
-#include "t_historique.h"
-#include "t_historiquebr.h"
-#include "t_historiqueDetails.h"
-#include "t_historiqueFE.h"
-#include "t_historiqueFL.h"
+#include "t_autoecole.h"
+#include "t_caisse.h"
+#include "t_candidats.h"
+#include "t_documents.h"
+#include "t_moniteurs.h"
+#include "t_vehicules.h"
 
 
 class MyDatabase : public QObject
@@ -29,12 +27,14 @@ class MyDatabase : public QObject
 public:
     explicit MyDatabase(QObject *parent = nullptr);
     bool initSQLITE3(QString pathDB="");
+    bool initMYSQL(QString ip, int port, QString username, QString password, QString databaseName);
     void createTable(easyORM *obj);
     QMap<QString, QString> _schemaMap;
     bool executeQuery(QString query);
     void msgCritical(QString title, QString body);
     QStringList tables();
     QString defaultDatabasePath();
+
 
 signals:
 

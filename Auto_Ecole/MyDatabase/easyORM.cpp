@@ -21,7 +21,6 @@ easyORM::~easyORM()
 void easyORM::init(QObject *obj)
 {
     this->obj = obj ;
-    //    qDebug() << "void easyORM::init(QObject *obj) " << obj->metaObject()->className() ;
     m_tableModel->setTable(obj->metaObject()->className());
     m_tableModel->select();
     m_databaseType = m_tableModel->database().driverName() ;
@@ -31,17 +30,11 @@ void easyORM::init(QObject *obj)
 
 void easyORM::select()
 {
-    //m_tableModel->setFilter("");
     m_tableModel->select();
     m_currentRow = 0 ;
     for(int i = 0 ; i < m_tableModel->columnCount() ; i++)
         obj->setProperty(m_tableModel->record(m_currentRow).fieldName(i).toLatin1().data(),
                          m_tableModel->record(m_currentRow).value(i)) ;
-
-//    int j = 0 ;
-//    for(int i = obj->metaObject()->propertyOffset() ; i < obj->metaObject()->propertyCount(); i++, j++)
-//        obj->setProperty(obj->metaObject()->property(i).name(), m_tableModel->record(m_currentRow).value(j)) ;
-
 
 
 }
@@ -87,8 +80,6 @@ QJsonObject easyORM::setCurrentRow(int index)
             obj->setProperty(m_tableModel->record(m_currentRow).fieldName(i).toLatin1().data(),
                              m_tableModel->record(m_currentRow).value(i)) ;
 
-//        for(int i = obj->metaObject()->propertyOffset(); i < obj->metaObject()->propertyCount(); i++)
-//        obj->setProperty(obj->metaObject()->property(i).name(), m_tableModel->record(m_currentRow).value(i-1)) ;
     return currentRowToJSON() ;
 }
 
@@ -126,22 +117,10 @@ void easyORM::clearRow()
 
 bool easyORM::update()
 {
-//    int j = 1 ;
-//    for(int i = obj->metaObject()->propertyOffset()+1; i < obj->metaObject()->propertyCount(); i++)
-//    {
-//        m_tableModel->setData(m_tableModel->index(m_currentRow, j), obj->metaObject()->property(i).read(obj));
-//        j++ ;
-//    }
 
     for(int i = 1 ; i < m_tableModel->columnCount() ; i++)
         m_tableModel->setData(m_tableModel->index(m_currentRow, i),
                               obj->property(m_tableModel->record(m_currentRow).fieldName(i).toLatin1().data()));
-
-//        m_tableModel->record(m_currentRow).setValue(i,
-//                  obj->property(m_tableModel->record(m_currentRow).fieldName(i).toLatin1().data()));
-
-//        obj->setProperty(m_tableModel->record(m_currentRow).fieldName(i).toLatin1().data(),
-//                         m_tableModel->record(m_currentRow).value(i)) ;
 
 
     if( !m_tableModel->submitAll() )

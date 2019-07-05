@@ -1,5 +1,5 @@
-#ifndef T_CLIENT_H
-#define T_CLIENT_H
+#ifndef T_CAISSE_H
+#define T_CAISSE_H
 
 #include "easyORM.h"
 

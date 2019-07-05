@@ -35,6 +35,49 @@ bool MyDatabase::initSQLITE3(QString pathDB)
     return ok ;
 }
 
+bool MyDatabase::initMYSQL(QString ip, int port, QString username, QString password, QString databaseName)
+{
+    databaseType="QMYSQL";
+    bool check = QSqlDatabase::isDriverAvailable(databaseType) ;
+    if( !check )
+    {
+        msgCritical("Error", myDatabase.lastError().text());
+        return check ;
+    }
+    myDatabase = QSqlDatabase::addDatabase("QMYSQL");
+    myDatabase.setHostName(ip);
+    myDatabase.setPort(port);
+    myDatabase.setUserName(username);
+    myDatabase.setPassword(password);
+    myDatabase.setDatabaseName(databaseName);
+
+    bool ok = myDatabase.open();
+    if ( !ok )
+    {
+        msgCritical("Error", myDatabase.lastError().text());
+        return ok ;
+    }
+    else
+    {
+        if ( databaseName.contains("databaseName") )
+        {
+            myDatabase.close();
+            myDatabase.setDatabaseName(databaseName);
+            myDatabase.open() ;
+        }
+        else
+        {
+            QSqlQuery cmd ;
+            cmd.exec("CREATE DATABASE "+databaseName+";");
+            myDatabase.close();
+            myDatabase.setDatabaseName(databaseName);
+            myDatabase.open() ;
+        }
+    }
+
+    return ok ;
+}
+
 QStringList MyDatabase::tables()
 {
     return myDatabase.tables() ;
