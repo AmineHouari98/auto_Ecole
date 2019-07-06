@@ -45,7 +45,3 @@ MainWindow::~MainWindow()
     //if(index == 7 ) loads->refresh();
 }*/
 
-void MainWindow::on_pushButton_clicked()
-{
-
-}
