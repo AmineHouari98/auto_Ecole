@@ -22,6 +22,9 @@ include(candidat/candidat.pri)
 INCLUDEPATH += $$PWD/TableViewTools
 include(TableViewTools/TableViewTools.pri)
 
+INCLUDEPATH += $$PWD/candidat
+include(impression/impression.pri)
+
 INCLUDEPATH += $$PWD/QtRptProject
 include($$PWD/QtRptProject/QtRPT/QtRPT.pri)
 
