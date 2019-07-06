@@ -19,6 +19,10 @@ include(MyDatabase/MyDatabase.pri)
 INCLUDEPATH += $$PWD/candidat
 include(candidat/candidat.pri)
 
+
+INCLUDEPATH += $$PWD/candidat
+include(impression/impression.pri)
+
 INCLUDEPATH += $$PWD/QtRptProject
 include($$PWD/QtRptProject/QtRPT/QtRPT.pri)
 
