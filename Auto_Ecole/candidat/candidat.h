@@ -22,6 +22,8 @@ public:
 private slots:
     void on_btnNouveaucandidat_clicked();
 
+    void on_toolButton_clicked();
+
 private:
     Ui::candidat *ui;
     t_candidats *candidatsTable;

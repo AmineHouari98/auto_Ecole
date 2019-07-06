@@ -6,7 +6,7 @@ candidat::candidat(QWidget *parent) :
     ui(new Ui::candidat)
 {
     ui->setupUi(this);
-    ui->toolButton_back->setVisible(false);
+   // ui->toolButton_back->setVisible(false);
 }
 
 
@@ -21,4 +21,10 @@ void candidat::on_btnNouveaucandidat_clicked()
     addCandidat addCandidat;
     addCandidat.exec();
     candidatsTable->select();
+}
+
+void candidat::on_toolButton_clicked()
+{
+    addCandidat addcandi;
+    addcandi.exec();
 }

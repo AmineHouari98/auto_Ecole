@@ -1,6 +1,6 @@
 FORMS += \
-    $$PWD/candidat.ui \
-    $$PWD/addCandidat.ui
+    $$PWD/addCandidat.ui \
+    $$PWD/candidat.ui
 
 HEADERS += \
     $$PWD/candidat.h \

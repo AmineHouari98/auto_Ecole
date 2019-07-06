@@ -8,8 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     setWindowTitle("Auto Ecole lhaj gal3ah");
-    Candidat  = new candidat(this);
-    ui->tabWidget->addTab(Candidat, QIcon(":/Assets/Images/icons/client.svg"), "Candidat");
+    Candi  = new candidat(this);
+    ui->tabWidget->addTab(Candi, QIcon(":/Assets/Images/icons/client.svg"), "Candidat");
 
     bool ok = true ;
     int tmp = getSettings("ui->tabWidget->currentIndex()").toInt(&ok);
