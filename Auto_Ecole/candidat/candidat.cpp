@@ -6,7 +6,12 @@ candidat::candidat(QWidget *parent) :
     ui(new Ui::candidat)
 {
     ui->setupUi(this);
-   // ui->toolButton_back->setVisible(false);
+    candidatsTable = new t_candidats();
+    candidatsTable->select();
+    ui->tableView->setModel(candidatsTable->toModel());
+
+    ui->widget->setTableView(ui->tableView);
+    ui->widget->setModel(candidatsTable);
 }
 
 
@@ -16,15 +21,10 @@ candidat::~candidat()
     delete ui;
 }
 
-void candidat::on_btnNouveaucandidat_clicked()
+
+void candidat::on_toolButton_new_client_clicked()
 {
     addCandidat addCandidat;
     addCandidat.exec();
     candidatsTable->select();
-}
-
-void candidat::on_toolButton_clicked()
-{
-    addCandidat addcandi;
-    addcandi.exec();
 }

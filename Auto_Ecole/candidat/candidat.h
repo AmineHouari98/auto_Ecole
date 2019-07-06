@@ -20,9 +20,7 @@ public:
     ~candidat();
 
 private slots:
-    void on_btnNouveaucandidat_clicked();
-
-    void on_toolButton_clicked();
+    void on_toolButton_new_client_clicked();
 
 private:
     Ui::candidat *ui;
