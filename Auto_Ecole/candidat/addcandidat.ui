@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AddClient</class>
- <widget class="QDialog" name="AddClient">
+ <class>addCandidat</class>
+ <widget class="QDialog" name="addCandidat">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -484,7 +484,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QDialogButtonBox" name="buttonBox">
+      <widget class="QDialogButtonBox" name="btnAnnulerAjoutCandidat">
        <property name="standardButtons">
         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
        </property>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Client</class>
- <widget class="QWidget" name="Client">
+ <class>candidat</class>
+ <widget class="QWidget" name="candidat">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -74,7 +74,7 @@ QToolButton::hover
          <string>Back</string>
         </property>
         <property name="icon">
-         <iconset resource="../resources.qrc">
+         <iconset resource="../ressources.qrc">
           <normaloff>:/Assets/Images/icons/left-arrow.svg</normaloff>:/Assets/Images/icons/left-arrow.svg</iconset>
         </property>
         <property name="iconSize">
@@ -102,7 +102,7 @@ QToolButton::hover
        </spacer>
       </item>
       <item>
-       <widget class="QToolButton" name="toolButton_new_client">
+       <widget class="QToolButton" name="btnNouveaucandidat">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -138,10 +138,10 @@ QToolButton::hover
         </property>
         <property name="text">
          <string>nouv. 
-Client</string>
+candidat</string>
         </property>
         <property name="icon">
-         <iconset resource="../resources.qrc">
+         <iconset resource="../ressources.qrc">
           <normaloff>:/Assets/Images/icons/add.svg</normaloff>:/Assets/Images/icons/add.svg</iconset>
         </property>
         <property name="iconSize">
@@ -211,14 +211,14 @@ Client</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>TableViewTools</class>
+  <class>TableViewTools</class>
    <extends>QWidget</extends>
    <header>tableviewtools.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../resources.qrc"/>
+  <include location="../ressources.qrc"/>
  </resources>
  <connections/>
 </ui>

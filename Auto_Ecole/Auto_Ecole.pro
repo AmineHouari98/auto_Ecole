@@ -19,6 +19,9 @@ include(MyDatabase/MyDatabase.pri)
 INCLUDEPATH += $$PWD/candidat
 include(candidat/candidat.pri)
 
+INCLUDEPATH += $$PWD/TableViewTools
+include(TableViewTools/TableViewTools.pri)
+
 INCLUDEPATH += $$PWD/QtRptProject
 include($$PWD/QtRptProject/QtRPT/QtRPT.pri)
 
@@ -37,12 +40,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-    mainwindow.cpp
+    main.cpp \
+    mainwindow.cpp \
+    myparentobject.cpp
 
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    myparentobject.h
 
 FORMS += \
     mainwindow.ui
