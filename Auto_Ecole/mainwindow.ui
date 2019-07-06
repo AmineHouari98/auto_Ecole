@@ -43,7 +43,7 @@
        <attribute name="title">
         <string>Accueil</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_3">
+       <layout class="QGridLayout" name="gridLayout">
         <item row="0" column="0">
          <widget class="QLabel" name="label_2">
           <property name="text">
