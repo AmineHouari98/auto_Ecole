@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,9 +18,6 @@ include(MyDatabase/MyDatabase.pri)
 
 INCLUDEPATH += $$PWD/candidat
 include(candidat/candidat.pri)
-
-INCLUDEPATH += $$PWD/TableViewTools
-include(TableViewTools/TableViewTools.pri)
 
 INCLUDEPATH += $$PWD/QtRptProject
 include($$PWD/QtRptProject/QtRPT/QtRPT.pri)

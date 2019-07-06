@@ -20,5 +20,5 @@ void candidat::on_btnNouveaucandidat_clicked()
 {
     addCandidat addCandidat;
     addCandidat.exec();
-    //candidatTable->select();
+    candidatsTable->select();
 }

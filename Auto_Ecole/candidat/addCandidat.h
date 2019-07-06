@@ -2,6 +2,7 @@
 #define ADDCANDIDAT_H
 
 #include <QDialog>
+#include "tables/t_candidats.h"
 
 
 namespace Ui {
@@ -23,7 +24,7 @@ private slots:
 
 private:
     Ui::addCandidat *ui;
-    //t_client clientTable;
+    t_candidats candidatsTable;
 };
 
 #endif // ADDCANDIDAT_H

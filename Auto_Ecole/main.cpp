@@ -56,6 +56,4 @@ void fillDatabase()
     autoecole.insert();
 
 
-
-
 }

@@ -4,7 +4,8 @@
 #include <QWidget>
 #include <myparentobject.h>
 #include "addCandidat.h"
-//#include "t_candidat.h"
+#include "tables/t_candidats.h"
+
 
 namespace Ui {
 class candidat;
@@ -23,8 +24,8 @@ private slots:
 
 private:
     Ui::candidat *ui;
-   // t_candidat *candidatTable;
-   // QSqlTableModel logTable;
+    t_candidats *candidatsTable;
+    QSqlTableModel logTable;
 };
 
 #endif // CANDIDAT_H

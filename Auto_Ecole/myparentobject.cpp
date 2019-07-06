@@ -9,12 +9,10 @@ MyParentObject::MyParentObject()
     _mySettings = new QSettings(settingsFilePath, QSettings::IniFormat);
 
 }
-
 MyParentObject::~MyParentObject()
 {
       delete _mySettings;
 }
-
 QString MyParentObject::convertWhidaToLetter(QString whida, int position)
 {
     QStringList tableTwoNumber ;
@@ -229,7 +227,6 @@ QString MyParentObject::spellLetter(QString number)
     }
     return tmp03 ;
 }
-
 bool MyParentObject::msgQuestion(QString title ,QString body)
 {
     qDebug() << "title: "+ title << "\nboady: "+ body ;
@@ -260,17 +257,14 @@ void MyParentObject::msgWarning(QString title ,QString body)
     qDebug() << "title: "+ title << "\nboady: "+ body ;
     QMessageBox::warning(0,title,body);
 }
-
 void MyParentObject::setSettings(QString key, QVariant data)
 {
     _mySettings->setValue(key, data);
 }
-
 QVariant MyParentObject::getSettings(QString key)
 {
     return _mySettings->value(key) ;
 }
-
 void MyParentObject::chiffreEnLettre(unsigned int chiffre, char *lettre){
     unsigned int centaine, dizaine, unite, reste, y;
     bool dix = false;
