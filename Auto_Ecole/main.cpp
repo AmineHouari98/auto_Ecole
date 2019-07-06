@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 {
     MyDatabase myDatabase;
     if(!myDatabase.initMYSQL("localhost",3306,"root","","test"))
+    //if(!myDatabase.initSQLITE3())
         return 1 ;
 
     t_autoEcole autoecole;

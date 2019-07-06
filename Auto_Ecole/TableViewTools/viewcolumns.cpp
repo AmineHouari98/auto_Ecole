@@ -44,7 +44,7 @@ void ViewColumns::init(QSqlTableModel *&model)
 
 void ViewColumns::init(QStringList columns)
 {
-    for( int i = 0 ; i < columns.length() ; i++ )
+    for( int i = 1 ; i < columns.length() ; i++ )
     {
         QListWidgetItem *item = new QListWidgetItem;
         item->setData( Qt::DisplayRole, columns[i] );

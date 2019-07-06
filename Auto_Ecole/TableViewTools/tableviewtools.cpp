@@ -130,6 +130,7 @@ void TableViewTools::on_toolButton_view_clicked()
 //    viewcolumns.init(myModel);
     viewcolumns.init(columnsList);
     viewcolumns.exec();
+    myTableView->hideColumn(0);
     for ( int i = 1 ; i < myModel->columnCount() ; i++)
         myTableView->showColumn(i);
     for ( int i = 0 ; i < viewcolumns.columnsToHide.length() ; i++)
