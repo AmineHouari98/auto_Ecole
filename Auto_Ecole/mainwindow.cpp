@@ -8,8 +8,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     setWindowTitle("Auto Ecole lhaj gal3ah");
-    Candi  = new candidat(this);
-    ui->tabWidget->addTab(Candi, QIcon(":/Assets/Images/icons/client.svg"), "Candidat");
+
+
+    ui_candidats  = new candidat(this);
+    ui_impression = new impression(this);
+
+
+    ui->tabWidget->addTab(ui_candidats, QIcon(":/Assets/Images/icons/client.svg"), "Candidats");
+    //TODO: change the icon for printing UI
+    ui->tabWidget->addTab(ui_impression, QIcon(":/Assets/Images/icons/client.svg"), "Impression");
+
 
     bool ok = true ;
     int tmp = getSettings("ui->tabWidget->currentIndex()").toInt(&ok);

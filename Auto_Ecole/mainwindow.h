@@ -4,6 +4,9 @@
 #include <QMainWindow>
 
 #include "candidat.h"
+#include "impression.h"
+
+
 #include "myparentobject.h"
 #include "MyDatabase.h"
 
@@ -26,7 +29,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    candidat *Candi;
+    candidat *ui_candidats;
+    impression *ui_impression;
+
 };
 
 #endif // MAINWINDOW_H
