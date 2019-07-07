@@ -72,8 +72,9 @@ addCandidat::~addCandidat()
     delete ui;
 }
 
-void addCandidat::on_btnAjoutCandidat_accepted()
+void addCandidat::on_pushButton_Valider_clicked()
 {
+    //TODO:change database codage to UTF8
     candidatsTable.setCurrentRow(-1);
     QString wilaya=ui->comboBox_wilaya->itemText(ui->comboBox_wilaya->currentIndex());
 
@@ -86,7 +87,7 @@ void addCandidat::on_btnAjoutCandidat_accepted()
     candidatsTable.setPrenom_Ar           (ui->lineEdit_prenomAr->text());
     candidatsTable.setDate_De_Naissance   (ui->dateEdit_naissanceCandidat->text());
     candidatsTable.setLieu_De_Naissance_Ar(selectedWilaya.at(1));
-    candidatsTable.setAdresse_Ar           (ui->lineEdit_adresseAr->text());
+    candidatsTable.setAdresse_Ar          (ui->lineEdit_adresseAr->text());
     candidatsTable.setNum_CIN             (ui->lineEdit_numCin->text().toInt());
     candidatsTable.setNum_Tel             (ui->lineEdit_numTelephoneCandidat->text().toInt());
     candidatsTable.setDate_Inscription    (QDate::currentDate().toString());
@@ -100,7 +101,8 @@ void addCandidat::on_btnAjoutCandidat_accepted()
     close();
 }
 
-void addCandidat::on_btnAnnulerAjoutCandidat_accepted()
+void addCandidat::on_pushButton_Annuler_clicked()
 {
     close();
 }
+

@@ -19,10 +19,8 @@ public:
     ~addCandidat();
 
 private slots:
-    void on_btnAjoutCandidat_accepted();
-
-    void on_btnAnnulerAjoutCandidat_accepted();
-
+    void on_pushButton_Valider_clicked();
+    void on_pushButton_Annuler_clicked();
 private:
     Ui::addCandidat *ui;
     t_candidats candidatsTable;
