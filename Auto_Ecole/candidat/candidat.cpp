@@ -12,6 +12,9 @@ candidat::candidat(QWidget *parent) :
 
     ui->widget->setTableView(ui->tableView);
     ui->widget->setModel(candidatsTable);
+    ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
+
 }
 
 

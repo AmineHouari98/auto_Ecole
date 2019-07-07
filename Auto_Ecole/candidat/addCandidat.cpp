@@ -94,7 +94,7 @@ void addCandidat::on_pushButton_Valider_clicked()
 
 
     if(candidatsTable.currentRow() < 0)
-    {candidatsTable.insert() ;qDebug()<<"done";}
+        candidatsTable.insert() ;
     else
         candidatsTable.update() ;
 

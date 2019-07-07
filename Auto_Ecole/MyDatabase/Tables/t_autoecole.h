@@ -11,10 +11,10 @@ public:
     t_autoEcole() { init(this); }
     ~t_autoEcole() {;}
 
-    AUTO_PROPERTY(int, NumRegistre)
-    AUTO_PROPERTY(QString, Nom)
-    AUTO_PROPERTY(QString, Adresse)
-    AUTO_PROPERTY(QString, NumTel)
+    AUTO_PROPERTY(int, NUMERO_REGISTRE)
+    AUTO_PROPERTY(QString, NOM)
+    AUTO_PROPERTY(QString, ADRESSE)
+    AUTO_PROPERTY(QString, TEL)
     ;
 public:
     enum TableName
