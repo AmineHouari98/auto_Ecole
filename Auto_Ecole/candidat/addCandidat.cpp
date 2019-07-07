@@ -6,8 +6,8 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     ui(new Ui::addCandidat)
 {
     ui->setupUi(this);
-    this->setWindowTitle("ajouter Candidat");
-
+    this->setWindowTitle("Ajout Candidat");
+    this->setFixedSize(this->width(),this->height());
 }
 
 addCandidat::~addCandidat()
