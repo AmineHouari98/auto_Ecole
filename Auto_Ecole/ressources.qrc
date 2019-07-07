@@ -42,5 +42,6 @@
         <file>Templates/BonDeReception.xml</file>
         <file>Templates/Rapport Quotidien.xml</file>
         <file>Templates/Bodereau.xml</file>
+        <file>Templates/Liste_Examen.xml</file>
     </qresource>
 </RCC>
