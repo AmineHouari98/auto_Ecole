@@ -20,11 +20,11 @@ public:
     AUTO_PROPERTY(QString, Prenom_Ar)
     AUTO_PROPERTY(QString, Date_De_Naissance)
     AUTO_PROPERTY(QString, Lieu_De_Naissance_Ar)
-    AUTO_PROPERTY(QString, AdresseAr)
-
-    AUTO_PROPERTY(QString, Date_Inscription)
+    AUTO_PROPERTY(QString, Adresse_Ar)
+    AUTO_PROPERTY(int, Num_CIN)
     AUTO_PROPERTY(int, Num_Tel)
     AUTO_PROPERTY(int, idDocuments)
+    AUTO_PROPERTY(QString, Date_Inscription)
 
     ;
 public:

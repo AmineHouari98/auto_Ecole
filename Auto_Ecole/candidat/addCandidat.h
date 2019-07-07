@@ -2,8 +2,9 @@
 #define ADDCANDIDAT_H
 
 #include <QDialog>
-#include "tables/t_candidats.h"
-
+#include <QDate>
+#include "t_candidats.h"
+#include "myparentobject.h"
 
 namespace Ui {
 class addCandidat;

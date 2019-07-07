@@ -28,3 +28,5 @@ void candidat::on_toolButton_new_client_clicked()
     addCandidat.exec();
     candidatsTable->select();
 }
+
+
