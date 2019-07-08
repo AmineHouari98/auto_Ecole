@@ -22,6 +22,13 @@ public:
 private slots:
     void on_toolButton_new_client_clicked();
 
+
+    void on_btn_viewProfile_clicked();
+
+    void on_stackedWidget_currentChanged(int arg1);
+
+    void on_toolButton_back_clicked();
+
 private:
     Ui::candidat *ui;
     t_candidats *candidatsTable;
