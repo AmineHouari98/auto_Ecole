@@ -4,7 +4,8 @@
 #include <QWidget>
 #include <myparentobject.h>
 #include "addCandidat.h"
-#include "tables/t_candidats.h"
+#include "t_candidats.h"
+#include "t_caisse.h"
 
 
 namespace Ui {
@@ -29,10 +30,20 @@ private slots:
 
     void on_toolButton_back_clicked();
 
+    void on_tableView_doubleClicked(const QModelIndex &index);
+
+
+    void on_pushButton_modifier_clicked();
+
 private:
     Ui::candidat *ui;
-    t_candidats *candidatsTable;
-    QSqlTableModel logTable;
+    t_candidats *tableCandidats;
+    t_caisse *tableCaisse;
+    QSqlTableModel *caisseTable;
+    void setValuesOnLineEdit(int);
+    void setEditable(bool);
+    void modifyOnDatabase();
+    void changeButtonState(QString,bool);
 };
 
 #endif // CANDIDAT_H

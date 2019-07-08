@@ -88,8 +88,8 @@ void addCandidat::on_pushButton_Valider_clicked()
     candidatsTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
     candidatsTable.setLIEU_DE_NAISSANCE   (selectedWilaya.at(1));
     candidatsTable.setADRESSE             (ui->lineEdit_adresseAr->text());
-    candidatsTable.setCIN                 (ui->lineEdit_numCin->text().toInt());
-    candidatsTable.setTELEPHONE           (ui->lineEdit_numTelephone->text().toInt());
+    candidatsTable.setCIN                 (ui->lineEdit_numCin->text());
+    candidatsTable.setTELEPHONE           (ui->lineEdit_numTelephone->text());
     candidatsTable.setNATIONALITE         (ui->lineEdit_nationnalite->text());
     candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text().toInt());
     candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate().toString());
