@@ -63,6 +63,7 @@ addCandidat::addCandidat(QWidget *parent, int id) :
 
 
     ui->comboBox_wilaya->addItems(listWilaya);
+    ui->lineEdit_nationnalite->setText("جزائرية");
 
 
 }
@@ -74,23 +75,24 @@ addCandidat::~addCandidat()
 
 void addCandidat::on_pushButton_Valider_clicked()
 {
-    //TODO:change database codage to UTF8
     candidatsTable.setCurrentRow(-1);
     QString wilaya=ui->comboBox_wilaya->itemText(ui->comboBox_wilaya->currentIndex());
 
     QStringList selectedWilaya =wilaya.split("-");
     qDebug()<<selectedWilaya.at(0)+"    "+selectedWilaya.at(1);
 
-    candidatsTable.setNom                 (ui->lineEdit_nom->text());
-    candidatsTable.setPrenom              (ui->lineEdit_prenom->text());
-    candidatsTable.setNom_Ar              (ui->lineEdit_nomAr->text());
-    candidatsTable.setPrenom_Ar           (ui->lineEdit_prenomAr->text());
-    candidatsTable.setDate_De_Naissance   (ui->dateEdit_naissanceCandidat->text());
-    candidatsTable.setLieu_De_Naissance_Ar(selectedWilaya.at(1));
-    candidatsTable.setAdresse_Ar          (ui->lineEdit_adresseAr->text());
-    candidatsTable.setNum_CIN             (ui->lineEdit_numCin->text().toInt());
-    candidatsTable.setNum_Tel             (ui->lineEdit_numTelephoneCandidat->text().toInt());
-    candidatsTable.setDate_Inscription    (QDate::currentDate().toString());
+    candidatsTable.setNOM                 (ui->lineEdit_nom->text());
+    candidatsTable.setPRENOM              (ui->lineEdit_prenom->text());
+    candidatsTable.setNOM_ARABE           (ui->lineEdit_nomAr->text());
+    candidatsTable.setPRENOM_ARABE        (ui->lineEdit_prenomAr->text());
+    candidatsTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
+    candidatsTable.setLIEU_DE_NAISSANCE   (selectedWilaya.at(1));
+    candidatsTable.setADRESSE             (ui->lineEdit_adresseAr->text());
+    candidatsTable.setCIN                 (ui->lineEdit_numCin->text().toInt());
+    candidatsTable.setTELEPHONE           (ui->lineEdit_numTelephone->text().toInt());
+    candidatsTable.setNATIONALITE         (ui->lineEdit_nationnalite->text());
+    candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text().toInt());
+    candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate().toString());
 
 
     if(candidatsTable.currentRow() < 0)

@@ -11,37 +11,27 @@ public:
     t_moniteurs() { init(this); }
     ~t_moniteurs() {;}
 
-    SYS_PROPERTY(int, idCandidat)
+    SYS_PROPERTY(int,      idMoniteur)
 
-    AUTO_PROPERTY(int, numDossier)
-    AUTO_PROPERTY(QString, Nom)
-    AUTO_PROPERTY(QString, Prenom)
-    AUTO_PROPERTY(QString, Nom_Ar)
-    AUTO_PROPERTY(QString, Prenom_Ar)
-    AUTO_PROPERTY(QString, Date_De_Naissance)
-    AUTO_PROPERTY(QString, Lieu_De_Naissance_Ar)
-    AUTO_PROPERTY(QString, AdresseAr)
-
-    AUTO_PROPERTY(QString, Date_Inscription)
-    AUTO_PROPERTY(int, Num_Tel)
-    AUTO_PROPERTY(int, idDocuments)
-
+    AUTO_PROPERTY(QString, NOM)
+    AUTO_PROPERTY(QString, PRENOM)
+    AUTO_PROPERTY(QString, DATE_DE_NAISSANCE)
+    AUTO_PROPERTY(QString, ADRESSE)
+    AUTO_PROPERTY(int,     PERMIS)
+    AUTO_PROPERTY(int,     TELEPHONE)
+    AUTO_PROPERTY(QString, DATE_AJOUT)
     ;
 public:
     enum TableName
     {
         _00idCandidat,
-        _01numDossier,
-        _02Nom,
-        _03Prenom,
-        _04Nom_Ar,
-        _05Prenom_Ar,
-        _06Date_De_Naissance,
-        _07Lieu_De_Naissance_Ar,
-        _08AdresseAr,
-        _09Date_Inscription,
-        _10Num_Tel,
-        _11idDocuments
+        _01NOM,
+        _02PRENOM,
+        _03DATE_DE_NAISSANCE,
+        _04ADRESSE,
+        _05PERMIS,
+        _06TELEPHONE,
+        _07DATE_AJOUT
 
     };
 };

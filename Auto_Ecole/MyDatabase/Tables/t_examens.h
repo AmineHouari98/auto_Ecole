@@ -1,15 +1,14 @@
-#ifndef T_CANDIDATS_H
-#define T_CANDIDATS_H
-
+#ifndef TEXAMENS_H
+#define TEXAMENS_H
 #include "easyORM.h"
 
-class t_candidats : public easyORM
+class t_examens : public easyORM
 {
     //    INIT_CURD(t_client) // add CURD methods( Create, Update, Read, Delete)
     Q_OBJECT
 public:
-    t_candidats() { init(this); }
-    ~t_candidats() {;}
+    t_examens() { init(this); }
+    ~t_examens() {;}
 
     SYS_PROPERTY(int,      idCandidat)
 
@@ -48,4 +47,4 @@ public:
     };
 };
 
-#endif // T_CLIENT_H
+#endif // TEXAMENS_H

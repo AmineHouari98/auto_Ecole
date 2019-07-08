@@ -13,7 +13,9 @@ candidat::candidat(QWidget *parent) :
     ui->widget->setTableView(ui->tableView);
     ui->widget->setModel(candidatsTable);
     ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
-
+    ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableView->hideColumn(t_candidats::_00idCandidat);
+    ui->tableView->hideColumn(t_candidats::_12idDocuments);
 
 }
 
