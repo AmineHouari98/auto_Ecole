@@ -8,6 +8,8 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     ui->setupUi(this);
     this->setWindowTitle("Ajout Candidat");
     this->setFixedSize(this->width(),this->height());
+    this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.svg"));
+
 
     const QStringList listWilaya ={
         "1-أدرار"
@@ -61,8 +63,6 @@ addCandidat::addCandidat(QWidget *parent, int id) :
 
 
     ui->comboBox_wilaya->addItems(listWilaya);
-
-
 
 
 }

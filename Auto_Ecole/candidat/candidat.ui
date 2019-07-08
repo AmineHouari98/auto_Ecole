@@ -84,11 +84,11 @@ QToolButton::hover
 	</string>
         </property>
         <property name="text">
-         <string>nouv. 
-Client</string>
+         <string>nouveau 
+Candidat</string>
         </property>
         <property name="icon">
-         <iconset resource="../../../Qt-Gestion-de-stock/ProTeam_Stock/resources.qrc">
+         <iconset resource="../ressources.qrc">
           <normaloff>:/Assets/Images/icons/add.svg</normaloff>:/Assets/Images/icons/add.svg</iconset>
         </property>
         <property name="iconSize">
@@ -164,6 +164,8 @@ Client</string>
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

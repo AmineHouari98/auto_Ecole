@@ -18,8 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     ui->tabWidget->addTab(ui_candidats, QIcon(":/Assets/Images/icons/client.svg"), "Candidats");
-    //TODO: change the icon for printing UI
-    ui->tabWidget->addTab(ui_impression, QIcon(":/Assets/Images/icons/client.svg"), "Impression");
+    ui->tabWidget->addTab(ui_impression, QIcon(":/Assets/Images/icons/print.svg"), "Impression");
 
 
     bool ok = true ;
