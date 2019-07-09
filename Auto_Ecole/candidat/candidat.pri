@@ -5,11 +5,9 @@ FORMS += \
 
 HEADERS += \
     $$PWD/candidat.h \
-    $$PWD/addCandidat.h \
-    $$PWD/viewprofile.h
+    $$PWD/addCandidat.h
    
 SOURCES += \
     $$PWD/candidat.cpp \
-    $$PWD/addCandidat.cpp \
-    $$PWD/viewprofile.cpp
+    $$PWD/addCandidat.cpp
   

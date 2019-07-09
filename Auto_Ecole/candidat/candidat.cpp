@@ -10,7 +10,6 @@ candidat::candidat(QWidget *parent) :
     setEditable(false);
     ui->pushButton_annuler->hide();
     ui->toolButton_back->setVisible(false);
-
     const QStringList listWilaya ={
         "1-أدرار"
         ,"2-الشلف"
@@ -60,6 +59,7 @@ candidat::candidat(QWidget *parent) :
         ,"46-عين تموشنت"
         ,"47-غرداية"
         ,"48-غليزان"};
+
 
 
     ui->comboBox_wilaya->addItems(listWilaya);
@@ -147,6 +147,8 @@ void candidat::setValuesOnLineEdit(int index)
     QString date_string_on_db = tableCandidats->getDATE_DE_NAISSANCE();
     QDate Date = QDate::fromString(date_string_on_db,"dd/MM/yyyy");
 
+    ui->comboBox_wilaya->setCurrentIndex(ui->comboBox_wilaya->findText(tableCandidats->getLIEU_DE_NAISSANCE(),Qt::MatchContains));
+
     ui->lineEdit_nom->setText(tableCandidats->getNOM());
     ui->lineEdit_prenom->setText(tableCandidats->getPRENOM());
     ui->lineEdit_nomAr->setText(tableCandidats->getNOM_ARABE());
@@ -159,7 +161,7 @@ void candidat::setValuesOnLineEdit(int index)
     ui->lineEdit_numDossier->setText(QString::number(tableCandidats->getDOSSIER()));
 
 
-    caisseTable->setFilter("idTransaction == "+QString::number(tableCandidats->get_idCandidat()));
+    caisseTable->setFilter("idTransaction == "+QString::number(tableCandidats->getidCandidat()));
     caisseTable->select();
 
 }
@@ -176,6 +178,7 @@ void candidat::setEditable(bool ok)
     ui->lineEdit_numTelephone->setEnabled(ok);
     ui->lineEdit_nationnalite->setEnabled(ok);
     ui->lineEdit_numDossier->setEnabled(ok);
+    ui->comboBox_wilaya->setEnabled(ok);
 
 }
 
