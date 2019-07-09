@@ -96,7 +96,6 @@ candidat::~candidat()
     delete ui;
 }
 
-
 void candidat::on_toolButton_new_client_clicked()
 {
     addCandidat addCandidat;
@@ -161,7 +160,7 @@ void candidat::setValuesOnLineEdit(int index)
     ui->lineEdit_numDossier->setText(QString::number(tableCandidats->getDOSSIER()));
 
 
-    caisseTable->setFilter("idTransaction == "+QString::number(tableCandidats->getidCandidat()));
+    caisseTable->setFilter("idTransaction = "+QString::number(tableCandidats->getidCandidat()));
     caisseTable->select();
 
 }
