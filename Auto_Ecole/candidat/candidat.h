@@ -6,6 +6,7 @@
 #include "addCandidat.h"
 #include "t_candidats.h"
 #include "t_caisse.h"
+#include "t_documents.h"
 
 
 namespace Ui {
@@ -41,11 +42,13 @@ private:
     Ui::candidat *ui;
     t_candidats *tableCandidats;
     t_caisse *tableCaisse;
+    t_documents *tableDocuments;
     QSqlTableModel *caisseTable;
     void setValuesOnLineEdit(int);
     void setEditable(bool);
     void modifyOnDatabase();
     void changeButtonState(QString,bool);
+
 };
 
 #endif // CANDIDAT_H
