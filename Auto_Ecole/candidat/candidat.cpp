@@ -202,15 +202,12 @@ void candidat::modifyOnDatabase()
 
 }
 
-void candidat::changeButtonState(QString title, bool isShown)
+void candidat::changeButtonState(QString title, bool isVisible)
 {
 
     ui->pushButton_modifier->setText(title);
 
-    if (isShown)
-        ui->pushButton_annuler->hide();
-    else
-        ui->pushButton_annuler->show();
+    ui->pushButton_annuler->setVisible(isVisible);
 
 }
 
@@ -220,7 +217,7 @@ void candidat::on_pushButton_modifier_clicked()
     {
 
         modifyOnDatabase();
-        changeButtonState("Modifier",true);
+        changeButtonState("Modifier",false);
 
 
 
@@ -228,6 +225,6 @@ void candidat::on_pushButton_modifier_clicked()
     if(ui->pushButton_modifier->text()=="Modifier")
     {
         setEditable(true);
-        changeButtonState("Valider",false);
+        changeButtonState("Valider",true);
     }
 }
