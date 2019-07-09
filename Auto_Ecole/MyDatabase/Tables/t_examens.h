@@ -10,40 +10,22 @@ public:
     t_examens() { init(this); }
     ~t_examens() {;}
 
-    SYS_PROPERTY(int,      idCandidat)
+    SYS_PROPERTY(int,      idExamen)
 
-    AUTO_PROPERTY(int,     DOSSIER)
-    AUTO_PROPERTY(QString, NOM)
-    AUTO_PROPERTY(QString, PRENOM)
-    AUTO_PROPERTY(QString, NOM_ARABE)
-    AUTO_PROPERTY(QString, PRENOM_ARABE)
-    AUTO_PROPERTY(QString, DATE_DE_NAISSANCE)
-    AUTO_PROPERTY(QString, LIEU_DE_NAISSANCE)
-    AUTO_PROPERTY(QString, NATIONALITE)
-    AUTO_PROPERTY(QString, ADRESSE)
-    AUTO_PROPERTY(int,     CIN)
-    AUTO_PROPERTY(int,     TELEPHONE)
-    AUTO_PROPERTY(int,     idDocuments)
-    AUTO_PROPERTY(QString, DATE_INSCRIPTION)
+    AUTO_PROPERTY(QString, EXAMINATEUR)
+    AUTO_PROPERTY(QString, DATE)
+    AUTO_PROPERTY(QString, LIEU)
+    AUTO_PROPERTY(int,     idInter)
 
     ;
 public:
     enum TableName
     {
-        _00idCandidat,
-        _01DOSSIER,
-        _02NOM,
-        _03PRENOM,
-        _04NOM_ARABE,
-        _05PRENOM_ARABE,
-        _06DATE_DE_NAISSANCE,
-        _07LIEU_DE_NAISSANCE,
-        _08NATIONALITE,
-        _09ADRESSE,
-        _10CIN,
-        _11TELEPHONE,
-        _12idDocuments,
-        _13DATE_INSCRIPTION,
+        _00idExamen,
+        _01EXAMINATEUR,
+        _03DATE,
+        _04LIEU,
+        _05idInter
     };
 };
 
