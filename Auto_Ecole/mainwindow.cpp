@@ -18,9 +18,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui_moniteurs  = new moniteur(this);
 
 
-    ui->tabWidget->addTab(ui_candidats, QIcon(":/Assets/Images/icons/client.svg"), "Candidats");
+    ui->tabWidget->addTab(ui_candidats, QIcon(":/Assets/Images/icons/candidats.svg"), "Candidats");
     ui->tabWidget->addTab(ui_impression, QIcon(":/Assets/Images/icons/print.svg"), "Impression");
-    ui->tabWidget->addTab(ui_moniteurs, QIcon(":/Assets/Images/icons/print.svg"), "Moniteurs");
+    ui->tabWidget->addTab(ui_moniteurs, QIcon(":/Assets/Images/icons/moniteur.svg"), "Moniteurs");
 
 
     bool ok = true ;

@@ -44,5 +44,7 @@
         <file>Templates/Bodereau.xml</file>
         <file>Templates/Liste_Examen.xml</file>
         <file>Assets/Images/icons/add_candidat.ico</file>
+        <file>Assets/Images/icons/moniteur.svg</file>
+        <file>Assets/Images/icons/candidats.svg</file>
     </qresource>
 </RCC>

@@ -217,16 +217,21 @@ void candidat::on_pushButton_modifier_clicked()
 {
     if(ui->pushButton_modifier->text()=="Valider")
     {
-
+        candidat::on_pushButton_annuler_clicked();
         modifyOnDatabase();
-        changeButtonState("Modifier",false);
-
-
-
     }
+
     if(ui->pushButton_modifier->text()=="Modifier")
     {
         setEditable(true);
         changeButtonState("Valider",true);
+
     }
+}
+
+void candidat::on_pushButton_annuler_clicked()
+{
+   setEditable(false);
+   ui->pushButton_annuler->setVisible(false);
+   changeButtonState("Modifier",false);
 }

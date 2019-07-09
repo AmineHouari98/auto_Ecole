@@ -111,25 +111,14 @@ void moniteur::setEditable(bool ok)
 {
     ui->lineEdit_nom->setEnabled(ok);
     ui->lineEdit_prenom->setEnabled(ok);
-    ui->lineEdit_nomAr->setEnabled(ok);
-    ui->lineEdit_prenomAr->setEnabled(ok);
     ui->dateEdit_naissanceCandidat->setEnabled(ok);
     ui->lineEdit_adresseAr->setEnabled(ok);
     ui->lineEdit_numCin->setEnabled(ok);
     ui->lineEdit_numTelephone->setEnabled(ok);
-    ui->lineEdit_nationnalite->setEnabled(ok);
-    ui->lineEdit_numDossier->setEnabled(ok);
-    ui->comboBox_wilaya->setEnabled(ok);
-
 }
 
 void moniteur::modifyOnDatabase()
 {
-    QString wilaya=ui->comboBox_wilaya->itemText(ui->comboBox_wilaya->currentIndex());
-
-    QStringList selectedWilaya =wilaya.split("-");
-    qDebug()<<selectedWilaya.at(0)+"    "+selectedWilaya.at(1);
-
     tableMoniteurs->setNOM                 (ui->lineEdit_nom->text());
     tableMoniteurs->setPRENOM              (ui->lineEdit_prenom->text());
     tableMoniteurs->setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
@@ -145,7 +134,6 @@ void moniteur::changeButtonState(QString title, bool isVisible)
 {
 
     ui->pushButton_modifier->setText(title);
-
     ui->pushButton_annuler->setVisible(isVisible);
 
 }
