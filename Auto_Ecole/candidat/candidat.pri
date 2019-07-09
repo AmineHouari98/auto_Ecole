@@ -1,7 +1,6 @@
 FORMS += \
     $$PWD/addCandidat.ui \
-    $$PWD/candidat.ui \
-    $$PWD/viewprofile.ui
+    $$PWD/candidat.ui
 
 HEADERS += \
     $$PWD/candidat.h \

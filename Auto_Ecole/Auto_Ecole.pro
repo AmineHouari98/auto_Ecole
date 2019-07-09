@@ -19,6 +19,9 @@ include(MyDatabase/MyDatabase.pri)
 INCLUDEPATH += $$PWD/candidat
 include(candidat/candidat.pri)
 
+INCLUDEPATH += $$PWD/moniteur
+include(moniteur/moniteur.pri)
+
 INCLUDEPATH += $$PWD/TableViewTools
 include(TableViewTools/TableViewTools.pri)
 
