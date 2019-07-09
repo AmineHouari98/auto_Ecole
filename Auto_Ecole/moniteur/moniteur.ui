@@ -390,13 +390,6 @@ Candidat</string>
              <item>
               <widget class="QTableView" name="tableView_2"/>
              </item>
-             <item>
-              <widget class="Line" name="line_4">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-             </item>
             </layout>
            </item>
           </layout>
