@@ -77,6 +77,7 @@ candidat::candidat(QWidget *parent) :
 
 
 
+
     tableCaisse = new t_caisse();
     caisseTable = new QSqlTableModel(this);
     caisseTable->setTable(tableCaisse->tableName());
@@ -203,7 +204,7 @@ void candidat::modifyOnDatabase()
     tableCandidats->update() ;
 
 }
-
+//TODO: FIX THIS BALIZ
 void candidat::changeButtonState(QString title, bool isVisible)
 {
 
