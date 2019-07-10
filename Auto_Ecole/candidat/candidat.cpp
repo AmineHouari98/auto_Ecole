@@ -204,25 +204,21 @@ void candidat::modifyOnDatabase()
     tableCandidats->update() ;
 
 }
-//TODO: FIX THIS BALIZ
+
 void candidat::changeButtonState(QString title, bool isVisible)
 {
-
     ui->pushButton_modifier->setText(title);
-
     ui->pushButton_annuler->setVisible(isVisible);
-
 }
 
 void candidat::on_pushButton_modifier_clicked()
 {
     if(ui->pushButton_modifier->text()=="Valider")
     {
-        candidat::on_pushButton_annuler_clicked();
+        on_pushButton_annuler_clicked();
         modifyOnDatabase();
     }
-
-    if(ui->pushButton_modifier->text()=="Modifier")
+    else if(ui->pushButton_modifier->text()=="Modifier")
     {
         setEditable(true);
         changeButtonState("Valider",true);
