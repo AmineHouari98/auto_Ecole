@@ -22,6 +22,9 @@ include(candidat/candidat.pri)
 INCLUDEPATH += $$PWD/moniteur
 include(moniteur/moniteur.pri)
 
+INCLUDEPATH += $$PWD/examen
+include(examen/examen.pri)
+
 INCLUDEPATH += $$PWD/TableViewTools
 include(TableViewTools/TableViewTools.pri)
 
