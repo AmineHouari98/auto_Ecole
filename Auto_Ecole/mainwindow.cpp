@@ -16,13 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui_candidats  = new candidat(this);
     ui_impression = new impression(this);
     ui_moniteurs  = new moniteur(this);
-    ui_examens = new examen(this);
 
 
     ui->tabWidget->addTab(ui_candidats, QIcon(":/Assets/Images/icons/candidats.svg"), "Candidats");
     ui->tabWidget->addTab(ui_impression, QIcon(":/Assets/Images/icons/print.svg"), "Impression");
     ui->tabWidget->addTab(ui_moniteurs, QIcon(":/Assets/Images/icons/moniteur.svg"), "Moniteurs");
-    ui->tabWidget->addTab(ui_examens, QIcon(":/Assets/Images/icons/moniteur.svg"), "Examens");
 
 
     bool ok = true ;

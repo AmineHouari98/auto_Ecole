@@ -46,18 +46,10 @@
         <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="page">
-        <widget class="QWidget" name="layoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>100</width>
-           <height>75</height>
-          </rect>
-         </property>
+        <widget class="QWidget" name="">
          <layout class="QVBoxLayout" name="verticalLayout_19">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
