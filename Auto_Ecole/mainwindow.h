@@ -6,6 +6,7 @@
 #include "candidat.h"
 #include "impression.h"
 #include "moniteur.h"
+#include "examen.h"
 
 
 #include "myparentobject.h"
@@ -33,7 +34,7 @@ private:
     candidat *ui_candidats;
     impression *ui_impression;
     moniteur *ui_moniteurs;
-
+    examen *ui_examens;
 };
 
 #endif // MAINWINDOW_H
