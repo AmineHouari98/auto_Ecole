@@ -5,8 +5,7 @@ HEADERS += \
     $$PWD/t_autoecole.h \
     $$PWD/t_moniteurs.h \
     $$PWD/t_caisse.h \
-    $$PWD/t_examens.h \
-    $$PWD/t_inter.h
+    $$PWD/t_examens.h
 
 SOURCES +=
 

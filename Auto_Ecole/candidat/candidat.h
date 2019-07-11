@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <myparentobject.h>
 #include "addCandidat.h"
+#include "profilcandidat.h"
 #include "t_candidats.h"
 #include "t_caisse.h"
 #include "t_documents.h"
@@ -24,30 +25,17 @@ public:
 private slots:
     void on_toolButton_new_client_clicked();
 
-
     void on_btn_viewProfile_clicked();
-
-    void on_stackedWidget_currentChanged(int arg1);
-
-    void on_toolButton_back_clicked();
 
     void on_tableView_doubleClicked(const QModelIndex &index);
 
 
-    void on_pushButton_modifier_clicked();
-
-    void on_pushButton_annuler_clicked();
 
 private:
     Ui::candidat *ui;
     t_candidats *tableCandidats;
-    t_caisse *tableCaisse;
-    t_documents *tableDocuments;
-    QSqlTableModel *caisseTable;
-    void setValuesOnLineEdit(int);
-    void setEditable(bool);
-    void modifyOnDatabase();
-    void changeButtonState(QString,bool);
+    void openDetails();
+
 
 };
 

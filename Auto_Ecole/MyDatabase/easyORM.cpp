@@ -170,9 +170,9 @@ bool easyORM::where(QString condition)
     return ok ;
 }
 
-bool easyORM::whereid(int id)
+bool easyORM::whereid(QString idName,int id)
 {
-    return where("id == "+QString::number(id));
+    return where(idName+" = "+QString::number(id))+";";
 }
 
 int easyORM::rowCount()

@@ -24,7 +24,7 @@ public:
 public:
     enum TableName
     {
-        _00idCandidat,
+        _00idMoniteur,
         _01NOM,
         _02PRENOM,
         _03DATE_DE_NAISSANCE,

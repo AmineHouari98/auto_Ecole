@@ -40,6 +40,7 @@ private:
     void setValuesOnLineEdit(int);
     void setEditable(bool);
     void modifyOnDatabase();
+    void initTableWidget();
 };
 
 #endif // EXAMEN_H

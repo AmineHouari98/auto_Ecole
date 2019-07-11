@@ -17,7 +17,7 @@ public:
     AUTO_PROPERTY(QString, TYPE)
     AUTO_PROPERTY(QString, MONTANT)
     AUTO_PROPERTY(QString, DATE)
-
+    AUTO_PROPERTY(QString, user_type)
 
 
     ;
@@ -28,7 +28,8 @@ public:
         _01idTransaction,
         _02TYPE,
         _03MONTANT,
-        _04DATE
+        _04DATE,
+        _05user_type
 
     };
 };

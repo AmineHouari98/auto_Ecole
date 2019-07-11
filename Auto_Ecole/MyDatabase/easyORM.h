@@ -52,7 +52,7 @@ public:
     virtual bool update();
     virtual bool insert();
     bool where(QString condition);
-    bool whereid(int id);
+    bool whereid(QString,int id);
     int rowCount() ;
     QJsonObject currentRowToJSON();
 
