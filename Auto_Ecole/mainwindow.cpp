@@ -20,9 +20,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     ui->tabWidget->addTab(ui_candidats, QIcon(":/Assets/Images/icons/candidats.svg"), "Candidats");
-    ui->tabWidget->addTab(ui_impression, QIcon(":/Assets/Images/icons/print.svg"), "Impression");
     ui->tabWidget->addTab(ui_moniteurs, QIcon(":/Assets/Images/icons/moniteur.svg"), "Moniteurs");
-    ui->tabWidget->addTab(ui_examens, QIcon(":/Assets/Images/icons/moniteur.svg"), "Moniteurs");
+    ui->tabWidget->addTab(ui_examens, QIcon(":/Assets/Images/icons/exams.ico"), "Examen");
+    ui->tabWidget->addTab(ui_impression, QIcon(":/Assets/Images/icons/print.svg"), "Impression");
 
 
     bool ok = true ;

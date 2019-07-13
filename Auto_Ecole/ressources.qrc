@@ -46,5 +46,6 @@
         <file>Assets/Images/icons/add_candidat.ico</file>
         <file>Assets/Images/icons/moniteur.svg</file>
         <file>Assets/Images/icons/candidats.svg</file>
+        <file>Assets/Images/icons/exams.ico</file>
     </qresource>
 </RCC>
