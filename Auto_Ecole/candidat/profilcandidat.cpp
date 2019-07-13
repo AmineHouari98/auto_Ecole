@@ -6,6 +6,7 @@ profilCandidat::profilCandidat(QWidget *parent) :
     ui(new Ui::profilCandidat)
 {
     ui->setupUi(this);
+    ui->pushButton_annuler->hide();
 
     const QStringList listWilaya ={
         "1-أدرار"
@@ -162,6 +163,8 @@ void profilCandidat::on_pushButton_modifier_clicked()
 void profilCandidat::on_pushButton_annuler_clicked()
 {
     setEditable(false);
+    setValuesOnLineEdit(tableCandidats->getidCandidat());
+
     ui->pushButton_annuler->setVisible(false);
     changeButtonState("Modifier",false);
 }
