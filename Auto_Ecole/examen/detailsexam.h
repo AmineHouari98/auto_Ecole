@@ -2,9 +2,12 @@
 #define DETAILSEXAM_H
 
 #include <QDialog>
+
 #include "t_examens.h"
 #include "t_candidats.h"
 #include "t_inter.h"
+
+#include "dataModels.h"
 
 namespace Ui {
 class detailsExam;
@@ -25,10 +28,14 @@ public slots:
 private slots:
     void on_pushButton_annuler_clicked();
 
+    void on_toolButton_ImprimerListe_clicked();
+
 private:
     Ui::detailsExam *ui;
     t_examens *tableExamens;
     t_inter *tableInter;
+    QSqlQuery query;
+
     void setEditable(bool);
     void modifyOnDatabase();
     void changeButtonState(QString,bool);

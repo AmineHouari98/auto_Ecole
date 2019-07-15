@@ -2,12 +2,15 @@
 #define IMPRESSION_H
 
 #include <QWidget>
+#include "dataModels.h"
 
 class impression : public QWidget
 {
     Q_OBJECT
 public:
     explicit impression(QWidget *parent = nullptr);
+    void printListExamen(QList<ModelExamList>);
+    void printBorderau(QList<ModelBordereau>);
 
 signals:
 

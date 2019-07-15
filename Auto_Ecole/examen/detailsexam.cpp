@@ -31,8 +31,6 @@ detailsExam::~detailsExam()
     delete ui;
 }
 
-
-
 void detailsExam::setValuesOnLineEdit(int index)
 {
     tableExamens->whereid(index);
@@ -126,4 +124,9 @@ void detailsExam::on_pushButton_annuler_clicked()
     setValuesOnLineEdit(tableExamens->getid());
     ui->pushButton_annuler->setVisible(false);
     changeButtonState("Modifier",false);
+}
+
+void detailsExam::on_toolButton_ImprimerListe_clicked()
+{
+    QList<ModelExamList> ;
 }

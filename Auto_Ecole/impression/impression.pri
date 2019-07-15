@@ -1,5 +1,5 @@
 HEADERS += \
-    $$PWD/impression.h
+    $$PWD/impression.h \
 
 SOURCES += \
     $$PWD/impression.cpp

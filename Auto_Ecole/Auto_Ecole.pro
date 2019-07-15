@@ -56,7 +56,8 @@ SOURCES += \
 
 HEADERS += \
     mainwindow.h \
-    myparentobject.h
+    myparentobject.h \
+    dataModels.h
 
 FORMS += \
     mainwindow.ui
