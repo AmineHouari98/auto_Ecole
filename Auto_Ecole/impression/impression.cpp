@@ -32,16 +32,14 @@ void impression::printListExamen(QList<ModelExamList> myList)
 
         }
         if(paramName == "Date_De_Naissance") paramValue = myList.at(recNo).Date_De_Naissance;
-        if(paramName == "NatExamen")         paramValue = QString::number(rows);
-        if(paramName == "cat")               paramValue = QString::number(rows);
-        if(paramName == "NbrCandidats")      paramValue = QString::number(rows);
-        if(paramName == "NbrCode")           paramValue = QString::number(rows);
-        if(paramName == "NbrCirc")           paramValue = QString::number(rows);
-        if(paramName == "NbrM")              paramValue = QString::number(rows);
+        if(paramName == "NatExamen")         paramValue = myList.at(recNo).NatExamen;
+        if(paramName == "cat")               paramValue = myList.at(recNo).cat;
+        if(paramName == "NbrCandidats")      paramValue = QString::number(myList.at(recNo).NbrCandidats);
+        if(paramName == "NbrCode")           paramValue = QString::number(myList.at(recNo).NbrCode);
+        if(paramName == "NbrCirc")           paramValue = QString::number(myList.at(recNo).NbrCirc);
+        if(paramName == "NbrM")              paramValue = QString::number(myList.at(recNo).NbrM);
 
-//        QString NatExamen,cat;
 
-//        int NbrCode, NbrM, NbrCirc
 
 
     });

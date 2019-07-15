@@ -8,6 +8,7 @@
 #include "t_inter.h"
 
 #include "dataModels.h"
+#include "impression.h"
 
 namespace Ui {
 class detailsExam;

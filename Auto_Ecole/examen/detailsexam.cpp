@@ -42,9 +42,8 @@ void detailsExam::setValuesOnLineEdit(int index)
     ui->lineEdit_Lieu->setText(tableExamens->getLIEU());
     ui->dateEdit_Date->setDate(Date);
 
+    //TODO:add colun Nature exam
 
-
-    QSqlQuery query;
     query.exec("SELECT NOM, PRENOM, DATE_DE_NAISSANCE, LIEU_DE_NAISSANCE "
                "FROM t_candidats INNER JOIN t_inter "
                "ON t_candidats.id =t_inter.idCandidat"
@@ -128,5 +127,21 @@ void detailsExam::on_pushButton_annuler_clicked()
 
 void detailsExam::on_toolButton_ImprimerListe_clicked()
 {
-    QList<ModelExamList> ;
+    QList<ModelExamList> myList;
+
+    for(int i=0;i<query.size();i++)
+    {
+        ModelExamList model;
+        model.Nom =                 query.value(0).toString();
+        model.Prenom =              query.value(1).toString();
+        model.Date_De_Naissance =   query.value(2).toString();
+        model.NatExamen =           query.value(3).toString();
+        model.cat = "B";
+        model.calc();
+
+        myList.append(&model);
+
+    }
+    impression.printListExamen(myList);
+
 }
