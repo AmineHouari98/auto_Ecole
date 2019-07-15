@@ -274,7 +274,11 @@ QString easyORM::getSchemaTable()
         tmp = obj->metaObject()->property(i).read(obj).typeName();
         if(QString(obj->metaObject()->property(i).name()) == "id" )
         {
-            columnsList << "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE";
+            // BUG : check current connected database and add if to switch between mysql and sqlite schema
+            //this for sqlite
+            //columnsList << "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE";
+            //this for mysql
+            columnsList << "id int NOT NULL AUTO_INCREMENT";
             continue ;
         }
         if(QString(obj->metaObject()->property(i).name()).at(0) == '_')
