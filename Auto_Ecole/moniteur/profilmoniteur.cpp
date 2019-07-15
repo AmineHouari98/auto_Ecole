@@ -29,7 +29,7 @@ profilMoniteur::~profilMoniteur()
 
 void profilMoniteur::setValuesOnLineEdit(int index)
 {
-    tableMoniteurs->whereid("idMoniteur",index);
+    tableMoniteurs->whereid(index);
 
     QString date_string_on_db = tableMoniteurs->getDATE_DE_NAISSANCE();
     QDate Date = QDate::fromString(date_string_on_db,"dd/MM/yyyy");
@@ -43,7 +43,7 @@ void profilMoniteur::setValuesOnLineEdit(int index)
     ui->lineEdit_numTelephone->setText(tableMoniteurs->getTELEPHONE());
 
 
-    tableCaisse->where("idTransaction = "+QString::number(tableMoniteurs->getidMoniteur())+" AND user_type = 'M'" );
+    tableCaisse->where("idTransaction = "+QString::number(tableMoniteurs->getid())+" AND user_type = 'M'" );
     tableCaisse->select();
 }
 
@@ -99,7 +99,7 @@ void profilMoniteur::on_pushButton_modifier_clicked()
 void profilMoniteur::on_pushButton_annuler_clicked()
 {
     setEditable(false);
-    setValuesOnLineEdit(tableMoniteurs->getidMoniteur());
+    setValuesOnLineEdit(tableMoniteurs->getid());
     ui->pushButton_annuler->setVisible(false);
     changeButtonState("Modifier",false);
 }

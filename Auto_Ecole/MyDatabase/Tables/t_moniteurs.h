@@ -11,7 +11,7 @@ public:
     t_moniteurs() { init(this); }
     ~t_moniteurs() {;}
 
-    SYS_PROPERTY(int,      idMoniteur)
+    SYS_PROPERTY(int,      id)
 
     AUTO_PROPERTY(QString, NOM)
     AUTO_PROPERTY(QString, PRENOM)

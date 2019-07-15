@@ -170,9 +170,9 @@ bool easyORM::where(QString condition)
     return ok ;
 }
 
-bool easyORM::whereid(QString idName,int id)
+bool easyORM::whereid(int id)
 {
-    return where(idName+" = "+QString::number(id))+";";
+    return where("id = "+QString::number(id))+";";
 }
 
 int easyORM::rowCount()
@@ -278,7 +278,7 @@ QString easyORM::getSchemaTable()
             //this for sqlite
             //columnsList << "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE";
             //this for mysql
-            columnsList << "id int NOT NULL AUTO_INCREMENT";
+            columnsList << "id int NOT NULL AUTO_INCREMENT,PRIMARY KEY (id)";
             continue ;
         }
         if(QString(obj->metaObject()->property(i).name()).at(0) == '_')

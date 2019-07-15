@@ -30,7 +30,7 @@ detailsExam::~detailsExam()
 
 void detailsExam::setValuesOnLineEdit(int index)
 {
-    tableExamens->whereid("idMoniteur",index);
+    tableExamens->whereid(index);
 
     QString date_string_on_db = tableExamens->getDATE();
     QDate Date = QDate::fromString(date_string_on_db,"dd/MM/yyyy");
@@ -89,7 +89,7 @@ void detailsExam::on_pushButton_modifier_clicked()
 void detailsExam::on_pushButton_annuler_clicked()
 {
     setEditable(false);
-    setValuesOnLineEdit(tableExamens->getidExamen());
+    setValuesOnLineEdit(tableExamens->getid());
     ui->pushButton_annuler->setVisible(false);
     changeButtonState("Modifier",false);
 }

@@ -48,7 +48,7 @@ void candidat::openDetails()
 {
     tableCandidats->setCurrentRow(ui->tableView->currentIndex().row());
     profilCandidat pCandidat;
-    pCandidat.setValuesOnLineEdit(tableCandidats->getidCandidat());
+    pCandidat.setValuesOnLineEdit(tableCandidats->getid());
     pCandidat.exec();
     tableCandidats->select();
 

@@ -11,7 +11,7 @@ public:
     t_vehicules() { init(this); }
     ~t_vehicules() {;}
 
-    SYS_PROPERTY(int, idVehicule)
+    SYS_PROPERTY(int, id)
 
     AUTO_PROPERTY(QString, Matricule)
     AUTO_PROPERTY(QString, Modele)

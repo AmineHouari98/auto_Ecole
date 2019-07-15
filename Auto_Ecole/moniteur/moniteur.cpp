@@ -52,7 +52,7 @@ void moniteur::openDetails()
 {
     tableMoniteurs->setCurrentRow(ui->tableView->currentIndex().row());
     profilMoniteur pMoniteur;
-    pMoniteur.setValuesOnLineEdit(tableMoniteurs->getidMoniteur());
+    pMoniteur.setValuesOnLineEdit(tableMoniteurs->getid());
     pMoniteur.exec();
     tableMoniteurs->select();
 

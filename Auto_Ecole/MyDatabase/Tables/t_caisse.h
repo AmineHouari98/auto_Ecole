@@ -11,7 +11,7 @@ public:
     t_caisse() { init(this); }
     ~t_caisse() {;}
 
-    SYS_PROPERTY(int, idCaisse)
+    SYS_PROPERTY(int, id)
 
     AUTO_PROPERTY(int, idTransaction)
     AUTO_PROPERTY(QString, TYPE)

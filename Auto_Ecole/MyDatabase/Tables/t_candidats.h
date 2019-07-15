@@ -11,7 +11,7 @@ public:
     t_candidats() { init(this); }
     ~t_candidats() {;}
 
-    SYS_PROPERTY(int,      idCandidat)
+    SYS_PROPERTY(int,      id)
 
     AUTO_PROPERTY(int,     DOSSIER)
     AUTO_PROPERTY(QString, NOM)

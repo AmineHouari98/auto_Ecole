@@ -76,7 +76,7 @@ profilCandidat::profilCandidat(QWidget *parent) :
 
 void profilCandidat::setValuesOnLineEdit(int id)
 {
-    tableCandidats->whereid("idCandidat",id);
+    tableCandidats->whereid(id);
 
     QString date_string_on_db = tableCandidats->getDATE_DE_NAISSANCE();
     QDate Date = QDate::fromString(date_string_on_db,"dd/MM/yyyy");
@@ -95,7 +95,7 @@ void profilCandidat::setValuesOnLineEdit(int id)
     ui->lineEdit_numDossier->setText(QString::number(tableCandidats->getDOSSIER()));
 
 
-    tableCaisse->where("idTransaction = "+QString::number(tableCandidats->getidCandidat())+" AND user_type = 'C'" );
+    tableCaisse->where("idTransaction = "+QString::number(tableCandidats->getid())+" AND user_type = 'C'" );
     tableCaisse->select();
 
 }
@@ -163,7 +163,7 @@ void profilCandidat::on_pushButton_modifier_clicked()
 void profilCandidat::on_pushButton_annuler_clicked()
 {
     setEditable(false);
-    setValuesOnLineEdit(tableCandidats->getidCandidat());
+    setValuesOnLineEdit(tableCandidats->getid());
 
     ui->pushButton_annuler->setVisible(false);
     changeButtonState("Modifier",false);

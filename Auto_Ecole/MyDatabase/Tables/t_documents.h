@@ -11,7 +11,7 @@ public:
     t_documents() { init(this); }
     ~t_documents() {;}
 
-    SYS_PROPERTY(int, idDocuments)
+    SYS_PROPERTY(int, id)
 
     AUTO_PROPERTY(int, Photo)
     AUTO_PROPERTY(bool, Groupage)
