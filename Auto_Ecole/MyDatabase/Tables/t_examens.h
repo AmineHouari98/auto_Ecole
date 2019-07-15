@@ -1,5 +1,5 @@
-#ifndef TEXAMENS_H
-#define TEXAMENS_H
+#ifndef T_EXAMENS_H
+#define T_EXAMENS_H
 #include "easyORM.h"
 
 class t_examens : public easyORM
@@ -11,7 +11,6 @@ public:
     ~t_examens() {;}
 
     SYS_PROPERTY(int,      idExamen)
-
     AUTO_PROPERTY(QString, EXAMINATEUR)
     AUTO_PROPERTY(QString, DATE)
     AUTO_PROPERTY(QString, LIEU)
@@ -29,4 +28,4 @@ public:
     };
 };
 
-#endif // TEXAMENS_H
+#endif // T_EXAMENS_H

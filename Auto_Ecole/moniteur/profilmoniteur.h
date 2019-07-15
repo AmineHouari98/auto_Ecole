@@ -21,6 +21,9 @@ public:
 public slots:
         void on_pushButton_modifier_clicked();
 
+private slots:
+        void on_pushButton_annuler_clicked();
+
 private:
     Ui::profilMoniteur *ui;
     t_caisse *tableCaisse;

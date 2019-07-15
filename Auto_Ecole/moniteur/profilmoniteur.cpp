@@ -6,7 +6,7 @@ profilMoniteur::profilMoniteur(QWidget *parent) :
     ui(new Ui::profilMoniteur)
 {
     ui->setupUi(this);
-
+    ui->pushButton_annuler->hide();
 
     setEditable(false);
 
@@ -94,4 +94,12 @@ void profilMoniteur::on_pushButton_modifier_clicked()
         setEditable(true);
         changeButtonState("Valider",true);
     }
+}
+
+void profilMoniteur::on_pushButton_annuler_clicked()
+{
+    setEditable(false);
+    setValuesOnLineEdit(tableMoniteurs->getidMoniteur());
+    ui->pushButton_annuler->setVisible(false);
+    changeButtonState("Modifier",false);
 }

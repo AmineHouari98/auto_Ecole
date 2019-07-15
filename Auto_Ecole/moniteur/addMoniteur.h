@@ -4,7 +4,6 @@
 #include <QDialog>
 #include <QDate>
 #include "t_moniteurs.h"
-#include "myparentobject.h"
 
 namespace Ui {
 class addMoniteur;
