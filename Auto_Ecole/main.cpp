@@ -8,6 +8,7 @@
 #include "t_documents.h"
 #include "t_moniteurs.h"
 #include "t_vehicules.h"
+#include "t_examens.h"
 
 void fillDatabase();
 
@@ -24,6 +25,7 @@ int main(int argc, char *argv[])
     t_documents documents;
     t_moniteurs moniteurs;
     t_vehicules vehicules;
+    t_examens examens;
 
     myDatabase.createTable(&autoecole);
     myDatabase.createTable(&caisse   );
@@ -31,6 +33,7 @@ int main(int argc, char *argv[])
     myDatabase.createTable(&documents);
     myDatabase.createTable(&moniteurs);
     myDatabase.createTable(&vehicules);
+    myDatabase.createTable(&examens);
 
     qDebug() << myDatabase.tables();
 
