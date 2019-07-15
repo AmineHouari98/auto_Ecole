@@ -17,9 +17,10 @@ public:
     AUTO_PROPERTY(QString, PRENOM)
     AUTO_PROPERTY(QString, DATE_DE_NAISSANCE)
     AUTO_PROPERTY(QString, ADRESSE)
-    AUTO_PROPERTY(QString,     PERMIS)
-    AUTO_PROPERTY(QString,     TELEPHONE)
+    AUTO_PROPERTY(QString, PERMIS)
+    AUTO_PROPERTY(QString, TELEPHONE)
     AUTO_PROPERTY(QString, DATE_AJOUT)
+    AUTO_PROPERTY(int, idCaisse)
     ;
 public:
     enum TableName
@@ -31,7 +32,8 @@ public:
         _04ADRESSE,
         _05PERMIS,
         _06TELEPHONE,
-        _07DATE_AJOUT
+        _07DATE_AJOUT,
+        _08idCaisse
 
     };
 };

@@ -14,6 +14,8 @@ examen::examen(QWidget *parent) :
     ui->widget->setModel(tableExamens);
     ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableView->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->tableView->hideColumn(t_examens::_00idExamen);
     ui->tableView->hideColumn(t_examens::_05idInter);
 

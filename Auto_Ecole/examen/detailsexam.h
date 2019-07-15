@@ -2,9 +2,9 @@
 #define DETAILSEXAM_H
 
 #include <QDialog>
-#include "t_caisse.h"
 #include "t_examens.h"
 #include "t_candidats.h"
+#include "t_inter.h"
 
 namespace Ui {
 class detailsExam;
@@ -27,8 +27,8 @@ private slots:
 
 private:
     Ui::detailsExam *ui;
-    t_caisse *tableCaisse;
     t_examens *tableExamens;
+    t_inter *tableInter;
     void setEditable(bool);
     void modifyOnDatabase();
     void changeButtonState(QString,bool);

@@ -68,6 +68,8 @@ profilCandidat::profilCandidat(QWidget *parent) :
     ui->tableView->setModel(tableCaisse->toModel());
     ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableView->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->tableView->hideColumn(t_caisse::_00idCaisse);
     ui->tableView->hideColumn(t_caisse::_01idTransaction);
     ui->tableView->hideColumn(t_caisse::_05user_type);
@@ -137,6 +139,8 @@ void profilCandidat::modifyOnDatabase()
 
     tableCandidats->update() ;
 
+    tableCandidats->select();
+
 }
 
 void profilCandidat::changeButtonState(QString title, bool isVisible)
@@ -149,8 +153,9 @@ void profilCandidat::on_pushButton_modifier_clicked()
 {
     if(ui->pushButton_modifier->text()=="Valider")
     {
-        on_pushButton_annuler_clicked();
         modifyOnDatabase();
+        emit ui->pushButton_annuler->clicked(false);
+
     }
     else if(ui->pushButton_modifier->text()=="Modifier")
     {

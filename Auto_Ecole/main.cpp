@@ -9,6 +9,7 @@
 #include "t_moniteurs.h"
 #include "t_vehicules.h"
 #include "t_examens.h"
+#include "t_inter.h"
 
 void fillDatabase();
 
@@ -26,14 +27,16 @@ int main(int argc, char *argv[])
     t_moniteurs moniteurs;
     t_vehicules vehicules;
     t_examens examens;
+    t_inter inter;
 
     myDatabase.createTable(&autoecole);
-    myDatabase.createTable(&caisse   );
+    myDatabase.createTable(&caisse);
     myDatabase.createTable(&candidats);
     myDatabase.createTable(&documents);
     myDatabase.createTable(&moniteurs);
     myDatabase.createTable(&vehicules);
     myDatabase.createTable(&examens);
+    myDatabase.createTable(&inter);
 
     qDebug() << myDatabase.tables();
 

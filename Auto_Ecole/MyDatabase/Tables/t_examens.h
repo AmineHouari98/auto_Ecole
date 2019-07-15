@@ -14,7 +14,6 @@ public:
     AUTO_PROPERTY(QString, EXAMINATEUR)
     AUTO_PROPERTY(QString, DATE)
     AUTO_PROPERTY(QString, LIEU)
-    AUTO_PROPERTY(int,     idInter)
 
     ;
 public:

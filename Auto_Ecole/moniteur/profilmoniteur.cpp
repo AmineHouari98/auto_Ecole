@@ -16,6 +16,8 @@ profilMoniteur::profilMoniteur(QWidget *parent) :
     ui->tableView->setModel(tableCaisse->toModel());
     ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableView->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->tableView->hideColumn(t_caisse::_00idCaisse);
     ui->tableView->hideColumn(t_caisse::_01idTransaction);
     ui->tableView->hideColumn(t_caisse::_05user_type);
@@ -84,7 +86,7 @@ void profilMoniteur::on_pushButton_modifier_clicked()
     {
 
         modifyOnDatabase();
-        changeButtonState("Modifier",false);
+        emit ui->pushButton_annuler->clicked(false);
 
 
 

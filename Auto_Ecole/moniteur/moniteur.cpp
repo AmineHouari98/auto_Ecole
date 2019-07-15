@@ -16,8 +16,10 @@ moniteur::moniteur(QWidget *parent) :
     ui->widget->setModel(tableMoniteurs);
     ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-//    ui->tableView->hideColumn(t_candidats::_12idDocuments);
-//    ui->tableView->hideColumn(t_candidats::_00idCandidat);
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableView->setSelectionMode(QAbstractItemView::SingleSelection);
+    ui->tableView->hideColumn(t_moniteurs::_00idMoniteur);
+    ui->tableView->hideColumn(t_moniteurs::_08idCaisse);
 
 
 
