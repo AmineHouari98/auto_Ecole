@@ -21,6 +21,7 @@ public:
 private slots:
     void on_pushButton_Valider_clicked();
     void on_pushButton_Annuler_clicked();
+    bool verifToutBon();
 private:
     Ui::addCandidat *ui;
     t_candidats candidatsTable;
