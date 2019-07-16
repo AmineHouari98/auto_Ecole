@@ -9,7 +9,7 @@ class impression : public QWidget
     Q_OBJECT
 public:
     explicit impression(QWidget *parent = nullptr);
-    void printListExamen(QList<ModelExamList>);
+    void printListExamen(QList<ModelExamList>,QString);
     void printBorderau(QList<ModelBordereau>);
 
 signals:

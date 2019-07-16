@@ -8,19 +8,36 @@ impression::impression(QWidget *parent) : QWidget(parent)
 
 }
 
-void impression::printListExamen(QList<ModelExamList> myList)
+void impression::printListExamen(QList<ModelExamList> myList,QString date)
 {
     t_autoEcole *a = new t_autoEcole;
     int rows = myList.length();
     QtRPT *report = new QtRPT(this) ;
     report->loadReport(":/Templates/Liste_Examen.xml");
     report->recordCount.append(rows);
+
+    for(int i= 0;i<myList.length();i++)
+    {
+        qDebug()<< myList.at(i).NumDossier
+               << myList.at(i).Prenom
+               << myList.at(i).Nom
+               << myList.at(i).Date_De_Naissance
+               << myList.at(i).NatExamen
+               << myList.at(i).cat
+               << QString::number(myList.at(i).NbrCandidats)
+               << QString::number(myList.at(i).NbrCode)
+               << QString::number(myList.at(i).NbrCirc)
+               << QString::number(myList.at(i).NbrM);
+
+
+    }
+
     connect(report, &QtRPT::setValue, [&](int recNo,
             QString paramName, QVariant &paramValue, const int reportPage){
 
-        if(paramName == "NomAuto")           paramValue = a->getNom() ;
-        if(paramName == "AdresseAuto")       paramValue = a->getAdresse();
-        if(paramName == "NumTelAuto")        paramValue = a->getNumTel();
+        if(paramName == "NomAuto")           paramValue = a->getNOM() ;
+        if(paramName == "AdresseAuto")       paramValue = a->getADRESSE();
+        if(paramName == "NumTelAuto")        paramValue = a->getTELEPHONE();
         if(paramName == "WilayaAuto")        paramValue = "Oran";
         if(paramName == "Num")               paramValue = QString::number(recNo+1);
         if(paramName == "NumDossier")        paramValue = myList.at(recNo).NumDossier;
@@ -38,7 +55,7 @@ void impression::printListExamen(QList<ModelExamList> myList)
         if(paramName == "NbrCode")           paramValue = QString::number(myList.at(recNo).NbrCode);
         if(paramName == "NbrCirc")           paramValue = QString::number(myList.at(recNo).NbrCirc);
         if(paramName == "NbrM")              paramValue = QString::number(myList.at(recNo).NbrM);
-
+        if(paramName == "DateExamen")               paramValue = date;
 
 
 

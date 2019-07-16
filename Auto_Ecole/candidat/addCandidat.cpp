@@ -91,7 +91,7 @@ void addCandidat::on_pushButton_Valider_clicked()
     candidatsTable.setCIN                 (ui->lineEdit_numCin->text());
     candidatsTable.setTELEPHONE           (ui->lineEdit_numTelephone->text());
     candidatsTable.setNATIONALITE         (ui->lineEdit_nationnalite->text());
-    candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text().toInt());
+    candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text());
     candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate().toString());
 
 

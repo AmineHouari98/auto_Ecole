@@ -2,6 +2,7 @@
 #define DETAILSEXAM_H
 
 #include <QDialog>
+#include <QSqlQuery>
 
 #include "t_examens.h"
 #include "t_candidats.h"
@@ -35,7 +36,7 @@ private:
     Ui::detailsExam *ui;
     t_examens *tableExamens;
     t_inter *tableInter;
-    QSqlQuery query;
+    impression printer;
 
     void setEditable(bool);
     void modifyOnDatabase();

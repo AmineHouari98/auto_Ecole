@@ -94,7 +94,7 @@ void profilCandidat::setValuesOnLineEdit(int id)
     ui->lineEdit_numCin->setText(tableCandidats->getCIN());
     ui->lineEdit_numTelephone->setText(tableCandidats->getTELEPHONE());
     ui->lineEdit_nationnalite->setText(tableCandidats->getNATIONALITE());
-    ui->lineEdit_numDossier->setText(QString::number(tableCandidats->getDOSSIER()));
+    ui->lineEdit_numDossier->setText(tableCandidats->getDOSSIER());
 
 
     tableCaisse->where("idTransaction = "+QString::number(tableCandidats->getid())+" AND user_type = 'C'" );
@@ -135,7 +135,7 @@ void profilCandidat::modifyOnDatabase()
     tableCandidats->setCIN                 (ui->lineEdit_numCin->text());
     tableCandidats->setTELEPHONE           (ui->lineEdit_numTelephone->text());
     tableCandidats->setNATIONALITE         (ui->lineEdit_nationnalite->text());
-    tableCandidats->setDOSSIER             (ui->lineEdit_numDossier->text().toInt());
+    tableCandidats->setDOSSIER             (ui->lineEdit_numDossier->text());
 
     tableCandidats->update() ;
 

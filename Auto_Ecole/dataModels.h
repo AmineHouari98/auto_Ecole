@@ -6,16 +6,11 @@
 class ModelExamList
 {
     public:
-    QString Nom, Prenom,NatExamen,cat,Date_De_Naissance;
+    QString Nom, Prenom,NatExamen,cat,Date_De_Naissance,NumDossier;
 
-    int NbrCandidats,NbrCode, NbrM, NbrCirc,NumDossier;
+    int NbrCandidats=0,NbrCode=0, NbrM=0, NbrCirc=0;
 
-    void calc(){
-        NbrCandidats++;
-        if(NatExamen == "Code") NbrCode++;
-        else if(NatExamen == "Circuit")Nbr
-        else if(NatExamen == "Manoeuvre")
-    }
+
 
     enum TableName
     {

@@ -11,9 +11,9 @@ public:
     t_candidats() { init(this); }
     ~t_candidats() {;}
 
-    SYS_PROPERTY(int,      id)
+    SYS_PROPERTY(int,id)
 
-    AUTO_PROPERTY(int,     DOSSIER)
+    AUTO_PROPERTY(QString, DOSSIER)
     AUTO_PROPERTY(QString, NOM)
     AUTO_PROPERTY(QString, PRENOM)
     AUTO_PROPERTY(QString, NOM_ARABE)
@@ -22,8 +22,9 @@ public:
     AUTO_PROPERTY(QString, LIEU_DE_NAISSANCE)
     AUTO_PROPERTY(QString, NATIONALITE)
     AUTO_PROPERTY(QString, ADRESSE)
-    AUTO_PROPERTY(QString,     CIN)
-    AUTO_PROPERTY(QString,     TELEPHONE)
+    AUTO_PROPERTY(QString, CIN)
+    AUTO_PROPERTY(QString, TELEPHONE)
+    AUTO_PROPERTY(QString, PROCHAIN_EXAMEN)
     AUTO_PROPERTY(int,     idDocuments)
     AUTO_PROPERTY(QString, DATE_INSCRIPTION)
 
