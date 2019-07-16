@@ -15,7 +15,7 @@ class ModelExamList
     enum TableName
     {
        _00Nom, _01Prenom,_02NatExamen,_03cat,_04Date_De_Naissance,
-        _05NbrCandidats,_06NbrCode, _07NbrM, _08NbrCirc
+        _05NbrCandidats,_06NbrCode, _07NbrM, _08NbrCirc, _09NumDossier
     };
 
 };
