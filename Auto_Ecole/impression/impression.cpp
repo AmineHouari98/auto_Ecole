@@ -2,9 +2,9 @@
 #include "mydatabase.h"
 #include "qtrpt.h"
 
-impression::impression(QWidget *parent) : QWidget(parent) , ui(new Ui::impression)
+impression::impression(QWidget *parent) : QWidget(parent)
 {
-    ui->setupUi(this);
+
 
 }
 
