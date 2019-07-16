@@ -94,6 +94,11 @@ void impression::printListExamen(QList<ModelExamList> myList,QString date)
 
 }
 
+impression::~impression()
+{
+    delete ui;
+}
+
 void impression::printBorderau(QList<ModelBordereau> myList)
 {
 
