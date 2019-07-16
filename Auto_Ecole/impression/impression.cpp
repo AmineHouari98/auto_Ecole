@@ -40,22 +40,51 @@ void impression::printListExamen(QList<ModelExamList> myList,QString date)
         if(paramName == "NumTelAuto")        paramValue = a->getTELEPHONE();
         if(paramName == "WilayaAuto")        paramValue = "Oran";
         if(paramName == "Num")               paramValue = QString::number(recNo+1);
-        if(paramName == "NumDossier")        paramValue = myList.at(recNo).NumDossier;
-        if(paramName == "Prenom")            paramValue = myList.at(recNo).Prenom;
+        if(paramName == "NumDossier") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_09NumDossier) == 0) return;
+            paramValue = myList.at(recNo).NumDossier;
+        }
+        if(paramName == "Prenom") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_01Prenom) == 0) return;
+            paramValue = myList.at(recNo).Prenom;
+        }
         if(paramName == "Nom")            {
-
+            if (ui->tableWidget->item(recNo,ModelExamList::_00Nom) == 0) return;
             if(QString(myList.at(recNo).Nom).length()>=8)paramValue = myList.at(recNo).Nom+"\n";
             else paramValue = myList.at(recNo).Nom;
 
         }
-        if(paramName == "Date_De_Naissance") paramValue = myList.at(recNo).Date_De_Naissance;
-        if(paramName == "NatExamen")         paramValue = myList.at(recNo).NatExamen;
-        if(paramName == "cat")               paramValue = myList.at(recNo).cat;
-        if(paramName == "NbrCandidats")      paramValue = QString::number(myList.at(recNo).NbrCandidats);
-        if(paramName == "NbrCode")           paramValue = QString::number(myList.at(recNo).NbrCode);
-        if(paramName == "NbrCirc")           paramValue = QString::number(myList.at(recNo).NbrCirc);
-        if(paramName == "NbrM")              paramValue = QString::number(myList.at(recNo).NbrM);
-        if(paramName == "DateExamen")               paramValue = date;
+        if(paramName == "Date_De_Naissance") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_04Date_De_Naissance) == 0) return;
+            paramValue = myList.at(recNo).Date_De_Naissance;
+        }
+        if(paramName == "NatExamen") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_02NatExamen) == 0) return;
+            paramValue = myList.at(recNo).NatExamen;
+        }
+        if(paramName == "cat") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_03cat) == 0) return;
+            paramValue = myList.at(recNo).cat;
+        }
+        if(paramName == "NbrCandidats") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_05NbrCandidats) == 0) return;
+            paramValue = QString::number(myList.at(recNo).NbrCandidats);
+        }
+        if(paramName == "NbrCode") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_06NbrCode) == 0) return;
+            paramValue = QString::number(myList.at(recNo).NbrCode);
+        }
+        if(paramName == "NbrCirc") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_08NbrCirc) == 0) return;
+            paramValue = QString::number(myList.at(recNo).NbrCirc);
+        }
+        if(paramName == "NbrM") {
+            if (ui->tableWidget->item(recNo,ModelExamList::_07NbrM) == 0) return;
+            paramValue = QString::number(myList.at(recNo).NbrM);
+        }
+        if(paramName == "DateExamen") {
+            paramValue = date;
+        }
 
 
 
