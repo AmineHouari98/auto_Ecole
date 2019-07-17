@@ -27,7 +27,7 @@ void addMoniteur::on_pushButton_Valider_clicked()
     moniteursTable.setPRENOM              (ui->lineEdit_prenom->text());
     moniteursTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
     moniteursTable.setADRESSE             (ui->lineEdit_adresseAr->text());
-    moniteursTable.setPERMIS               (ui->lineEdit_numCin->text());
+    moniteursTable.setPERMIS               (ui->lineEdit_numPermis->text());
     moniteursTable.setTELEPHONE           (ui->lineEdit_numTelephone->text());
     moniteursTable.setDATE_AJOUT    (QDate::currentDate().toString());
 
@@ -42,5 +42,26 @@ void addMoniteur::on_pushButton_Valider_clicked()
 void addMoniteur::on_pushButton_Annuler_clicked()
 {
     close();
+}
+
+bool addMoniteur::verifToutBon()
+{
+    if ( ui->lineEdit_nom->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_prenom->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_numPermis->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_prenom->text().isEmpty() )
+    {
+        return true;
+    }
+
 }
 

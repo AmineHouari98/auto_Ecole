@@ -20,6 +20,7 @@ public:
 private slots:
     void on_pushButton_Valider_clicked();
     void on_pushButton_Annuler_clicked();
+    bool verifToutBon();
 private:
     Ui::addMoniteur *ui;
     t_moniteurs moniteursTable;
