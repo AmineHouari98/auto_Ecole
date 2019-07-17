@@ -65,6 +65,12 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     ui->comboBox_wilaya->addItems(listWilaya);
     ui->lineEdit_nationnalite->setText("جزائرية");
 
+    // tbaya3 of textfields
+    ui->lineEdit_numCin->setMaxLength(9);
+    ui->lineEdit_numTelephone->setMaxLength(10);
+    ui->spinBox_ins->setRange(10000,50000);
+    ui->spinBox_PrE->setRange(0,4500);
+
 
 }
 
@@ -106,5 +112,11 @@ void addCandidat::on_pushButton_Valider_clicked()
 void addCandidat::on_pushButton_Annuler_clicked()
 {
     close();
+}
+
+bool addCandidat::verifToutBon()
+{
+
+
 }
 
