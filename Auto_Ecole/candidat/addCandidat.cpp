@@ -114,6 +114,18 @@ void addCandidat::on_pushButton_Annuler_clicked()
     close();
 }
 
+void addCandidat::on_pushButton_clicked()
+{
+
+    ui->checkBox_APaternel->setChecked(true);
+    ui->checkBox_CIN->setChecked(true);
+    ui->checkBox_Groupage->setChecked(true);
+    ui->checkBox_Photo->setChecked(true);
+    ui->checkBox_Residence->setChecked(true);
+    ui->checkBox_Timbre->setChecked(true);
+
+}
+
 bool addCandidat::verifToutBon()
 {
 
