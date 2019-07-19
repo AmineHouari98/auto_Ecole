@@ -126,7 +126,7 @@ void addCandidat::on_pushButton_clicked()
 
 }
 
-bool addCandidat::verifToutBon()
+bool addCandidat::checkIntegrity()//verifToutBon() => that's gay man
 {
 
 
