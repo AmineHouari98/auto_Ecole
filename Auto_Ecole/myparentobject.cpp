@@ -434,9 +434,9 @@ QString MyParentObject::addcommat(unsigned long long n)
     } while (n);
     return QString::fromStdString(s);
 }
-bool MyParentObject::checkIntegrity(QList<QLineEdit*> list)//verifToutBon() => that's gay man
+int MyParentObject::checkIntegrity(QList<QLineEdit*> list)//verifToutBon() => that's gay man
 {
-
+    int ok;
     for(int i=0;i<list.length();i++)
     {
 
@@ -444,10 +444,10 @@ bool MyParentObject::checkIntegrity(QList<QLineEdit*> list)//verifToutBon() => t
 
         {
             list.at(i)->setStyleSheet("background-color:red;");
-            return true;
 
         }
     }
+    return ok;
 
 }
 

@@ -105,7 +105,7 @@ addCandidat::~addCandidat()
 
 void addCandidat::on_pushButton_Valider_clicked()
 {
-    if(checkIntegrity(lineList))
+    if(checkIntegrity(lineList)<lineList.length())
     {
        msgWarning("Attention",champVide);
     }

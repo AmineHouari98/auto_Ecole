@@ -27,13 +27,13 @@ public:
 
     void setSettings(QString key, QVariant data);
     QVariant getSettings(QString key);
-    bool checkIntegrity(QList<QLineEdit*>);
+    int checkIntegrity(QList<QLineEdit*>);
     static void chiffreEnLettre(unsigned int chiffre, char *lettre);
     static QString result(int number);
     static QString addcommat(unsigned long long n);
 private:
-        QSettings *_mySettings;
-          QString thisPath, settingsFilePath ;
+    QSettings *_mySettings;
+    QString thisPath, settingsFilePath ;
 };
 
 #endif // MYPARENTOBJECT_H
