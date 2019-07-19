@@ -158,19 +158,4 @@ void addCandidat::on_pushButton_clicked()
 
 }
 
-bool addCandidat::checkIntegrity(QList<QLineEdit*> list)//verifToutBon() => that's gay man
-{
-
-    for(int i=0;i<list.length();i++)
-    {
-
-        if(list.at(i)->text().isEmpty())
-
-        {
-            return true;
-
-        }
-    }
-
-}
 

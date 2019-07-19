@@ -434,4 +434,19 @@ QString MyParentObject::addcommat(unsigned long long n)
     } while (n);
     return QString::fromStdString(s);
 }
+bool MyParentObject::checkIntegrity(QList<QLineEdit*> list)//verifToutBon() => that's gay man
+{
+
+    for(int i=0;i<list.length();i++)
+    {
+
+        if(list.at(i)->text().isEmpty())
+
+        {
+            return true;
+
+        }
+    }
+
+}
 

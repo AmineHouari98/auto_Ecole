@@ -7,6 +7,7 @@
 #include <QSettings>
 #include <QDir>
 #include <QApplication>
+#include <QLineEdit>
 
 
 class MyParentObject
@@ -26,7 +27,7 @@ public:
 
     void setSettings(QString key, QVariant data);
     QVariant getSettings(QString key);
-
+    bool checkIntegrity(QList<QLineEdit*>);
     static void chiffreEnLettre(unsigned int chiffre, char *lettre);
     static QString result(int number);
     static QString addcommat(unsigned long long n);
