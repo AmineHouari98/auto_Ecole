@@ -72,6 +72,29 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     ui->spinBox_ins->setRange(10000,50000);
     ui->spinBox_PrE->setRange(0,4500);
 
+    lineList.append(ui->lineEdit_nom);
+    lineList.append(ui->lineEdit_prenom);
+    lineList.append(ui->lineEdit_nomAr);
+    lineList.append(ui->lineEdit_prenomAr);
+    lineList.append(ui->lineEdit_adresseAr);
+    lineList.append(ui->lineEdit_numCin);
+    lineList.append(ui->lineEdit_numTelephone);
+    lineList.append(ui->lineEdit_nationnalite);
+    lineList.append(ui->lineEdit_numDossier);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -82,7 +105,7 @@ addCandidat::~addCandidat()
 
 void addCandidat::on_pushButton_Valider_clicked()
 {
-    if(verifToutBon())
+    if(checkIntegrity(lineList))
     {
        msgWarning("Attention",champVide);
     }
@@ -135,39 +158,18 @@ void addCandidat::on_pushButton_clicked()
 
 }
 
-bool addCandidat::checkIntegrity()//verifToutBon() => that's gay man
+bool addCandidat::checkIntegrity(QList<QLineEdit*> list)//verifToutBon() => that's gay man
 {
-    if ( ui->lineEdit_adresseAr->text().isEmpty() )
+
+    for(int i=0;i<list.length();i++)
     {
-        return true;
-    }
-    else if ( ui->lineEdit_nomAr->text().isEmpty() )
-    {
-        return true;
-    }
-    else if ( ui->lineEdit_prenomAr->text().isEmpty() )
-    {
-        return true;
-    }
-    else if ( ui->lineEdit_nom->text().isEmpty() )
-    {
-        return true;
-    }
-    else if ( ui->lineEdit_prenom->text().isEmpty() )
-    {
-        return true;
-    }
-    else if ( ui->lineEdit_nationnalite->text().isEmpty() )
-    {
-        return true;
-    }
-    else if ( ui->dateEdit_naissanceCandidat->text().isEmpty() )
-    {
-        return true;
-    }
-    else if ( ui->lineEdit_numTelephone->text().isEmpty() )
-    {
-        return true;
+
+        if(list.at(i)->text().isEmpty())
+
+        {
+            return true;
+
+        }
     }
 
 }

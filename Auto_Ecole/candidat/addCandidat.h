@@ -22,10 +22,11 @@ private slots:
     void on_pushButton_Valider_clicked();
     void on_pushButton_Annuler_clicked();
     void on_pushButton_clicked();
-    bool checkIntegrity();
+    bool checkIntegrity(QList<QLineEdit*>);
 private:
     Ui::addCandidat *ui;
     t_candidats candidatsTable;
+    QList<QLineEdit*> lineList;
 };
 
 #endif // ADDCANDIDAT_H

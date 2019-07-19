@@ -22,7 +22,6 @@ void addMoniteur::on_pushButton_Valider_clicked()
 {
     moniteursTable.setCurrentRow(-1);
 
-
     moniteursTable.setNOM                 (ui->lineEdit_nom->text());
     moniteursTable.setPRENOM              (ui->lineEdit_prenom->text());
     moniteursTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
