@@ -10,7 +10,7 @@ namespace Ui {
 class addCandidat;
 }
 
-class addCandidat : public QDialog
+class addCandidat : public QDialog , public MyParentObject
 {
      Q_OBJECT
 
