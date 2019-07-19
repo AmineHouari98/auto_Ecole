@@ -117,6 +117,7 @@ void addCandidat::on_pushButton_Valider_clicked()
         QStringList selectedWilaya =wilaya.split("-");
         qDebug()<<selectedWilaya.at(0)+"    "+selectedWilaya.at(1);
 
+
         candidatsTable.setNOM                 (ui->lineEdit_nom->text());
         candidatsTable.setPRENOM              (ui->lineEdit_prenom->text());
         candidatsTable.setNOM_ARABE           (ui->lineEdit_nomAr->text());
