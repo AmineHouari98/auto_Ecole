@@ -259,7 +259,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_Res">
+          <widget class="QCheckBox" name="checkBox_Residence">
            <property name="text">
             <string>Residence</string>
            </property>
@@ -270,7 +270,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_5">
          <item>
-          <widget class="QCheckBox" name="checkBox_Tim">
+          <widget class="QCheckBox" name="checkBox_Timbre">
            <property name="text">
             <string>Timbre</string>
            </property>
@@ -288,14 +288,14 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
-          <widget class="QCheckBox" name="checkBox_Gr">
+          <widget class="QCheckBox" name="checkBox_Groupage">
            <property name="text">
             <string>Groupage</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_AP">
+          <widget class="QCheckBox" name="checkBox_APaternel">
            <property name="text">
             <string>Autorisation Paternel</string>
            </property>
