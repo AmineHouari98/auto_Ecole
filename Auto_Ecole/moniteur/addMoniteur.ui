@@ -33,7 +33,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_nom"/>
+            <widget class="QLineEdit" name="lineEdit_nom">
+             <property name="styleSheet">
+              <string notr="true">border-color: rgb(255, 87, 10);</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -88,7 +92,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_numCin"/>
+              <widget class="QLineEdit" name="lineEdit_numPermis"/>
              </item>
             </layout>
            </item>

@@ -17,6 +17,7 @@ public:
 
     QString convertWhidaToLetter(QString whida, int position);
     QString spellLetter(QString number);
+    QString champVide = "completez les champs manquants s'il vous plaît";
 
     bool msgQuestion(QString title, QString body);
     void msgCritical(QString title, QString body);

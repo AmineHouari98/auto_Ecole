@@ -1,6 +1,7 @@
 #include "addCandidat.h"
 #include "ui_addCandidat.h"
 
+
 addCandidat::addCandidat(QWidget *parent, int id) :
     QDialog(parent),
     ui(new Ui::addCandidat)
@@ -81,32 +82,40 @@ addCandidat::~addCandidat()
 
 void addCandidat::on_pushButton_Valider_clicked()
 {
-    candidatsTable.setCurrentRow(-1);
-    QString wilaya=ui->comboBox_wilaya->itemText(ui->comboBox_wilaya->currentIndex());
-
-    QStringList selectedWilaya =wilaya.split("-");
-    qDebug()<<selectedWilaya.at(0)+"    "+selectedWilaya.at(1);
-
-    candidatsTable.setNOM                 (ui->lineEdit_nom->text());
-    candidatsTable.setPRENOM              (ui->lineEdit_prenom->text());
-    candidatsTable.setNOM_ARABE           (ui->lineEdit_nomAr->text());
-    candidatsTable.setPRENOM_ARABE        (ui->lineEdit_prenomAr->text());
-    candidatsTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
-    candidatsTable.setLIEU_DE_NAISSANCE   (selectedWilaya.at(1));
-    candidatsTable.setADRESSE             (ui->lineEdit_adresseAr->text());
-    candidatsTable.setCIN                 (ui->lineEdit_numCin->text());
-    candidatsTable.setTELEPHONE           (ui->lineEdit_numTelephone->text());
-    candidatsTable.setNATIONALITE         (ui->lineEdit_nationnalite->text());
-    candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text());
-    candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate().toString());
-
-
-    if(candidatsTable.currentRow() < 0)
-        candidatsTable.insert() ;
+    if(verifToutBon())
+    {
+       msgWarning("Attention",champVide);
+    }
     else
-        candidatsTable.update() ;
+    {
+        candidatsTable.setCurrentRow(-1);
+        QString wilaya=ui->comboBox_wilaya->itemText(ui->comboBox_wilaya->currentIndex());
 
-    close();
+        QStringList selectedWilaya =wilaya.split("-");
+        qDebug()<<selectedWilaya.at(0)+"    "+selectedWilaya.at(1);
+
+        candidatsTable.setNOM                 (ui->lineEdit_nom->text());
+        candidatsTable.setPRENOM              (ui->lineEdit_prenom->text());
+        candidatsTable.setNOM_ARABE           (ui->lineEdit_nomAr->text());
+        candidatsTable.setPRENOM_ARABE        (ui->lineEdit_prenomAr->text());
+        candidatsTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
+        candidatsTable.setLIEU_DE_NAISSANCE   (selectedWilaya.at(1));
+        candidatsTable.setADRESSE             (ui->lineEdit_adresseAr->text());
+        candidatsTable.setCIN                 (ui->lineEdit_numCin->text());
+        candidatsTable.setTELEPHONE           (ui->lineEdit_numTelephone->text());
+        candidatsTable.setNATIONALITE         (ui->lineEdit_nationnalite->text());
+        candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text());
+        candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate().toString());
+
+
+        if(candidatsTable.currentRow() < 0)
+            candidatsTable.insert() ;
+        else
+            candidatsTable.update() ;
+
+        close();
+    }
+
 }
 
 void addCandidat::on_pushButton_Annuler_clicked()
@@ -116,7 +125,38 @@ void addCandidat::on_pushButton_Annuler_clicked()
 
 bool addCandidat::verifToutBon()
 {
-
+    if ( ui->lineEdit_adresseAr->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_nomAr->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_prenomAr->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_nom->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_prenom->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_nationnalite->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->dateEdit_naissanceCandidat->text().isEmpty() )
+    {
+        return true;
+    }
+    else if ( ui->lineEdit_numTelephone->text().isEmpty() )
+    {
+        return true;
+    }
 
 }
 

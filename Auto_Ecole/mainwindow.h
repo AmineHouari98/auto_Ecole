@@ -23,6 +23,7 @@ class MainWindow : public QMainWindow, public MyParentObject
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    QString champVide = "completez les champs vides s'il vous plaît!";
 
 private slots:
     void on_actionQuiter_triggered() { close(); }
