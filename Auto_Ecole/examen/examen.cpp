@@ -44,6 +44,7 @@ void examen::openDetails()
     tableExamens->setCurrentRow(ui->tableView->currentIndex().row());
     detailsExam detailE;
     detailE.setValuesOnLineEdit(tableExamens->getid());
+    detailE.executeQuery(tableExamens->getid());
     detailE.exec();
     tableExamens->select();
 

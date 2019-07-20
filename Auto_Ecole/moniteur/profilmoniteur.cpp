@@ -84,17 +84,15 @@ void profilMoniteur::on_pushButton_modifier_clicked()
 {
     if(ui->pushButton_modifier->text()=="Valider")
     {
-
         modifyOnDatabase();
         emit ui->pushButton_annuler->clicked(false);
 
-
-
     }
-    if(ui->pushButton_modifier->text()=="Modifier")
+    else if(ui->pushButton_modifier->text()=="Modifier")
     {
         setEditable(true);
         changeButtonState("Valider",true);
+
     }
 }
 

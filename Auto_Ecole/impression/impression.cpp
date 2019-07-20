@@ -8,13 +8,26 @@ impression::impression(QWidget *parent) : QWidget(parent)
 
 }
 
-void impression::printListExamen(QList<ModelExamList> myList,QString date)
+void impression::printListExamen(QList<ModelExamList> myList,QString date,int Cand,int code,int man ,int circ)
 {
     t_autoEcole *a = new t_autoEcole;
     int rows = myList.length();
     QtRPT *report = new QtRPT(this) ;
     report->loadReport(":/Templates/Liste_Examen.xml");
     report->recordCount.append(rows);
+
+    for(int i= 0;i<myList.length();i++)
+    {
+        qDebug()<< myList.at(i).NumDossier
+               << myList.at(i).Prenom
+               << myList.at(i).Nom
+               << myList.at(i).Date_De_Naissance
+               << myList.at(i).NatExamen
+               << myList.at(i).cat;
+
+
+    }
+
 
 
     connect(report, &QtRPT::setValue, [&](int recNo,
@@ -45,16 +58,16 @@ void impression::printListExamen(QList<ModelExamList> myList,QString date)
             paramValue = myList.at(recNo).cat;
         }
         if(paramName == "CANDIDATS") {
-            paramValue = QString::number(myList.at(recNo).NbrCandidats);
+            paramValue = QString::number(Cand);
         }
         if(paramName == "CODE") {
-            paramValue = QString::number(myList.at(recNo).NbrCode);
+            paramValue = QString::number(code);
         }
         if(paramName == "CIRC") {
-            paramValue = QString::number(myList.at(recNo).NbrCirc);
+            paramValue = QString::number(circ);
         }
         if(paramName == "CMAN") {
-            paramValue = QString::number(myList.at(recNo).NbrM);
+            paramValue = QString::number(man);
         }
         if(paramName == "CDATE") {
             paramValue = date;

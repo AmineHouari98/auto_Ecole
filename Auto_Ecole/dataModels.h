@@ -8,14 +8,12 @@ class ModelExamList
     public:
     QString Nom, Prenom,NatExamen,cat,Date_De_Naissance,NumDossier;
 
-    int NbrCandidats=0,NbrCode=0, NbrM=0, NbrCirc=0;
-
 
 
     enum TableName
     {
        _00Nom, _01Prenom,_02NatExamen,_03cat,_04Date_De_Naissance,
-        _05NbrCandidats,_06NbrCode, _07NbrM, _08NbrCirc, _09NumDossier
+         _05NumDossier
     };
 
 };

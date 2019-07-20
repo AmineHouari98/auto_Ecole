@@ -23,6 +23,7 @@ public:
     explicit detailsExam(QWidget *parent = 0);
     ~detailsExam();
     void setValuesOnLineEdit(int);
+    void executeQuery(int);
 
 public slots:
     void on_pushButton_modifier_clicked();

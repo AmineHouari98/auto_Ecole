@@ -43,6 +43,40 @@ void detailsExam::setValuesOnLineEdit(int index)
     ui->dateEdit_Date->setDate(Date);
 
 
+
+
+}
+
+void detailsExam::setEditable(bool ok)
+{
+    ui->lineEdit_nomExaminateur->setEnabled(ok);
+    ui->lineEdit_Lieu->setEnabled(ok);
+    ui->dateEdit_Date->setEnabled(ok);
+
+}
+
+void detailsExam::modifyOnDatabase()
+{
+    tableExamens->setEXAMINATEUR   (ui->lineEdit_nomExaminateur->text());
+    tableExamens->setLIEU          (ui->lineEdit_Lieu->text());
+    tableExamens->setDATE          (ui->dateEdit_Date->text());
+
+
+    tableExamens->update() ;
+
+}
+
+void detailsExam::changeButtonState(QString title, bool isVisible)
+{
+
+    ui->pushButton_modifier->setText(title);
+    ui->pushButton_annuler->setVisible(isVisible);
+
+}
+
+void detailsExam::executeQuery(int index)
+{
+
     QSqlQuery query;
 
     query.exec("SELECT DOSSIER, NOM, PRENOM, DATE_DE_NAISSANCE, PROCHAIN_EXAMEN "
@@ -75,52 +109,21 @@ void detailsExam::setValuesOnLineEdit(int index)
 
 
 
-
-
-}
-
-void detailsExam::setEditable(bool ok)
-{
-    ui->lineEdit_nomExaminateur->setEnabled(ok);
-    ui->lineEdit_Lieu->setEnabled(ok);
-    ui->dateEdit_Date->setEnabled(ok);
-
-}
-
-void detailsExam::modifyOnDatabase()
-{
-    tableExamens->setEXAMINATEUR   (ui->lineEdit_nomExaminateur->text());
-    tableExamens->setLIEU          (ui->lineEdit_Lieu->text());
-    tableExamens->setDATE          (ui->dateEdit_Date->text());
-
-
-    tableExamens->update() ;
-
-}
-
-void detailsExam::changeButtonState(QString title, bool isVisible)
-{
-
-    ui->pushButton_modifier->setText(title);
-    ui->pushButton_annuler->setVisible(isVisible);
-
 }
 
 void detailsExam::on_pushButton_modifier_clicked()
 {
     if(ui->pushButton_modifier->text()=="Valider")
     {
-
         modifyOnDatabase();
         emit ui->pushButton_annuler->clicked(false);
 
-
-
     }
-    if(ui->pushButton_modifier->text()=="Modifier")
+    else if(ui->pushButton_modifier->text()=="Modifier")
     {
         setEditable(true);
         changeButtonState("Valider",true);
+
     }
 }
 
@@ -128,6 +131,7 @@ void detailsExam::on_pushButton_annuler_clicked()
 {
     setEditable(false);
     setValuesOnLineEdit(tableExamens->getid());
+
     ui->pushButton_annuler->setVisible(false);
     changeButtonState("Modifier",false);
 }
@@ -147,15 +151,14 @@ void detailsExam::on_toolButton_ImprimerListe_clicked()
         model.Date_De_Naissance =   ui->tableWidget->item(i,3)->text();
         model.NatExamen =           ui->tableWidget->item(i,4)->text();
         model.cat = "B";
-        model.NbrCandidats = rowCount;
 
-        if(model.NatExamen == "Code") { NbrCode++; model.NbrCode = NbrCode;}
-        if(model.NatExamen == "Circulation") {NbrCirc++;model.NbrCirc = NbrCirc;}
-        if(model.NatExamen == "Manoeuvre") {NbrM++;model.NbrM = NbrM;}
+        if(model.NatExamen == "Code") NbrCode++;
+        else if(model.NatExamen == "Circulation") NbrCirc++;
+        else if(model.NatExamen == "Manoeuvre") NbrM++;
 
         myList.append(model);
 
     }
-    printer.printListExamen(myList,tableExamens->getDATE());
+    printer.printListExamen(myList,tableExamens->getDATE(),rowCount,NbrCode,NbrM,NbrCirc);
 
 }
