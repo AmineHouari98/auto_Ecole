@@ -23,6 +23,18 @@ detailsExam::detailsExam(QWidget *parent) :
     ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
 
+
+
+    pWidget = new QWidget();
+    btn_edit = new QPushButton();
+
+    btn_edit->setText("Edit");
+    QHBoxLayout* pLayout = new QHBoxLayout(pWidget);
+    pLayout->addWidget(btn_edit);
+    pLayout->setAlignment(Qt::AlignCenter);
+    pLayout->setContentsMargins(0, 0, 0, 0);
+    pWidget->setLayout(pLayout);
+
 }
 
 detailsExam::~detailsExam()
@@ -87,6 +99,9 @@ void detailsExam::executeQuery(int index)
     int recordsNumber =0;
 
     while (query.next()) {
+
+
+
         QString DOSSIER = query.value(0).toString();
         QString NOM = query.value(1).toString();
         QString PRENOM = query.value(2).toString();
@@ -100,6 +115,8 @@ void detailsExam::executeQuery(int index)
         ui->tableWidget->setItem(recordsNumber, 2, new QTableWidgetItem(PRENOM));
         ui->tableWidget->setItem(recordsNumber, 3, new QTableWidgetItem(DATE_DE_NAISSANCE));
         ui->tableWidget->setItem(recordsNumber, 4, new QTableWidgetItem(NATURE_EXAMEN));
+        ui->tableWidget->setCellWidget(recordsNumber, 5, pWidget);
+
 
         qDebug()<<DOSSIER<<NOM<<PRENOM<<DATE_DE_NAISSANCE<<NATURE_EXAMEN;
 

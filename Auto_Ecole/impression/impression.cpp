@@ -1,16 +1,17 @@
 #include "impression.h"
-#include "mydatabase.h"
 #include "qtrpt.h"
 
 impression::impression(QWidget *parent) : QWidget(parent)
 {
+
+    cad = new t_candidats;
+    a = new t_autoEcole;
 
 
 }
 
 void impression::printListExamen(QList<ModelExamList> myList,QString date,int Cand,int code,int man ,int circ)
 {
-    t_autoEcole *a = new t_autoEcole;
     int rows = myList.length();
     QtRPT *report = new QtRPT(this) ;
     report->loadReport(":/Templates/Liste_Examen.xml");
@@ -83,6 +84,30 @@ void impression::printListExamen(QList<ModelExamList> myList,QString date,int Ca
 
 void impression::printBorderau(QList<ModelBordereau> myList)
 {
+    int rows = cad->rowCount();
+    QtRPT *report = new QtRPT(this) ;
+    report->loadReport(":/Templates/Liste_Examen.xml");
+    report->recordCount.append(rows);
+    connect(report, &QtRPT::setValue, [&](int recNo,
+            QString paramName, QVariant &paramValue, const int reportPage){
+
+        if(paramName == "NomAuto")           paramValue = a->getNOM() ;
+        if(paramName == "AdresseAuto")       paramValue = a->getADRESSE();
+        if(paramName == "NumTelAuto")        paramValue = a->getTELEPHONE();
+        if(paramName == "WilayaAuto")        paramValue = "Oran";
+        if(paramName == "Num")               paramValue = QString::number(recNo+1);
+        if(paramName == "Prenom")               {cad->setCurrentRow(recNo);paramValue = cad->getPRENOM();}
+        if(paramName == "Nom")            {
+            cad->setCurrentRow(recNo);
+            if(cad->getNOM().length()>=8)paramValue = cad->getNOM()+"\n";
+            else paramValue = cad->getNOM();
+
+        }
+        if(paramName == "Date_De_Naissance") {cad->setCurrentRow(recNo);paramValue = cad->getDATE_DE_NAISSANCE();}
+        if(paramName == "Observations")      {cad->setCurrentRow(recNo);paramValue = "";}
+        if(paramName == "NbrCandidats")      paramValue = QString::number(rows);
+
+    });
 
 }
 //DONT TOUCH THIS CODE

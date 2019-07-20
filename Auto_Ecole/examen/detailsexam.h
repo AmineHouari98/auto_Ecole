@@ -38,6 +38,8 @@ private:
     t_examens *tableExamens;
     t_inter *tableInter;
     impression printer;
+    QWidget* pWidget;
+    QPushButton* btn_edit;
 
     void setEditable(bool);
     void modifyOnDatabase();

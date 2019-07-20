@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include "dataModels.h"
+#include "mydatabase.h"
+
 
 class impression : public QWidget
 {
@@ -15,6 +17,11 @@ public:
 signals:
 
 public slots:
+
+
+private:
+    t_candidats *cad;
+    t_autoEcole *a ;
 };
 
 #endif // IMPRESSION_H
