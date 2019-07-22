@@ -51,13 +51,6 @@
          </spacer>
         </item>
         <item>
-         <widget class="QToolButton" name="toolButton">
-          <property name="text">
-           <string>Imprimer Bordereau</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QPushButton" name="btn_viewProfile">
           <property name="text">
            <string>voir le profile</string>
