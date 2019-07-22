@@ -8,7 +8,7 @@ profilCandidat::profilCandidat(QWidget *parent) :
     ui->setupUi(this);
     ui->pushButton_annuler->hide();
     this->setWindowTitle("Profil du candidat");
-    this->setWindowIcon(QIcon(":/Assets/Images/icons/profile.ico"));
+    this->setWindowIcon(QIcon(":/Assets/Images/icons/profile1.ico"));
 
     const QStringList listWilaya ={
         "1-أدرار"
