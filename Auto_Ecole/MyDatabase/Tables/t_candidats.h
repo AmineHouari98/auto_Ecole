@@ -25,7 +25,6 @@ public:
     AUTO_PROPERTY(QString, CIN)
     AUTO_PROPERTY(QString, TELEPHONE)
     AUTO_PROPERTY(QString, PROCHAIN_EXAMEN)
-    AUTO_PROPERTY(int,     idDocuments)
     AUTO_PROPERTY(QString, DATE_INSCRIPTION)
 
     ;
@@ -44,8 +43,7 @@ public:
         _09ADRESSE,
         _10CIN,
         _11TELEPHONE,
-        _12idDocuments,
-        _13DATE_INSCRIPTION,
+        _12DATE_INSCRIPTION,
     };
 };
 

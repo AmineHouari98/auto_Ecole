@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QDate>
 #include "t_candidats.h"
+#include "t_documents.h"
 #include "myparentobject.h"
 
 namespace Ui {
@@ -25,7 +26,9 @@ private slots:
 private:
     Ui::addCandidat *ui;
     t_candidats candidatsTable;
+    t_documents *documentsTable;
     QList<QLineEdit*> lineList;
+    void checkAll(bool);
 };
 
 #endif // ADDCANDIDAT_H

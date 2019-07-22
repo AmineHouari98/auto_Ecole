@@ -12,6 +12,9 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.ico"));
 
 
+    documentsTable = new t_documents;
+
+
     const QStringList listWilaya ={
         "1-أدرار"
         ,"2-الشلف"
@@ -93,7 +96,7 @@ void addCandidat::on_pushButton_Valider_clicked()
 {
     if(checkIntegrity(lineList)<lineList.length())
     {
-       msgWarning("Attention",champVide);
+        msgWarning("Attention",champVide);
     }
     else
     {
@@ -118,10 +121,19 @@ void addCandidat::on_pushButton_Valider_clicked()
         candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate().toString());
 
 
-        if(candidatsTable.currentRow() < 0)
-            candidatsTable.insert() ;
-        else
-            candidatsTable.update() ;
+
+        documentsTable->setCurrentRow(-1);
+
+        documentsTable->setAutorisation_Paternel(ui->checkBox_APaternel->checkState());
+        documentsTable->setCIN(ui->checkBox_CIN->checkState());
+        documentsTable->setGroupage(ui->checkBox_Groupage->checkState());
+        documentsTable->setPhoto(ui->checkBox_Photo->checkState());
+        documentsTable->setResidance(ui->checkBox_Residence->checkState());
+        documentsTable->setTimbre(ui->checkBox_Timbre->checkState());
+
+
+        candidatsTable.insert() ;
+        documentsTable->insert();
 
         close();
     }
@@ -135,13 +147,25 @@ void addCandidat::on_pushButton_Annuler_clicked()
 
 void addCandidat::on_pushButton_clicked()
 {
+    if(ui->pushButton->text()=="Tout Cocher")
+    {
+        checkAll(true);
+    }
+    else if (ui->pushButton->text()=="Tout Décocher")
+    {
+        checkAll(false);
+    }
 
-    ui->checkBox_APaternel->setChecked(true);
-    ui->checkBox_CIN->setChecked(true);
-    ui->checkBox_Groupage->setChecked(true);
-    ui->checkBox_Photo->setChecked(true);
-    ui->checkBox_Residence->setChecked(true);
-    ui->checkBox_Timbre->setChecked(true);
+}
+
+void addCandidat::checkAll(bool ok)
+{
+    ui->checkBox_APaternel->setChecked(ok);
+    ui->checkBox_CIN->setChecked(ok);
+    ui->checkBox_Groupage->setChecked(ok);
+    ui->checkBox_Photo->setChecked(ok);
+    ui->checkBox_Residence->setChecked(ok);
+    ui->checkBox_Timbre->setChecked(ok);
 
 }
 

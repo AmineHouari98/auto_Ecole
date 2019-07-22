@@ -89,6 +89,16 @@
             </layout>
            </item>
            <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Date de L'Examen :</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateEdit" name="dateEdit_Date"/>
+           </item>
+           <item>
             <widget class="Line" name="line">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -96,18 +106,7 @@
             </widget>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_7">
-             <item>
-              <widget class="QLabel" name="label_7">
-               <property name="text">
-                <string>Histoque des Examens :</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QDateEdit" name="dateEdit_Date"/>
-             </item>
-            </layout>
+            <layout class="QVBoxLayout" name="verticalLayout_7"/>
            </item>
           </layout>
          </item>
@@ -209,7 +208,8 @@
          <item>
           <widget class="QToolButton" name="toolButton">
            <property name="text">
-            <string>...</string>
+            <string>Associe
+Examen</string>
            </property>
           </widget>
          </item>
@@ -219,7 +219,7 @@
             <string>imprimer fiche navette</string>
            </property>
            <property name="icon">
-            <iconset resource="../ressources.qrc">
+            <iconset>
              <normaloff>:/Assets/Images/icons/print.svg</normaloff>:/Assets/Images/icons/print.svg</iconset>
            </property>
            <property name="checkable">
@@ -248,7 +248,7 @@
             <string>Liste Examen</string>
            </property>
            <property name="icon">
-            <iconset resource="../ressources.qrc">
+            <iconset>
              <normaloff>:/Assets/Images/icons/exams.ico</normaloff>:/Assets/Images/icons/exams.ico</iconset>
            </property>
            <property name="toolButtonStyle">
@@ -277,8 +277,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="../ressources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

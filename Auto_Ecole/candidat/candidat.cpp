@@ -18,7 +18,6 @@ candidat::candidat(QWidget *parent) :
     ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableView->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->tableView->hideColumn(t_candidats::_00idCandidat);
-    ui->tableView->hideColumn(t_candidats::_12idDocuments);
 
 }
 

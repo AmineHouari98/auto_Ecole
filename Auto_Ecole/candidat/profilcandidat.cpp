@@ -62,6 +62,7 @@ profilCandidat::profilCandidat(QWidget *parent) :
 
     ui->comboBox_wilaya->addItems(listWilaya);
     tableCandidats = new t_candidats;
+    tableDocuments = new t_documents;
 
 
     setEditable(false);
@@ -102,6 +103,13 @@ void profilCandidat::setValuesOnLineEdit(int id)
     tableCaisse->where("idTransaction = "+QString::number(tableCandidats->getid())+" AND user_type = 'C'" );
     tableCaisse->select();
 
+    executeQuery(tableCandidats->getid());
+
+
+
+
+
+
 }
 
 void profilCandidat::setEditable(bool ok)
@@ -117,14 +125,48 @@ void profilCandidat::setEditable(bool ok)
     ui->lineEdit_nationnalite->setEnabled(ok);
     ui->lineEdit_numDossier->setEnabled(ok);
     ui->comboBox_wilaya->setEnabled(ok);
-    ui->checkBox_3->setEnabled(ok);
-    ui->checkBox_9->setEnabled(ok);
-    ui->checkBox_10->setEnabled(ok);
-    ui->checkBox_11->setEnabled(ok);
-    ui->checkBox_11->setEnabled(ok);
-    ui->checkBox_12->setEnabled(ok);
-    ui->checkBox_13->setEnabled(ok);
+    ui->checkBox_photo->setEnabled(ok);
+    ui->checkBox_groupage->setEnabled(ok);
+    ui->checkBox_CIN->setEnabled(ok);
+    ui->checkBox_residance->setEnabled(ok);
+    ui->checkBox_Timbre->setEnabled(ok);
+    ui->checkBox_AutoP->setEnabled(ok);
 }
+
+void profilCandidat::executeQuery(int index)
+{
+
+    QSqlQuery query;
+
+    query.exec("SELECT Photo,Groupage,CIN,Residance,Timbre,Autorisation_Paternel,idCandidat "
+               "FROM t_documents "
+               "WHERE idCandidat = "+ QString::number(index));
+
+    while (query.next()) {
+
+        bool Photo                 =query.value(0).toBool();
+        bool Groupage              =query.value(1).toBool();
+        bool CIN                   =query.value(2).toBool();
+        bool Residance             =query.value(3).toBool();
+        bool Timbre                =query.value(4).toBool();
+        bool Autorisation_Paternel =query.value(5).toBool();
+
+        qDebug()<<QString::number(Photo);
+
+        ui->checkBox_photo->setChecked(Photo);
+        ui->checkBox_groupage->setChecked(Groupage);
+        ui->checkBox_CIN->setChecked(CIN);
+        ui->checkBox_residance->setChecked(Residance);
+        ui->checkBox_Timbre->setChecked(Timbre);
+        ui->checkBox_AutoP->setChecked(Autorisation_Paternel);
+
+    }
+
+
+
+}
+
+
 
 void profilCandidat::modifyOnDatabase()
 {
@@ -146,6 +188,17 @@ void profilCandidat::modifyOnDatabase()
     tableCandidats->setDOSSIER             (ui->lineEdit_numDossier->text());
 
     tableCandidats->update() ;
+
+
+
+    tableDocuments->setAutorisation_Paternel(ui->checkBox_AutoP->checkState());
+    tableDocuments->setCIN(ui->checkBox_CIN->checkState());
+    tableDocuments->setGroupage(ui->checkBox_groupage->checkState());
+    tableDocuments->setPhoto(ui->checkBox_photo->checkState());
+    tableDocuments->setResidance(ui->checkBox_residance->checkState());
+    tableDocuments->setTimbre(ui->checkBox_Timbre->checkState());
+
+    tableDocuments->update();
 
     tableCandidats->select();
 
@@ -186,7 +239,6 @@ profilCandidat::~profilCandidat()
 {
     delete ui;
 }
-
 
 void profilCandidat::on_toolbtn_histExams_clicked()
 {

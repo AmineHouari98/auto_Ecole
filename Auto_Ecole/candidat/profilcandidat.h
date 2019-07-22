@@ -30,12 +30,13 @@ private:
     void setEditable(bool);
     void modifyOnDatabase();
     void changeButtonState(QString,bool);
+    void executeQuery(int index);
 
 public slots:
     void on_pushButton_modifier_clicked();
 
     void on_pushButton_annuler_clicked();
-private slots:
+
     void on_toolbtn_histExams_clicked();
 };
 

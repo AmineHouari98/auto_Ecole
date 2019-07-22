@@ -333,42 +333,42 @@
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkBox_3">
+            <widget class="QCheckBox" name="checkBox_photo">
              <property name="text">
               <string>6 photos</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkBox_9">
+            <widget class="QCheckBox" name="checkBox_residance">
              <property name="text">
               <string>Certificat de résidence</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkBox_10">
+            <widget class="QCheckBox" name="checkBox_groupage">
              <property name="text">
               <string> carte de groupage</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkBox_11">
+            <widget class="QCheckBox" name="checkBox_CIN">
              <property name="text">
               <string> carte d'identité nationale</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkBox_12">
+            <widget class="QCheckBox" name="checkBox_AutoP">
              <property name="text">
               <string>Autorisation paternelle ( pour les moins de 18 ans )</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkBox_13">
+            <widget class="QCheckBox" name="checkBox_Timbre">
              <property name="text">
               <string>Timbre fiscale de 200 DA</string>
              </property>
