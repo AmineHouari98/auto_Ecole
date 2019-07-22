@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>854</width>
-    <height>470</height>
+    <width>904</width>
+    <height>561</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,6 +22,13 @@
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Détail de l'examen :</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <spacer name="horizontalSpacer_6">
              <property name="orientation">
@@ -48,19 +55,6 @@
               <string>Annuler</string>
              </property>
             </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_5">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
            </item>
           </layout>
          </item>
@@ -93,6 +87,13 @@
               <widget class="QLineEdit" name="lineEdit_Lieu"/>
              </item>
             </layout>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
            </item>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -213,9 +214,25 @@
           </widget>
          </item>
          <item>
-          <widget class="QToolButton" name="toolButton_2">
+          <widget class="QToolButton" name="toolbtn_printNavette">
            <property name="text">
-            <string>...</string>
+            <string>imprimer fiche navette</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../ressources.qrc">
+             <normaloff>:/Assets/Images/icons/print.svg</normaloff>:/Assets/Images/icons/print.svg</iconset>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>100</number>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
            </property>
           </widget>
          </item>
@@ -229,6 +246,13 @@
            </property>
            <property name="text">
             <string>Liste Examen</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../ressources.qrc">
+             <normaloff>:/Assets/Images/icons/exams.ico</normaloff>:/Assets/Images/icons/exams.ico</iconset>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
            </property>
           </widget>
          </item>
@@ -253,6 +277,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

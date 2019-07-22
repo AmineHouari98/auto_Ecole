@@ -7,6 +7,8 @@ profilCandidat::profilCandidat(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->pushButton_annuler->hide();
+    this->setWindowTitle("Profil du candidat");
+    this->setWindowIcon(QIcon(":/Assets/Images/icons/profile.ico"));
 
     const QStringList listWilaya ={
         "1-أدرار"
@@ -185,7 +187,12 @@ profilCandidat::~profilCandidat()
     delete ui;
 }
 
-void profilCandidat::on_toolButton_clicked()
-{
 
+void profilCandidat::on_toolbtn_histExams_clicked()
+{
+    detailsExam detailE;
+    //detailE.setValuesOnLineEdit(tableExamens->getid());
+    //detailE.executeQuery(tableExamens->getid());
+    detailE.exec();
+    //tableExamens->select();
 }

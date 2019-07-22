@@ -31,6 +31,7 @@ void examen::on_toolButton_new_exam_clicked()
 
 void examen::on_btn_viewDetails_clicked()
 {
+    // il devient cliquable que quand un élément est selectionné dans la tableview
     openDetails();
 }
 

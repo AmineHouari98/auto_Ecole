@@ -6,6 +6,8 @@ detailsExam::detailsExam(QWidget *parent) :
     ui(new Ui::detailsExam)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Détail de l'examen");
+    this->setWindowIcon(QIcon(":/Assets/Images/icons/details.ico"));
     ui->pushButton_annuler->hide();
 
     setEditable(false);
@@ -178,4 +180,9 @@ void detailsExam::on_toolButton_ImprimerListe_clicked()
     }
     printer.printListExamen(myList,tableExamens->getDATE(),rowCount,NbrCode,NbrM,NbrCirc);
 
+}
+
+void detailsExam::on_toolbtn_printNavette_clicked()
+{
+    // il devient cliquable que quand un élément est selectionné dans la tableview
 }

@@ -33,6 +33,8 @@ private slots:
 
     void on_toolButton_ImprimerListe_clicked();
 
+    void on_toolbtn_printNavette_clicked();
+
 private:
     Ui::detailsExam *ui;
     t_examens *tableExamens;

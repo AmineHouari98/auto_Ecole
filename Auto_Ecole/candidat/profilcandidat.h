@@ -5,6 +5,8 @@
 #include "t_candidats.h"
 #include "t_caisse.h"
 #include "t_documents.h"
+#include "t_examens.h"
+#include "detailsexam.h"
 
 namespace Ui {
 class profilCandidat;
@@ -24,6 +26,7 @@ private:
     t_candidats *tableCandidats;
     t_caisse *tableCaisse;
     t_documents *tableDocuments;
+
     void setEditable(bool);
     void modifyOnDatabase();
     void changeButtonState(QString,bool);
@@ -33,7 +36,7 @@ public slots:
 
     void on_pushButton_annuler_clicked();
 private slots:
-    void on_toolButton_clicked();
+    void on_toolbtn_histExams_clicked();
 };
 
 #endif // PROFILCANDIDAT_H

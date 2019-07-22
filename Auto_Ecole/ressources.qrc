@@ -47,5 +47,10 @@
         <file>Assets/Images/icons/moniteur.svg</file>
         <file>Assets/Images/icons/candidats.svg</file>
         <file>Assets/Images/icons/exams.ico</file>
+        <file>Assets/Images/icons/details.ico</file>
+        <file>Assets/Images/icons/profile.ico</file>
+        <file>Assets/Images/icons/view.ico</file>
+        <file>Assets/Images/icons/profile1.ico</file>
+        <file>Assets/Images/icons/add_candidat2.ico</file>
     </qresource>
 </RCC>

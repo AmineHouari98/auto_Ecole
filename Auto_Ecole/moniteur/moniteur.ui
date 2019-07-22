@@ -51,13 +51,6 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="btn_viewProfile">
-          <property name="text">
-           <string>voir le profile</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QToolButton" name="toolButton_new_client">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -108,6 +101,13 @@ Candidat</string>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextUnderIcon</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_viewProfile">
+          <property name="text">
+           <string>voir le profile</string>
           </property>
          </widget>
         </item>

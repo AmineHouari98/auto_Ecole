@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>738</width>
-    <height>612</height>
+    <width>691</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,6 +25,13 @@
            <property name="sizeConstraint">
             <enum>QLayout::SetFixedSize</enum>
            </property>
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Profile du candidat :</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <spacer name="horizontalSpacer_9">
              <property name="orientation">
@@ -54,22 +61,6 @@
               <string>Annuler</string>
              </property>
             </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_10">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::MinimumExpanding</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>25</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
            </item>
           </layout>
          </item>
@@ -301,19 +292,6 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_13">
            <item>
-            <spacer name="horizontalSpacer_13">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
             <widget class="QLabel" name="label_2">
              <property name="text">
               <string>Historique des paiements </string>
@@ -347,6 +325,13 @@
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_31">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Dossier du candidat :</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <widget class="QCheckBox" name="checkBox_3">
              <property name="text">
@@ -405,28 +390,25 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_14">
        <item>
-        <spacer name="horizontalSpacer_15">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>boite à impression :</string>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
+        </widget>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_15">
          <item>
-          <widget class="QToolButton" name="toolButton">
+          <widget class="QToolButton" name="toolbtn_histExams">
            <property name="text">
             <string>Historique des Examens</string>
            </property>
            <property name="icon">
             <iconset resource="../ressources.qrc">
              <normaloff>:/Assets/Images/icons/exams.ico</normaloff>:/Assets/Images/icons/exams.ico</iconset>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextUnderIcon</enum>
            </property>
           </widget>
          </item>
