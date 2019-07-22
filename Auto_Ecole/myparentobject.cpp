@@ -442,6 +442,7 @@ int MyParentObject::checkIntegrity(QList<QLineEdit*> list)//verifToutBon() => th
 
         if(list.at(i)->text().isEmpty())
         {
+            ok++;
             list.at(i)->setStyleSheet("background-color:red;");
         }
     }

@@ -115,7 +115,13 @@ void profilCandidat::setEditable(bool ok)
     ui->lineEdit_nationnalite->setEnabled(ok);
     ui->lineEdit_numDossier->setEnabled(ok);
     ui->comboBox_wilaya->setEnabled(ok);
-
+    ui->checkBox_3->setEnabled(ok);
+    ui->checkBox_9->setEnabled(ok);
+    ui->checkBox_10->setEnabled(ok);
+    ui->checkBox_11->setEnabled(ok);
+    ui->checkBox_11->setEnabled(ok);
+    ui->checkBox_12->setEnabled(ok);
+    ui->checkBox_13->setEnabled(ok);
 }
 
 void profilCandidat::modifyOnDatabase()
@@ -177,4 +183,9 @@ void profilCandidat::on_pushButton_annuler_clicked()
 profilCandidat::~profilCandidat()
 {
     delete ui;
+}
+
+void profilCandidat::on_toolButton_clicked()
+{
+
 }
