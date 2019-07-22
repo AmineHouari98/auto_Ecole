@@ -37,7 +37,8 @@ void candidat::on_toolButton_new_client_clicked()
 }
 
 void candidat::on_btn_viewProfile_clicked()
-{    
+{
+    // essaye de faire un truc du genre le bouton devient cliquable que quand quelqu'un est selectionné dans la table en bas
     openDetails();
 }
 
