@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QSettings>
 #include <QDir>
+#include <QTimer>
 #include <QApplication>
 #include <QLineEdit>
 
@@ -34,6 +35,7 @@ public:
 private:
     QSettings *_mySettings;
     QString thisPath, settingsFilePath ;
+    QTimer tm;
 };
 
 #endif // MYPARENTOBJECT_H

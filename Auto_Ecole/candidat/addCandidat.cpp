@@ -9,7 +9,7 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     ui->setupUi(this);
     this->setWindowTitle("Ajout Candidat");
     this->setFixedSize(this->width(),this->height());
-    this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.svg"));
+    this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.ico"));
 
 
     const QStringList listWilaya ={
@@ -81,20 +81,6 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     lineList.append(ui->lineEdit_numTelephone);
     lineList.append(ui->lineEdit_nationnalite);
     lineList.append(ui->lineEdit_numDossier);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

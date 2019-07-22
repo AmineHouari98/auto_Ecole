@@ -422,7 +422,11 @@
          <item>
           <widget class="QToolButton" name="toolButton">
            <property name="text">
-            <string>...</string>
+            <string>Historique des Examens</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../ressources.qrc">
+             <normaloff>:/Assets/Images/icons/exams.ico</normaloff>:/Assets/Images/icons/exams.ico</iconset>
            </property>
           </widget>
          </item>
@@ -467,6 +471,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>
