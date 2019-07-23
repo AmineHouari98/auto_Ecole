@@ -26,6 +26,19 @@
             <enum>QLayout::SetFixedSize</enum>
            </property>
            <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QLabel" name="label_3">
              <property name="text">
               <string>Profile du candidat :</string>
@@ -442,6 +455,20 @@
         <layout class="QHBoxLayout" name="horizontalLayout_15">
          <item>
           <widget class="QToolButton" name="toolbtn_histExams">
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+
+}
+QToolButton::hover
+{
+    border-style: outset;
+    border-width: 2px;
+    border-color: white;
+}</string>
+           </property>
            <property name="text">
             <string>Imprimer
 Facture</string>
@@ -457,6 +484,20 @@ Facture</string>
          </item>
          <item>
           <widget class="QToolButton" name="toolButton_2">
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+
+}
+QToolButton::hover
+{
+    border-style: outset;
+    border-width: 2px;
+    border-color: white;
+}</string>
+           </property>
            <property name="text">
             <string>imprimer 
  fiche de navette</string>
@@ -477,6 +518,20 @@ Facture</string>
              <width>0</width>
              <height>0</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+
+}
+QToolButton::hover
+{
+    border-style: outset;
+    border-width: 2px;
+    border-color: white;
+}</string>
            </property>
            <property name="text">
             <string>Imprimer

@@ -52,5 +52,11 @@
         <file>Assets/Images/icons/view.ico</file>
         <file>Assets/Images/icons/profile1.ico</file>
         <file>Assets/Images/icons/add_candidat2.ico</file>
+        <file>Assets/Images/icons/print1.ico</file>
+        <file>Assets/Images/icons/add_to_exam.ico</file>
+        <file>Assets/Images/icons/add_to_exam1.ico</file>
+        <file>Assets/Images/icons/print2.ico</file>
+        <file>Assets/Images/icons/print3.ico</file>
+        <file>Assets/Images/icons/profile2.ico</file>
     </qresource>
 </RCC>
