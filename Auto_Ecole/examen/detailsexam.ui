@@ -15,9 +15,9 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
@@ -99,19 +99,9 @@
             <widget class="QDateEdit" name="dateEdit_Date"/>
            </item>
            <item>
-            <widget class="Line" name="line">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item>
             <layout class="QVBoxLayout" name="verticalLayout_7"/>
            </item>
           </layout>
-         </item>
-         <item>
-          <widget class="QTableWidget" name="tableWidget_2"/>
          </item>
          <item>
           <spacer name="verticalSpacer">
@@ -136,46 +126,81 @@
         </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_15">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <layout class="QVBoxLayout" name="verticalLayout_15">
            <item>
-            <spacer name="horizontalSpacer_7">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <spacer name="horizontalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Liste Des Candidats</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </item>
            <item>
-            <widget class="QLabel" name="label">
-             <property name="text">
-              <string>Liste Des Candidats</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_8">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
+            <widget class="QTableWidget" name="tableWidget"/>
            </item>
           </layout>
          </item>
          <item>
-          <widget class="QTableWidget" name="tableWidget"/>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButton">
+             <property name="text">
+              <string>Ajouter</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButton_2">
+             <property name="text">
+              <string>Supprimer</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
@@ -206,20 +231,12 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
-          <widget class="QToolButton" name="toolButton">
-           <property name="text">
-            <string>Associe
-Examen</string>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QToolButton" name="toolbtn_printNavette">
            <property name="text">
             <string>imprimer fiche navette</string>
            </property>
            <property name="icon">
-            <iconset>
+            <iconset resource="../ressources.qrc">
              <normaloff>:/Assets/Images/icons/print.svg</normaloff>:/Assets/Images/icons/print.svg</iconset>
            </property>
            <property name="checkable">
@@ -248,7 +265,7 @@ Examen</string>
             <string>Liste Examen</string>
            </property>
            <property name="icon">
-            <iconset>
+            <iconset resource="../ressources.qrc">
              <normaloff>:/Assets/Images/icons/exams.ico</normaloff>:/Assets/Images/icons/exams.ico</iconset>
            </property>
            <property name="toolButtonStyle">
@@ -277,6 +294,8 @@ Examen</string>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>
