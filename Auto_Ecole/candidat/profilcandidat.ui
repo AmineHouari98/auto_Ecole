@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>848</width>
-    <height>523</height>
+    <width>691</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
            <item>
             <widget class="QLabel" name="label_3">
              <property name="text">
-              <string>Profile du candidat</string>
+              <string>Profile du candidat :</string>
              </property>
             </widget>
            </item>
@@ -292,19 +292,6 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_13">
            <item>
-            <spacer name="horizontalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
             <widget class="QLabel" name="label_2">
              <property name="text">
               <string>Historique des paiements </string>
@@ -339,41 +326,11 @@
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_31">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout">
-             <item>
-              <spacer name="horizontalSpacer">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_4">
-               <property name="text">
-                <string>Dossier du candidat </string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_2">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-            </layout>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Dossier du candidat :</string>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QCheckBox" name="checkBox_3">
@@ -433,14 +390,14 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_14">
        <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>boite à impression :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_15">
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>boite à impression :</string>
-           </property>
-          </widget>
-         </item>
          <item>
           <widget class="QToolButton" name="toolbtn_histExams">
            <property name="text">
