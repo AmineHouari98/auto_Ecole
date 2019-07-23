@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>975</width>
-    <height>418</height>
+    <height>534</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -139,6 +139,14 @@ QToolButton::hover
          </widget>
         </item>
         <item>
+         <widget class="QToolButton" name="toolButton_2">
+          <property name="text">
+           <string>Associer
+Examen</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="horizontalSpacer_2">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -150,6 +158,14 @@ QToolButton::hover
            </size>
           </property>
          </spacer>
+        </item>
+        <item>
+         <widget class="QToolButton" name="toolButton">
+          <property name="text">
+           <string>Imprimer
+Tout</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

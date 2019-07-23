@@ -12,8 +12,8 @@ public:
     ~t_documents() {;}
 
     SYS_PROPERTY(int, id)
-
-    AUTO_PROPERTY(int, Photo)
+    AUTO_PROPERTY(int, idCandidat)
+    AUTO_PROPERTY(bool, Photo)
     AUTO_PROPERTY(bool, Groupage)
     AUTO_PROPERTY(bool, CIN)
     AUTO_PROPERTY(bool, Residance)
@@ -25,13 +25,14 @@ public:
 public:
     enum TableName
     {
-        _00idDocuments,
-        _01Photo,
-        _02Groupage,
-        _03CIN,
-        _04Residance,
-        _05Timbre,
-        _06Autorisation_Paternel
+        _00id,
+        _01idCandidat,
+        _02Photo,
+        _03Groupage,
+        _04CIN,
+        _05Residance,
+        _06Timbre,
+        _07Autorisation_Paternel
 
     };
 };

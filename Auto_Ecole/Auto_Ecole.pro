@@ -51,16 +51,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    myparentobject.cpp
+    myparentobject.cpp \
+    settings.cpp
 
 
 HEADERS += \
     mainwindow.h \
     myparentobject.h \
-    dataModels.h
+    dataModels.h \
+    settings.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    settings.ui
 
 RESOURCES += \
     ressources.qrc \
