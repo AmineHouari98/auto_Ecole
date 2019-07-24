@@ -37,7 +37,7 @@ void candidat::on_toolButton_new_client_clicked()
 
 void candidat::on_btn_viewProfile_clicked()
 {
-    if(tableCandidats->getid()== 0) msgWarning("Erreur","Selectionné un candidat dans le tableau pour voir ses informations");
+    if(ui->tableView->currentIndex().row()<0) msgWarning("Erreur","Selectionné un candidat dans le tableau pour voir ses informations");
     else openDetails();
 }
 

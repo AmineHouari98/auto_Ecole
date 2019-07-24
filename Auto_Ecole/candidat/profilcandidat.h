@@ -29,6 +29,8 @@ private:
     t_candidats *tableCandidats;
     t_caisse *tableCaisse;
     t_documents *tableDocuments;
+    QStringList list={"Inscription","Examen","Autre"};
+
 
     void setEditable(bool);
     void modifyOnDatabase();

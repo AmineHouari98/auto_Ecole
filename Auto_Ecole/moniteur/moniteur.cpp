@@ -41,8 +41,8 @@ void moniteur::on_toolButton_new_client_clicked()
 
 void moniteur::on_btn_viewProfile_clicked()
 {    
-    // il devient cliquable que quand un élément est selectionné dans la tableview
-    // douk ndir his profile aftegh les autres maykamklou
+    if(ui->tableView->currentIndex().row()<0) msgWarning("Erreur","Selectionné un candidat dans le tableau pour voir ses informations");
+    else openDetails();
 }
 
 void moniteur::on_tableView_doubleClicked(const QModelIndex &index)

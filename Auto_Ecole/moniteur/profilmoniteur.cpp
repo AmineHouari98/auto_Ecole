@@ -103,3 +103,36 @@ void profilMoniteur::on_pushButton_annuler_clicked()
     ui->pushButton_annuler->setVisible(false);
     changeButtonState("Modifier",false);
 }
+
+void profilMoniteur::on_toolButton_Modifier_clicked()
+{
+
+   // qDebug()<<QString::number(ui->tableView->currentIndex().row());
+    tableCaisse->setCurrentRow(ui->tableView->currentIndex().row());
+    AjouterPaiment ap(list,tableMoniteurs->getid(),tableCaisse->getid(),"M");
+    ap.exec();
+    tableCaisse->select();
+
+}
+
+void profilMoniteur::on_toolButton_Ajouter_clicked()
+{
+    AjouterPaiment ap(list,tableMoniteurs->getid(),-1,"M");
+    ap.exec();
+    tableCaisse->select();
+
+}
+
+void profilMoniteur::on_toolButton_Supprimer_clicked()
+{
+
+    int currentRow = ui->tableView->currentIndex().row() ;
+    if( currentRow == -1 ) return ;
+
+    if(!msgQuestion("Attention!","êtes-vous sûr de vouloir supprimer ?"))
+        return ;
+
+    tableCaisse->setCurrentRow(currentRow);
+    tableCaisse->removeCurrentRow();
+    tableCaisse->select();
+}
