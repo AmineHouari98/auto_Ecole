@@ -61,5 +61,7 @@
         <file>Assets/Images/icons/Xornet's icons/add_employee.ico</file>
         <file>Assets/Images/icons/Xornet's icons/receive_money.ico</file>
         <file>Assets/Images/icons/Xornet's icons/remove_employee.ico</file>
+        <file>Assets/Images/icons/Xornet's icons/vehicule.ico</file>
+        <file>Assets/Images/icons/Xornet's icons/vehicule_report.ico</file>
     </qresource>
 </RCC>

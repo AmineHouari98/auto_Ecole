@@ -90,8 +90,9 @@ addCandidat::~addCandidat()
 void addCandidat::setUpLineEdits()
 {
     // tbaya3 of textfields
-    ui->lineEdit_numTelephone->setMaxLength(13);
-    //ui->lineEdit_numTelephone->setValidator(new QIntValidator(0,max,this));
+     ui->lineEdit_numTelephone->setText("");
+    ui->lineEdit_numTelephone->setInputMask("09 99 99 99 99");
+
 
     ui->spinBox_ins->setRange(10000,50000);
     ui->spinBox_PrE->setRange(0,4500);

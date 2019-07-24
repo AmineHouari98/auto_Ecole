@@ -22,6 +22,9 @@ include(candidat/candidat.pri)
 INCLUDEPATH += $$PWD/moniteur
 include(moniteur/moniteur.pri)
 
+INCLUDEPATH += $$PWD/vehicule
+include(vehicule/vehicule.pri)
+
 INCLUDEPATH += $$PWD/examen
 include(examen/examen.pri)
 
@@ -53,7 +56,7 @@ SOURCES += \
     mainwindow.cpp \
     myparentobject.cpp \
     settings.cpp \
-    ajouterpaiment.cpp
+    ajouterpaiment.cpp \
 
 
 HEADERS += \
@@ -61,7 +64,7 @@ HEADERS += \
     myparentobject.h \
     dataModels.h \
     settings.h \
-    ajouterpaiment.h
+    ajouterpaiment.h \
 
 
 FORMS += \

@@ -7,6 +7,7 @@
 #include "impression.h"
 #include "moniteur.h"
 #include "examen.h"
+#include "vehicule.h"
 
 
 #include "myparentobject.h"
@@ -36,6 +37,7 @@ private:
     impression *ui_impression;
     moniteur *ui_moniteurs;
     examen *ui_examens;
+    vehicule *ui_vehicule;
 
 };
 
