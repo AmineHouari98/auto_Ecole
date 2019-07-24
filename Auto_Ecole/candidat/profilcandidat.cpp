@@ -166,8 +166,6 @@ void profilCandidat::executeQuery(int index)
 
 }
 
-
-
 void profilCandidat::modifyOnDatabase()
 {
     QString wilaya=ui->comboBox_wilaya->itemText(ui->comboBox_wilaya->currentIndex());
@@ -242,9 +240,29 @@ profilCandidat::~profilCandidat()
 
 void profilCandidat::on_toolbtn_histExams_clicked()
 {
-    detailsExam detailE;
-    //detailE.setValuesOnLineEdit(tableExamens->getid());
-    //detailE.executeQuery(tableExamens->getid());
-    detailE.exec();
-    //tableExamens->select();
+
+}
+
+
+void profilCandidat::on_toolButton_Modifier_clicked()
+{
+    ui->tableView->setEditTriggers(QAbstractItemView::EditTrigger);
+    ui->tableView->setCurrentIndex( ui->tableView->currentIndex());
+    ui->tableView->setFocus();
+
+
+
+
+}
+
+void profilCandidat::on_toolButton_Ajouter_clicked()
+{
+    AjouterPaiment ap();
+
+}
+
+void profilCandidat::on_toolButton_Supprimer_clicked()
+{
+
+
 }

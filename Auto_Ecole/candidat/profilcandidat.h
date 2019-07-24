@@ -6,7 +6,8 @@
 #include "t_caisse.h"
 #include "t_documents.h"
 #include "t_examens.h"
-#include "detailsexam.h"
+
+#include "ajouterpaiment.h"
 
 namespace Ui {
 class profilCandidat;
@@ -38,6 +39,10 @@ public slots:
     void on_pushButton_annuler_clicked();
 
     void on_toolbtn_histExams_clicked();
+private slots:
+    void on_toolButton_Modifier_clicked();
+    void on_toolButton_Ajouter_clicked();
+    void on_toolButton_Supprimer_clicked();
 };
 
 #endif // PROFILCANDIDAT_H

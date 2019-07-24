@@ -37,8 +37,8 @@ void candidat::on_toolButton_new_client_clicked()
 
 void candidat::on_btn_viewProfile_clicked()
 {
-    // il devient cliquable que quand un élément est selectionné dans la tableview
-    openDetails();
+    if(tableCandidats->getid()== 0) msgWarning("Erreur","Selectionné un candidat dans le tableau pour voir ses informations");
+    else openDetails();
 }
 
 void candidat::on_tableView_doubleClicked(const QModelIndex &index)
@@ -51,6 +51,7 @@ void candidat::openDetails()
     tableCandidats->setCurrentRow(ui->tableView->currentIndex().row());
     profilCandidat pCandidat;
     pCandidat.setValuesOnLineEdit(tableCandidats->getid());
+    qDebug()<<QString::number(tableCandidats->getid());
     pCandidat.exec();
     tableCandidats->select();
 

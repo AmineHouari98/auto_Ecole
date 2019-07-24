@@ -347,21 +347,21 @@
               </spacer>
              </item>
              <item>
-              <widget class="QToolButton" name="toolButton_4">
+              <widget class="QToolButton" name="toolButton_Ajouter">
                <property name="text">
                 <string>Ajouter</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QToolButton" name="toolButton">
+              <widget class="QToolButton" name="toolButton_Modifier">
                <property name="text">
                 <string>Modifier</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QToolButton" name="toolButton">
+              <widget class="QToolButton" name="toolButton_Supprimer">
                <property name="text">
                 <string>Supprimer</string>
                </property>
