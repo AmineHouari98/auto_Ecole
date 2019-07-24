@@ -241,28 +241,25 @@ profilCandidat::~profilCandidat()
 void profilCandidat::on_toolbtn_histExams_clicked()
 {
 
+
 }
 
 
 void profilCandidat::on_toolButton_Modifier_clicked()
 {
 
-    ui->tableView->setEditTriggers(QAbstractItemView::AllEditTriggers); // TODO : badlha , prc paramter alledittriggers dertha tchanba ,
-    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectItems);
+   // qDebug()<<QString::number(ui->tableView->currentIndex().row());
+    tableCaisse->setCurrentRow(ui->tableView->currentIndex().row());
+    AjouterPaiment ap(list,tableCandidats->getid(),tableCaisse->getid(),"C");
+    ap.exec();
+    tableCaisse->select();
 
-    ui->tableView->setCurrentIndex( ui->tableView->currentIndex());
-    ui->tableView->setFocus();
 }
 
 void profilCandidat::on_toolButton_Ajouter_clicked()
 {
-    AjouterPaiment ap;
-    ap.index = tableCandidats->getid();
-
-    QStringList list={"Inscription","Examen","Autre"};
-    ap.myList= list;
+    AjouterPaiment ap(list,tableCandidats->getid(),-1,"C");
     ap.exec();
-
     tableCaisse->select();
 
 }

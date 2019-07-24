@@ -102,7 +102,7 @@
        <item>
         <widget class="QPushButton" name="pushButton">
          <property name="text">
-          <string>Ajouter</string>
+          <string>Valider</string>
          </property>
         </widget>
        </item>
