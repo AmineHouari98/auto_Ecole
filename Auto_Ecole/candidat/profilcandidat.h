@@ -2,11 +2,13 @@
 #define PROFILCANDIDAT_H
 
 #include <QDialog>
+#include <QSqlQuery>
 #include "t_candidats.h"
 #include "t_caisse.h"
 #include "t_documents.h"
 #include "t_examens.h"
 
+#include "ajouterpaiment.h"
 #include "ajouterpaiment.h"
 
 namespace Ui {

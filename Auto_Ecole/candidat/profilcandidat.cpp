@@ -246,13 +246,21 @@ void profilCandidat::on_toolbtn_histExams_clicked()
 
 void profilCandidat::on_toolButton_Modifier_clicked()
 {
-    ui->tableView->setEditTriggers(QAbstractItemView::EditTrigger);
+    //learn to point cursor on the method or enum and then press F1 to find more help and option :)
+    /*
+    This enum describes actions which will initiate item editing.
+    QAbstractItemView::NoEditTriggers:    No editing possible.
+    QAbstractItemView::CurrentChanged:    Editing start whenever current item changes.
+    QAbstractItemView::DoubleClicked:    Editing starts when an item is double clicked.
+    QAbstractItemView::SelectedClicked:    Editing starts when clicking on an already selected item.
+    QAbstractItemView::EditKeyPressed:    Editing starts when the platform edit key has been pressed over an item.
+    QAbstractItemView::AnyKeyPressed:    Editing starts when any key is pressed over an item.
+    QAbstractItemView::AllEditTriggers:    Editing starts for all above actions.
+    The EditTriggers type is a typedef for QFlags<EditTrigger>. It stores an OR combination of EditTrigger values.
+    */
+    ui->tableView->setEditTriggers(QAbstractItemView::AllEditTriggers); // TODO : badlha , prc paramter alledittriggers dertha tchanba ,
     ui->tableView->setCurrentIndex( ui->tableView->currentIndex());
     ui->tableView->setFocus();
-
-
-
-
 }
 
 void profilCandidat::on_toolButton_Ajouter_clicked()

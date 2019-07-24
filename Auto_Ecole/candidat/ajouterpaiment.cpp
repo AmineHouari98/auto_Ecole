@@ -37,7 +37,7 @@ void AjouterPaiment::on_pushButton_clicked()
     tableCaisse->setDATE(QDate::currentDate().toString());
     tableCaisse->setidTransaction(candidat);
     tableCaisse->setTYPE(type);
-    tableCaisse->setMONTANT(ui->spinBox->value());
+    tableCaisse->setMONTANT(QString::number(ui->spinBox->value()));
     tableCaisse->setuser_type("C");
 
 
