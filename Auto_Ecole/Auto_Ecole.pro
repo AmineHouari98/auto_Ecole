@@ -52,18 +52,22 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     myparentobject.cpp \
-    settings.cpp
+    settings.cpp \
+    ajouterpaiment.cpp
 
 
 HEADERS += \
     mainwindow.h \
     myparentobject.h \
     dataModels.h \
-    settings.h
+    settings.h \
+    ajouterpaiment.h
+
 
 FORMS += \
     mainwindow.ui \
-    settings.ui
+    settings.ui \
+    ajouterpaiment.ui
 
 RESOURCES += \
     ressources.qrc \

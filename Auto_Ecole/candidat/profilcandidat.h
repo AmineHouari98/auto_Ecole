@@ -9,13 +9,13 @@
 #include "t_examens.h"
 
 #include "ajouterpaiment.h"
-#include "ajouterpaiment.h"
+#include "myparentobject.h"
 
 namespace Ui {
 class profilCandidat;
 }
 
-class profilCandidat : public QDialog
+class profilCandidat : public QDialog,public MyParentObject
 {
     Q_OBJECT
 
