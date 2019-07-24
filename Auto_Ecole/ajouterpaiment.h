@@ -14,8 +14,10 @@ class AjouterPaiment : public QDialog
     Q_OBJECT
 
 public:
-    explicit AjouterPaiment(int index,QWidget *parent = 0);
+    explicit AjouterPaiment(QWidget *parent = 0);
     ~AjouterPaiment();
+    int index;
+    QStringList myList;
 
 private slots:
     void on_comboBox_currentIndexChanged(const QString &arg1);
@@ -27,7 +29,6 @@ private slots:
 private:
     Ui::AjouterPaiment *ui;
     QString type;
-    int candidat;
     t_caisse *tableCaisse;
 };
 
