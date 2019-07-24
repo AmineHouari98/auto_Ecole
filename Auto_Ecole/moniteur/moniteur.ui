@@ -86,17 +86,17 @@ QToolButton::hover
 	</string>
           </property>
           <property name="text">
-           <string>nouveau 
-Candidat</string>
+           <string>Nouveau 
+moniteur</string>
           </property>
           <property name="icon">
            <iconset resource="../ressources.qrc">
-            <normaloff>:/Assets/Images/icons/add.svg</normaloff>:/Assets/Images/icons/add.svg</iconset>
+            <normaloff>:/Assets/Images/icons/Xornet's icons/add_employee.ico</normaloff>:/Assets/Images/icons/Xornet's icons/add_employee.ico</iconset>
           </property>
           <property name="iconSize">
            <size>
-            <width>32</width>
-            <height>32</height>
+            <width>36</width>
+            <height>36</height>
            </size>
           </property>
           <property name="toolButtonStyle">
@@ -105,9 +105,55 @@ Candidat</string>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="btn_viewProfile">
+         <widget class="QToolButton" name="btn_viewProfile">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+
+}
+QToolButton::hover
+{
+    border-style: outset;
+    border-width: 2px;
+    border-color: white;
+}
+	</string>
+          </property>
           <property name="text">
-           <string>voir le profile</string>
+           <string>voir profile</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../ressources.qrc">
+            <normaloff>:/Assets/Images/icons/profile2.ico</normaloff>:/Assets/Images/icons/profile2.ico</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>36</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="toolButtonStyle">
+           <enum>Qt::ToolButtonTextUnderIcon</enum>
           </property>
          </widget>
         </item>

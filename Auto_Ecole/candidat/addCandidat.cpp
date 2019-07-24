@@ -7,10 +7,10 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     ui(new Ui::addCandidat)
 {
     ui->setupUi(this);
+    setUpLineEdits();
     this->setWindowTitle("Ajout Candidat");
     this->setFixedSize(this->width(),this->height());
     this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.ico"));
-
 
     documentsTable = new t_documents;
 
@@ -69,11 +69,7 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     ui->comboBox_wilaya->addItems(listWilaya);
     ui->lineEdit_nationnalite->setText("جزائرية");
 
-    // tbaya3 of textfields
-    ui->lineEdit_numCin->setMaxLength(9);
-    ui->lineEdit_numTelephone->setMaxLength(10);
-    ui->spinBox_ins->setRange(10000,50000);
-    ui->spinBox_PrE->setRange(0,4500);
+
 
     lineList.append(ui->lineEdit_nom);
     lineList.append(ui->lineEdit_prenom);
@@ -91,6 +87,19 @@ addCandidat::~addCandidat()
 {
     delete ui;
 }
+void addCandidat::setUpLineEdits()
+{
+    // tbaya3 of textfields
+    ui->lineEdit_numTelephone->setMaxLength(13);
+    //ui->lineEdit_numTelephone->setValidator(new QIntValidator(0,max,this));
+
+    ui->spinBox_ins->setRange(10000,50000);
+    ui->spinBox_PrE->setRange(0,4500);
+
+    ui->lineEdit_numCin->setMaxLength(9);
+    ui->lineEdit_numDossier->setMaxLength(7);
+}
+
 
 void addCandidat::on_pushButton_Valider_clicked()
 {

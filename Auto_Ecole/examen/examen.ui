@@ -105,9 +105,58 @@ Examen</string>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="btn_viewDetails">
+         <widget class="QToolButton" name="btn_viewDetails">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QToolButton
+{
+background-color: transparent ;
+border : none ;
+
+}
+QToolButton::hover
+{
+    border-style: outset;
+    border-width: 2px;
+    border-color: white;
+}
+	</string>
+          </property>
           <property name="text">
            <string>Détails</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../ressources.qrc">
+            <normaloff>:/Assets/Images/icons/details.ico</normaloff>:/Assets/Images/icons/details.ico</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="toolButtonStyle">
+           <enum>Qt::ToolButtonTextUnderIcon</enum>
           </property>
          </widget>
         </item>

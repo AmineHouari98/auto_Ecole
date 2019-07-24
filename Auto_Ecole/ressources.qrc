@@ -58,5 +58,8 @@
         <file>Assets/Images/icons/print2.ico</file>
         <file>Assets/Images/icons/print3.ico</file>
         <file>Assets/Images/icons/profile2.ico</file>
+        <file>Assets/Images/icons/Xornet's icons/add_employee.ico</file>
+        <file>Assets/Images/icons/Xornet's icons/receive_money.ico</file>
+        <file>Assets/Images/icons/Xornet's icons/remove_employee.ico</file>
     </qresource>
 </RCC>
