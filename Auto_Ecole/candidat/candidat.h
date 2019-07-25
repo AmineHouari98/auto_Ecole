@@ -10,6 +10,9 @@
 #include "t_documents.h"
 
 
+#include "impression.h"
+
+
 namespace Ui {
 class candidat;
 }
@@ -31,9 +34,12 @@ private slots:
 
 
 
+    void on_toolButton_clicked();
+
 private:
     Ui::candidat *ui;
     t_candidats *tableCandidats;
+    impression printer;
     void openDetails();
 
 

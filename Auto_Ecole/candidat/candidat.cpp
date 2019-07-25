@@ -57,3 +57,8 @@ void candidat::openDetails()
 
 }
 
+
+void candidat::on_toolButton_clicked()
+{
+    printer.printAllCandidat("20/07/2019","25/07/2019");
+}

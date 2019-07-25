@@ -63,5 +63,6 @@
         <file>Assets/Images/icons/Xornet's icons/remove_employee.ico</file>
         <file>Assets/Images/icons/Xornet's icons/vehicule.ico</file>
         <file>Assets/Images/icons/Xornet's icons/vehicule_report.ico</file>
+        <file>Templates/All_Candidat.xml</file>
     </qresource>
 </RCC>
