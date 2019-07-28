@@ -16,7 +16,7 @@ public:
     AUTO_PROPERTY(int, idTransaction)
     AUTO_PROPERTY(QString, TYPE)
     AUTO_PROPERTY(QString, MONTANT)
-    AUTO_PROPERTY(QString, DATE)
+    AUTO_PROPERTY(QDate, DATE)
     AUTO_PROPERTY(QString, user_type)
 
 

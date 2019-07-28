@@ -12,12 +12,13 @@
 #include "dataModels.h"
 #include "impression.h"
 #include "form.h"
+#include "myparentobject.h"
 
 namespace Ui {
 class detailsExam;
 }
 
-class detailsExam : public QDialog
+class detailsExam : public QDialog,public MyParentObject
 {
     Q_OBJECT
 
@@ -35,8 +36,6 @@ private slots:
 
     void on_toolButton_ImprimerListe_clicked();
 
-    void on_toolbtn_printNavette_clicked();
-
     void on_toolButton_Ajouter_clicked();
 
     void on_toolButton_Supp_clicked();
@@ -48,6 +47,7 @@ private:
     impression printer;
 
     Form *myForm = nullptr;
+    int idExam;
 
 
 

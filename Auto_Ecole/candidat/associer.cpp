@@ -13,12 +13,11 @@ Associer::Associer(int id,QWidget *parent) :
 
 
 
-    QString date = QDate::currentDate().toString("dd/MM/yyyy");
+    QString date = QDate::currentDate().toString("yyyy-MM-dd");
 
 
     tableExamens->where("DATE >= '"+date+"'");
     tableExamens->select();
-    qDebug()<<date + "    "+tableExamens->getDATE();
 
     ui->comboBox->setModel(tableExamens->toModel());
     ui->comboBox->setModelColumn(t_examens::_03DATE);

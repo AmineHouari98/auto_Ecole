@@ -12,6 +12,10 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     this->setFixedSize(this->width(),this->height());
     this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.ico"));
 
+    ui->dateEdit_naissanceCandidat->setDisplayFormat("yyyy-MM-dd");
+
+
+
     documentsTable = new t_documents;
 
 
@@ -121,14 +125,14 @@ void addCandidat::on_pushButton_Valider_clicked()
         candidatsTable.setPRENOM              (ui->lineEdit_prenom->text());
         candidatsTable.setNOM_ARABE           (ui->lineEdit_nomAr->text());
         candidatsTable.setPRENOM_ARABE        (ui->lineEdit_prenomAr->text());
-        candidatsTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
+        candidatsTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->date());
         candidatsTable.setLIEU_DE_NAISSANCE   (selectedWilaya.at(1));
         candidatsTable.setADRESSE             (ui->lineEdit_adresseAr->text());
         candidatsTable.setCIN                 (ui->lineEdit_numCin->text());
         candidatsTable.setTELEPHONE           (ui->lineEdit_numTelephone->text());
         candidatsTable.setNATIONALITE         (ui->lineEdit_nationnalite->text());
         candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text());
-        candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate().toString("dd/MM/yyyy"));
+        candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate());
 
 
 

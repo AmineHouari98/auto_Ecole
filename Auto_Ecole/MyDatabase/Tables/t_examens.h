@@ -12,7 +12,7 @@ public:
 
     SYS_PROPERTY(int,      id)
     AUTO_PROPERTY(QString, EXAMINATEUR)
-    AUTO_PROPERTY(QString, DATE)
+    AUTO_PROPERTY(QDate, DATE)
     AUTO_PROPERTY(QString, LIEU)
 
     ;

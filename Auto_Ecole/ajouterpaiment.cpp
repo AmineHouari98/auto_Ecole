@@ -70,7 +70,7 @@ void AjouterPaiment::on_pushButton_2_clicked()
 void AjouterPaiment::on_pushButton_clicked()
 {
 
-    tableCaisse->setDATE(QDate::currentDate().toString());
+    tableCaisse->setDATE(QDate::currentDate());
     tableCaisse->setidTransaction(myIndex);
     if(type=="Autre")
         tableCaisse->setTYPE(ui->lineEdit->text());

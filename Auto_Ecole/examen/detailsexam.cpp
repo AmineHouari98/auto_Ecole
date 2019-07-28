@@ -9,6 +9,8 @@ detailsExam::detailsExam(QWidget *parent) :
     this->setWindowTitle("Détail de l'examen");
     this->setWindowIcon(QIcon(":/Assets/Images/icons/details.ico"));
     ui->pushButton_annuler->hide();
+    ui->dateEdit_Date->setDisplayFormat("yyyy-MM-dd");
+
 
     setEditable(false);
 
@@ -38,13 +40,10 @@ void detailsExam::setValuesOnLineEdit(int index)
 {
     tableExamens->whereid(index);
 
-    qDebug()<<QString::number(index);
-    QString date_string_on_db = tableExamens->getDATE();
-    QDate Date = QDate::fromString(date_string_on_db,"dd/MM/yyyy");
 
     ui->lineEdit_nomExaminateur->setText(tableExamens->getEXAMINATEUR());
     ui->lineEdit_Lieu->setText(tableExamens->getLIEU());
-    ui->dateEdit_Date->setDate(Date);
+    ui->dateEdit_Date->setDate(tableExamens->getDATE());
 
 
 
@@ -63,7 +62,7 @@ void detailsExam::modifyOnDatabase()
 {
     tableExamens->setEXAMINATEUR   (ui->lineEdit_nomExaminateur->text());
     tableExamens->setLIEU          (ui->lineEdit_Lieu->text());
-    tableExamens->setDATE          (ui->dateEdit_Date->text());
+    tableExamens->setDATE          (ui->dateEdit_Date->date());
 
 
     tableExamens->update() ;
@@ -82,8 +81,8 @@ void detailsExam::executeQuery(int index)
 {
 
     QSqlQuery query;
-
-    query.exec("SELECT DOSSIER, NOM, PRENOM, DATE_DE_NAISSANCE, PROCHAIN_EXAMEN "
+    idExam=index;
+    query.exec("SELECT t_candidats.id, DOSSIER, NOM, PRENOM, DATE_DE_NAISSANCE, PROCHAIN_EXAMEN "
                "FROM t_candidats INNER JOIN t_inter "
                "ON t_candidats.id =t_inter.idCandidat"
                " WHERE t_inter.idExamen = "+ QString::number(index));
@@ -182,19 +181,26 @@ void detailsExam::on_toolButton_Ajouter_clicked()
 void detailsExam::on_toolButton_Supp_clicked()
 {
 
+    if(!msgQuestion("Attention!","êtes-vous sûr de vouloir supprimer ?"))
+        return ;
+
     QString tmp="";
     for(int i=0;i<ui->tableWidget->rowCount();i++)
     {
 
-        myForm=(Form*)ui->tableWidget->cellWidget(i,5);
+        myForm=(Form*)ui->tableWidget->cellWidget(i,6);
         if(myForm->getState())
         {
             tmp=ui->tableWidget->item(i,0)->text();
-            tmp.toInt()
+
+            tableInter->where("idCandidat = "+tmp+" AND "+ QString::number(idExam));
+            tableInter->removeCurrentRow();
+            ui->tableWidget->removeRow(i);
+
 
         }
 
 
-
     }
+
 }

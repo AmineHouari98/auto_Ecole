@@ -19,7 +19,7 @@ public:
     AUTO_PROPERTY(QString, ADRESSE)
     AUTO_PROPERTY(QString, PERMIS)
     AUTO_PROPERTY(QString, TELEPHONE)
-    AUTO_PROPERTY(QString, DATE_AJOUT)
+    AUTO_PROPERTY(QDate, DATE_AJOUT)
     AUTO_PROPERTY(int, idCaisse)
     ;
 public:

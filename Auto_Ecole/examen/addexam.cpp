@@ -9,6 +9,9 @@ addExam::addExam(QWidget *parent) :
     this->setWindowTitle("Ajout Examen");
     this->setFixedSize(this->width(),this->height());
     this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.svg"));
+
+    ui->dateEdit_Date->setDisplayFormat("yyyy-MM-dd");
+
     setManual(true);
     setAuto(false);
 }
@@ -37,7 +40,7 @@ void addExam::on_pushButton_Valider_clicked()
         addOnTable(
                     ui->lineEdit_nomExaminateur->text(),
                     ui->lineEdit_Lieu->text(),
-                    ui->dateEdit_Date->text()
+                    ui->dateEdit_Date->date()
 
                     );
 
@@ -73,7 +76,7 @@ void addExam::setManual(bool ok)
 
 }
 
-void addExam::addOnTable(QString examinateur, QString lieu, QString date)
+void addExam::addOnTable(QString examinateur, QString lieu, QDate date)
 {
     examsTable.setCurrentRow(-1);
 

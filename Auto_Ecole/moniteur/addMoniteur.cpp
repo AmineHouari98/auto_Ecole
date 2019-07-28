@@ -9,6 +9,8 @@ addMoniteur::addMoniteur(QWidget *parent, int id) :
     this->setWindowTitle("Ajout Moniteur");
     this->setFixedSize(this->width(),this->height());
     this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.svg"));
+    ui->dateEdit_naissanceCandidat->setDisplayFormat("yyyy-MM-dd");
+
 
 
 }
@@ -28,7 +30,7 @@ void addMoniteur::on_pushButton_Valider_clicked()
     moniteursTable.setADRESSE             (ui->lineEdit_adresseAr->text());
     moniteursTable.setPERMIS               (ui->lineEdit_numPermis->text());
     moniteursTable.setTELEPHONE           (ui->lineEdit_numTelephone->text());
-    moniteursTable.setDATE_AJOUT    (QDate::currentDate().toString());
+    moniteursTable.setDATE_AJOUT    (QDate::currentDate());
 
     if(moniteursTable.currentRow() < 0)
         moniteursTable.insert() ;
