@@ -13,6 +13,7 @@
 #include "impression.h"
 #include "form.h"
 #include "myparentobject.h"
+#include "addinexam.h"
 
 namespace Ui {
 class detailsExam;

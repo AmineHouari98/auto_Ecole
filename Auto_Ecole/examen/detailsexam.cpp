@@ -44,10 +44,6 @@ void detailsExam::setValuesOnLineEdit(int index)
     ui->lineEdit_nomExaminateur->setText(tableExamens->getEXAMINATEUR());
     ui->lineEdit_Lieu->setText(tableExamens->getLIEU());
     ui->dateEdit_Date->setDate(tableExamens->getDATE());
-
-
-
-
 }
 
 void detailsExam::setEditable(bool ok)
@@ -175,6 +171,9 @@ void detailsExam::on_toolButton_ImprimerListe_clicked()
 
 void detailsExam::on_toolButton_Ajouter_clicked()
 {
+    AddInExam ad(idExam);
+    ad.exec();
+    executeQuery(idExam);
 
 }
 
