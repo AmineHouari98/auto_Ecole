@@ -15,7 +15,7 @@ detailsExam::detailsExam(QWidget *parent) :
     tableExamens = new t_examens();
     tableInter = new t_inter();
 
-    QStringList labels ={"DOSSIER","NOM","PRENOM","DATE DE NAISSANCE","NATURE EXAMEN","Supprimer"};
+    QStringList labels ={"id","DOSSIER","NOM","PRENOM","DATE DE NAISSANCE","NATURE EXAMEN","Supprimer"};
 
 
     ui->tableWidget->setColumnCount(labels.length());
@@ -24,18 +24,8 @@ detailsExam::detailsExam(QWidget *parent) :
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+    ui->tableWidget->hideColumn(0);
 
-
-
-    pWidget = new QWidget();
-    btn_edit = new QPushButton();
-
-    btn_edit->setText("Edit");
-    QHBoxLayout* pLayout = new QHBoxLayout(pWidget);
-    pLayout->addWidget(btn_edit);
-    pLayout->setAlignment(Qt::AlignCenter);
-    pLayout->setContentsMargins(0, 0, 0, 0);
-    pWidget->setLayout(pLayout);
 
 }
 
@@ -102,22 +92,24 @@ void detailsExam::executeQuery(int index)
 
     while (query.next()) {
 
+        Form *pWidget=new Form;
 
-
-        QString DOSSIER = query.value(0).toString();
-        QString NOM = query.value(1).toString();
-        QString PRENOM = query.value(2).toString();
-        QString DATE_DE_NAISSANCE = query.value(3).toString();
-        QString NATURE_EXAMEN = query.value(4).toString();
+        QString id =  query.value(0).toString();
+        QString DOSSIER = query.value(1).toString();
+        QString NOM = query.value(2).toString();
+        QString PRENOM = query.value(3).toString();
+        QString DATE_DE_NAISSANCE = query.value(4).toString();
+        QString NATURE_EXAMEN = query.value(5).toString();
 
         ui->tableWidget->insertRow(ui->tableWidget->rowCount());
 
-        ui->tableWidget->setItem(recordsNumber, 0, new QTableWidgetItem(DOSSIER));
-        ui->tableWidget->setItem(recordsNumber, 1, new QTableWidgetItem(NOM));
-        ui->tableWidget->setItem(recordsNumber, 2, new QTableWidgetItem(PRENOM));
-        ui->tableWidget->setItem(recordsNumber, 3, new QTableWidgetItem(DATE_DE_NAISSANCE));
-        ui->tableWidget->setItem(recordsNumber, 4, new QTableWidgetItem(NATURE_EXAMEN));
-        ui->tableWidget->setCellWidget(recordsNumber, 5, pWidget);
+        ui->tableWidget->setItem(recordsNumber, 0, new QTableWidgetItem(id));
+        ui->tableWidget->setItem(recordsNumber, 1, new QTableWidgetItem(DOSSIER));
+        ui->tableWidget->setItem(recordsNumber, 2, new QTableWidgetItem(NOM));
+        ui->tableWidget->setItem(recordsNumber, 3, new QTableWidgetItem(PRENOM));
+        ui->tableWidget->setItem(recordsNumber, 4, new QTableWidgetItem(DATE_DE_NAISSANCE));
+        ui->tableWidget->setItem(recordsNumber, 5, new QTableWidgetItem(NATURE_EXAMEN));
+        ui->tableWidget->setCellWidget(recordsNumber, 6, pWidget);
 
 
         qDebug()<<DOSSIER<<NOM<<PRENOM<<DATE_DE_NAISSANCE<<NATURE_EXAMEN;
@@ -164,11 +156,11 @@ void detailsExam::on_toolButton_ImprimerListe_clicked()
     for(int i=0;i<rowCount;i++) {
 
         ModelExamList model;
-        model.NumDossier =          ui->tableWidget->item(i,0)->text();
-        model.Nom =                 ui->tableWidget->item(i,1)->text();
-        model.Prenom =              ui->tableWidget->item(i,2)->text();
-        model.Date_De_Naissance =   ui->tableWidget->item(i,3)->text();
-        model.NatExamen =           ui->tableWidget->item(i,4)->text();
+        model.NumDossier =          ui->tableWidget->item(i,1)->text();
+        model.Nom =                 ui->tableWidget->item(i,2)->text();
+        model.Prenom =              ui->tableWidget->item(i,3)->text();
+        model.Date_De_Naissance =   ui->tableWidget->item(i,4)->text();
+        model.NatExamen =           ui->tableWidget->item(i,5)->text();
         model.cat = "B";
 
         if(model.NatExamen == "Code") NbrCode++;
@@ -182,7 +174,27 @@ void detailsExam::on_toolButton_ImprimerListe_clicked()
 
 }
 
-void detailsExam::on_toolbtn_printNavette_clicked()
+void detailsExam::on_toolButton_Ajouter_clicked()
 {
-    // il devient cliquable que quand un élément est selectionné dans la tableview
+
+}
+
+void detailsExam::on_toolButton_Supp_clicked()
+{
+
+    QString tmp="";
+    for(int i=0;i<ui->tableWidget->rowCount();i++)
+    {
+
+        myForm=(Form*)ui->tableWidget->cellWidget(i,5);
+        if(myForm->getState())
+        {
+            tmp=ui->tableWidget->item(i,0)->text();
+            tmp.toInt()
+
+        }
+
+
+
+    }
 }

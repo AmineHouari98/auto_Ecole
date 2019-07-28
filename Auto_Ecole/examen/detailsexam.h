@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QSqlQuery>
+#include <QCheckBox>
 
 #include "t_examens.h"
 #include "t_candidats.h"
@@ -10,6 +11,7 @@
 
 #include "dataModels.h"
 #include "impression.h"
+#include "form.h"
 
 namespace Ui {
 class detailsExam;
@@ -35,13 +37,19 @@ private slots:
 
     void on_toolbtn_printNavette_clicked();
 
+    void on_toolButton_Ajouter_clicked();
+
+    void on_toolButton_Supp_clicked();
+
 private:
     Ui::detailsExam *ui;
     t_examens *tableExamens;
     t_inter *tableInter;
     impression printer;
-    QWidget* pWidget;
-    QPushButton* btn_edit;
+
+    Form *myForm = nullptr;
+
+
 
     void setEditable(bool);
     void modifyOnDatabase();

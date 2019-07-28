@@ -3,11 +3,15 @@
 
 #include <QWidget>
 #include <myparentobject.h>
+
 #include "addCandidat.h"
 #include "profilcandidat.h"
+#include "associer.h"
+
 #include "t_candidats.h"
 #include "t_caisse.h"
 #include "t_documents.h"
+#include "t_inter.h"
 
 
 #include "impression.h"
@@ -35,6 +39,8 @@ private slots:
 
 
     void on_toolButton_clicked();
+
+    void on_toolButton_2_clicked();
 
 private:
     Ui::candidat *ui;
