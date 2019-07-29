@@ -63,8 +63,7 @@ void candidat::openDetails()
 
 void candidat::on_toolButton_clicked()
 {
-    printAll pa;
-    pa.exec();
+    //printer.printAllCandidat("20/07/2019","25/07/2019");
 }
 
 void candidat::on_toolButton_2_clicked()
