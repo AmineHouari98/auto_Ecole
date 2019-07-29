@@ -184,5 +184,5 @@ void detailsExam::on_toolButton_ImprimerListe_clicked()
 
 void detailsExam::on_toolbtn_printNavette_clicked()
 {
-    // il devient cliquable que quand un élément est selectionné dans la tableview
+    // il devient cliquable que quand un élément (candidat) est selectionné dans la tableview de l'examen
 }

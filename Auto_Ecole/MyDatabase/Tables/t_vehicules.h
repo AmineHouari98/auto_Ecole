@@ -13,11 +13,11 @@ public:
 
     SYS_PROPERTY(int, id)
 
-    AUTO_PROPERTY(QString, Matricule)
-    AUTO_PROPERTY(QString, Modele)
-    AUTO_PROPERTY(QString, Annee)
-    AUTO_PROPERTY(QString, Type)
-    AUTO_PROPERTY(int, idCaisse)
+    AUTO_PROPERTY(QString, MATRICULE)
+    AUTO_PROPERTY(QString, MODELE)
+    AUTO_PROPERTY(QString, ANNEE)
+    AUTO_PROPERTY(QString, TYPE)
+    AUTO_PROPERTY(QString, PROPRIETAIRE)
 
 
     ;
@@ -29,7 +29,7 @@ public:
         _02Modele,
         _03Annee,
         _04Type,
-        _05idCaisse
+        _05PROPRIETAIRE
 
     };
 };

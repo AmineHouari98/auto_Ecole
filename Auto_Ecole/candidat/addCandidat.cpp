@@ -81,6 +81,8 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     lineList.append(ui->lineEdit_nationnalite);
     lineList.append(ui->lineEdit_numDossier);
 
+
+
 }
 
 addCandidat::~addCandidat()
