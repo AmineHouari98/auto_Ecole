@@ -35,7 +35,6 @@ void candidat::on_toolButton_new_client_clicked()
     addCandidat addCandidat;
     addCandidat.exec();
     tableCandidats->select();
-
 }
 
 void candidat::on_btn_viewProfile_clicked()

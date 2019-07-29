@@ -183,3 +183,10 @@ void detailsExam::on_toolButton_ImprimerListe_clicked()
 
 }
 
+<<<<<<< HEAD
+=======
+void detailsExam::on_toolbtn_printNavette_clicked()
+{
+    // il devient cliquable que quand un élément est selectionné dans la tableview
+}
+>>>>>>> parent of f120e7e... men dik lkhtra li kount 3andi xD

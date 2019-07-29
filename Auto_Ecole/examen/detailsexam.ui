@@ -232,38 +232,11 @@
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
           <widget class="QToolButton" name="toolbtn_printNavette">
-           <property name="minimumSize">
-            <size>
-             <width>80</width>
-             <height>70</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>80</width>
-             <height>70</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QToolButton
-{
-background-color: transparent ;
-border : none ;
-
-}
-QToolButton::hover
-{
-    border-style: outset;
-    border-width: 2px;
-    border-color: white;
-}</string>
-           </property>
            <property name="text">
-            <string>imprimer
- fiche navette</string>
+            <string>imprimer fiche navette</string>
            </property>
            <property name="icon">
-            <iconset>
+            <iconset resource="../ressources.qrc">
              <normaloff>:/Assets/Images/icons/print.svg</normaloff>:/Assets/Images/icons/print.svg</iconset>
            </property>
            <property name="checkable">
@@ -284,36 +257,15 @@ QToolButton::hover
           <widget class="QToolButton" name="toolButton_ImprimerListe">
            <property name="minimumSize">
             <size>
-             <width>80</width>
-             <height>70</height>
+             <width>0</width>
+             <height>0</height>
             </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>80</width>
-             <height>70</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QToolButton
-{
-background-color: transparent ;
-border : none ;
-
-}
-QToolButton::hover
-{
-    border-style: outset;
-    border-width: 2px;
-    border-color: white;
-}</string>
            </property>
            <property name="text">
-            <string>Apperçu
- Liste Examen</string>
+            <string>Liste Examen</string>
            </property>
            <property name="icon">
-            <iconset>
+            <iconset resource="../ressources.qrc">
              <normaloff>:/Assets/Images/icons/exams.ico</normaloff>:/Assets/Images/icons/exams.ico</iconset>
            </property>
            <property name="toolButtonStyle">
@@ -342,6 +294,8 @@ QToolButton::hover
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

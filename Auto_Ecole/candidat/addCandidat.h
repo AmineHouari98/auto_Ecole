@@ -31,6 +31,7 @@ private:
     t_candidats candidatsTable;
     t_documents *documentsTable;
     QList<QLineEdit*> lineList;
+    int max=999999999999;
     void checkAll(bool);
 };
 

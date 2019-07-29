@@ -93,7 +93,7 @@ QToolButton::hover
 Candidat</string>
           </property>
           <property name="icon">
-           <iconset>
+           <iconset resource="../ressources.qrc">
             <normaloff>:/Assets/Images/icons/add_candidat.ico</normaloff>:/Assets/Images/icons/add_candidat.ico</iconset>
           </property>
           <property name="iconSize">
@@ -140,7 +140,7 @@ QToolButton::hover
 profile</string>
           </property>
           <property name="icon">
-           <iconset>
+           <iconset resource="../ressources.qrc">
             <normaloff>:/Assets/Images/icons/profile2.ico</normaloff>:/Assets/Images/icons/profile2.ico</iconset>
           </property>
           <property name="iconSize">
@@ -187,7 +187,7 @@ QToolButton::hover
 un Examen</string>
           </property>
           <property name="icon">
-           <iconset>
+           <iconset resource="../ressources.qrc">
             <normaloff>:/Assets/Images/icons/add_to_exam1.ico</normaloff>:/Assets/Images/icons/add_to_exam1.ico</iconset>
           </property>
           <property name="iconSize">
@@ -241,7 +241,7 @@ QToolButton::hover
 Tout</string>
           </property>
           <property name="icon">
-           <iconset>
+           <iconset resource="../ressources.qrc">
             <normaloff>:/Assets/Images/icons/print2.ico</normaloff>:/Assets/Images/icons/print2.ico</iconset>
           </property>
           <property name="iconSize">
@@ -284,6 +284,8 @@ Tout</string>
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>
