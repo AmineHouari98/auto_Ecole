@@ -31,8 +31,8 @@ void examen::on_toolButton_new_exam_clicked()
 
 void examen::on_btn_viewDetails_clicked()
 {
-    // il devient cliquable que quand un élément est selectionné dans la tableview
-    openDetails();
+    if(ui->tableView->currentIndex().row()<0) msgWarning("Erreur","Selectionné un Examen dans le tableau pour voir ses détails");
+    else openDetails();
 }
 
 void examen::on_tableView_doubleClicked(const QModelIndex &index)
@@ -43,9 +43,7 @@ void examen::on_tableView_doubleClicked(const QModelIndex &index)
 void examen::openDetails()
 {
     tableExamens->setCurrentRow(ui->tableView->currentIndex().row());
-    detailsExam detailE;
-    detailE.setValuesOnLineEdit(tableExamens->getid());
-    detailE.executeQuery(tableExamens->getid());
+    detailsExam detailE(tableExamens->getid());
     detailE.exec();
     tableExamens->select();
 

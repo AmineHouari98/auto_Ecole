@@ -9,6 +9,8 @@ candidat::candidat(QWidget *parent) :
 
 
     tableCandidats = new t_candidats();
+
+
     tableCandidats->select();
     ui->tableView->setModel(tableCandidats->toModel());
     ui->widget->setTableView(ui->tableView);
@@ -61,5 +63,16 @@ void candidat::openDetails()
 
 void candidat::on_toolButton_clicked()
 {
-    printer.printAllCandidat("20/07/2019","25/07/2019");
+    printAll pa;
+    pa.exec();
+}
+
+void candidat::on_toolButton_2_clicked()
+{
+    if(ui->tableView->currentIndex().row()<0) msgWarning("Erreur","Selectionné un candidat dans le tableau pour l'Associer a un Examen");
+    else{
+        tableCandidats->setCurrentRow(ui->tableView->currentIndex().row());
+        Associer as(tableCandidats->getid());
+        as.exec();
+    }
 }

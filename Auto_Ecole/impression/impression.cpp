@@ -10,7 +10,7 @@ impression::impression(QWidget *parent) : QWidget(parent)
 
 }
 
-void impression::printListExamen(QList<ModelExamList> myList,QString date,int Cand,int code,int man ,int circ)
+void impression::printListExamen(QList<ModelExamList> myList,QDate date,int Cand,int code,int man ,int circ)
 {
     int rows = myList.length();
     QtRPT *report = new QtRPT(this) ;
@@ -57,7 +57,7 @@ void impression::printListExamen(QList<ModelExamList> myList,QString date,int Ca
             paramValue = QString::number(man);
         }
         if(paramName == "CDATE") {
-            paramValue = date;
+            paramValue = date.toString("yyyy-MM-dd");
         }
 
 
@@ -83,7 +83,7 @@ void impression::printAllCandidat(QString date1,QString date2)
 
         if(paramName == "DATE1") {paramValue = date1;}
         if(paramName == "DATE2") {paramValue = date2;}
-        if(paramName == "DATE3") {paramValue = QDate::currentDate().toString("dd/MM/yyyy") ;}
+        if(paramName == "DATE3") {paramValue = QDate::currentDate().toString("yyyy-MM-dd") ;}
 
 
         if(paramName == "DOSSIER") {cad->setCurrentRow(recNo);paramValue = cad->getDOSSIER();}

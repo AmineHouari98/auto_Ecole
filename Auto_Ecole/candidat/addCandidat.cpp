@@ -12,6 +12,10 @@ addCandidat::addCandidat(QWidget *parent, int id) :
     this->setFixedSize(this->width(),this->height());
     this->setWindowIcon(QIcon(":/Assets/Images/icons/add_candidat.ico"));
 
+    ui->dateEdit_naissanceCandidat->setDisplayFormat("yyyy-MM-dd");
+
+
+
     documentsTable = new t_documents;
 
 
@@ -92,7 +96,7 @@ addCandidat::~addCandidat()
 void addCandidat::setUpLineEdits()
 {
     // tbaya3 of textfields
-     ui->lineEdit_numTelephone->setText("");
+    ui->lineEdit_numTelephone->setText("");
     ui->lineEdit_numTelephone->setInputMask("09 99 99 99 99");
 
 
@@ -123,19 +127,22 @@ void addCandidat::on_pushButton_Valider_clicked()
         candidatsTable.setPRENOM              (ui->lineEdit_prenom->text());
         candidatsTable.setNOM_ARABE           (ui->lineEdit_nomAr->text());
         candidatsTable.setPRENOM_ARABE        (ui->lineEdit_prenomAr->text());
-        candidatsTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
+        candidatsTable.setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->date());
         candidatsTable.setLIEU_DE_NAISSANCE   (selectedWilaya.at(1));
         candidatsTable.setADRESSE             (ui->lineEdit_adresseAr->text());
         candidatsTable.setCIN                 (ui->lineEdit_numCin->text());
         candidatsTable.setTELEPHONE           (ui->lineEdit_numTelephone->text());
         candidatsTable.setNATIONALITE         (ui->lineEdit_nationnalite->text());
         candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text());
-        candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate().toString("dd/MM/yyyy"));
+        candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate());
 
-
+        candidatsTable.insert() ;
+        candidatsTable.select();
+        candidatsTable.setCurrentRow(candidatsTable.rowCount()-1);
 
         documentsTable->setCurrentRow(-1);
 
+        documentsTable->setidCandidat(candidatsTable.getid());
         documentsTable->setAutorisation_Paternel(ui->checkBox_APaternel->checkState());
         documentsTable->setCIN(ui->checkBox_CIN->checkState());
         documentsTable->setGroupage(ui->checkBox_Groupage->checkState());
@@ -144,7 +151,6 @@ void addCandidat::on_pushButton_Valider_clicked()
         documentsTable->setTimbre(ui->checkBox_Timbre->checkState());
 
 
-        candidatsTable.insert() ;
         documentsTable->insert();
 
         close();

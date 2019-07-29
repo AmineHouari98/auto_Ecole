@@ -31,7 +31,7 @@ private:
     t_examens examsTable;
     void setAuto(bool);
     void setManual(bool);
-    void addOnTable(QString,QString,QString);
+    void addOnTable(QString,QString,QDate);
 };
 
 #endif // ADDEXAM_H

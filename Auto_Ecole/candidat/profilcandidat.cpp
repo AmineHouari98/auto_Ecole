@@ -10,6 +10,9 @@ profilCandidat::profilCandidat(QWidget *parent) :
     this->setWindowTitle("Profil du candidat");
     this->setWindowIcon(QIcon(":/Assets/Images/icons/profile1.ico"));
 
+    ui->dateEdit_naissanceCandidat->setDisplayFormat("yyyy-MM-dd");
+
+
     const QStringList listWilaya ={
         "1-أدرار"
         ,"2-الشلف"
@@ -83,7 +86,7 @@ void profilCandidat::setValuesOnLineEdit(int id)
 {
     tableCandidats->whereid(id);
 
-    QString date_string_on_db = tableCandidats->getDATE_DE_NAISSANCE();
+    QString date_string_on_db = tableCandidats->getDATE_DE_NAISSANCE().toString();
     QDate Date = QDate::fromString(date_string_on_db,"dd/MM/yyyy");
 
     ui->comboBox_wilaya->setCurrentIndex(ui->comboBox_wilaya->findText(tableCandidats->getLIEU_DE_NAISSANCE(),Qt::MatchContains));
@@ -177,7 +180,7 @@ void profilCandidat::modifyOnDatabase()
     tableCandidats->setPRENOM              (ui->lineEdit_prenom->text());
     tableCandidats->setNOM_ARABE           (ui->lineEdit_nomAr->text());
     tableCandidats->setPRENOM_ARABE        (ui->lineEdit_prenomAr->text());
-    tableCandidats->setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->text());
+    tableCandidats->setDATE_DE_NAISSANCE   (ui->dateEdit_naissanceCandidat->date());
     tableCandidats->setLIEU_DE_NAISSANCE   (selectedWilaya.at(1));
     tableCandidats->setADRESSE             (ui->lineEdit_adresseAr->text());
     tableCandidats->setCIN                 (ui->lineEdit_numCin->text());

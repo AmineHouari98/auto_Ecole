@@ -7,6 +7,7 @@ profilMoniteur::profilMoniteur(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->pushButton_annuler->hide();
+    ui->dateEdit_naissanceCandidat->setDisplayFormat("yyyy-MM-dd");
 
     setEditable(false);
 
