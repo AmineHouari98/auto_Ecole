@@ -6,12 +6,13 @@
 #include <QDate>
 #include <QIntValidator>
 #include "t_vehicules.h"
+#include "myparentobject.h"
 
 namespace Ui {
 class addVehicule;
 }
 
-class addVehicule
+class addVehicule : public QDialog , public MyParentObject
 {
     Q_OBJECT
 

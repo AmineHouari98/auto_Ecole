@@ -1,4 +1,5 @@
 #include "addvehicule.h"
+#include "ui_addVehicule.h"
 
 addVehicule::addVehicule(QWidget *parent, int id) :
     QDialog(parent),
@@ -71,14 +72,14 @@ void addVehicule::on_pushButton_Valider_clicked()
         candidatsTable.insert() ;
         documentsTable->insert();
 
-        close();*/
-    }
+        close();
+    }*/
 
 }
 
 void addVehicule::on_pushButton_Annuler_clicked()
 {
-    close();
+    //close();
 }
 
 void addVehicule::on_pushButton_clicked()
