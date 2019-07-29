@@ -43,9 +43,7 @@ void examen::on_tableView_doubleClicked(const QModelIndex &index)
 void examen::openDetails()
 {
     tableExamens->setCurrentRow(ui->tableView->currentIndex().row());
-    detailsExam detailE;
-    detailE.setValuesOnLineEdit(tableExamens->getid());
-    detailE.executeQuery(tableExamens->getid());
+    detailsExam detailE(tableExamens->getid());
     detailE.exec();
     tableExamens->select();
 

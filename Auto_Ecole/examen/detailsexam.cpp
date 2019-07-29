@@ -1,7 +1,7 @@
 #include "detailsexam.h"
 #include "ui_detailsexam.h"
 
-detailsExam::detailsExam(QWidget *parent) :
+detailsExam::detailsExam(int index,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::detailsExam)
 {
@@ -11,7 +11,7 @@ detailsExam::detailsExam(QWidget *parent) :
     ui->pushButton_annuler->hide();
     ui->dateEdit_Date->setDisplayFormat("yyyy-MM-dd");
 
-
+    idExam=index;
     setEditable(false);
 
     tableExamens = new t_examens();
@@ -28,7 +28,8 @@ detailsExam::detailsExam(QWidget *parent) :
     ui->tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->tableWidget->hideColumn(0);
 
-
+    setValuesOnLineEdit();
+    executeQuery();
 }
 
 detailsExam::~detailsExam()
@@ -36,9 +37,9 @@ detailsExam::~detailsExam()
     delete ui;
 }
 
-void detailsExam::setValuesOnLineEdit(int index)
+void detailsExam::setValuesOnLineEdit()
 {
-    tableExamens->whereid(index);
+    tableExamens->whereid(idExam);
 
 
     ui->lineEdit_nomExaminateur->setText(tableExamens->getEXAMINATEUR());
@@ -73,15 +74,15 @@ void detailsExam::changeButtonState(QString title, bool isVisible)
 
 }
 
-void detailsExam::executeQuery(int index)
+void detailsExam::executeQuery()
 {
 
+    ui->tableWidget->setRowCount(0);//delete all rows
     QSqlQuery query;
-    idExam=index;
     query.exec("SELECT t_candidats.id, DOSSIER, NOM, PRENOM, DATE_DE_NAISSANCE, PROCHAIN_EXAMEN "
                "FROM t_candidats INNER JOIN t_inter "
                "ON t_candidats.id =t_inter.idCandidat"
-               " WHERE t_inter.idExamen = "+ QString::number(index));
+               " WHERE t_inter.idExamen = "+ QString::number(idExam));
 
     int recordsNumber =0;
 
@@ -136,7 +137,7 @@ void detailsExam::on_pushButton_modifier_clicked()
 void detailsExam::on_pushButton_annuler_clicked()
 {
     setEditable(false);
-    setValuesOnLineEdit(tableExamens->getid());
+    setValuesOnLineEdit();
 
     ui->pushButton_annuler->setVisible(false);
     changeButtonState("Modifier",false);
@@ -173,7 +174,7 @@ void detailsExam::on_toolButton_Ajouter_clicked()
 {
     AddInExam ad(idExam);
     ad.exec();
-    executeQuery(idExam);
+    executeQuery();
 
 }
 

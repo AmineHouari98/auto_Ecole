@@ -14,6 +14,11 @@ AddInExam::AddInExam(int index,QWidget *parent) :
 
     QStringList labels ={"id","DOSSIER","NOM","PRENOM","DATE DE NAISSANCE","NATURE EXAMEN","Supprimer"};
 
+    tableInter->where("idExamen = "+QString::number(idExam));
+
+    tableCandidats->where("id not in(select idCandidat from t_inter)");
+
+
 
     ui->tableWidget->setColumnCount(labels.length());
     ui->tableWidget->setHorizontalHeaderLabels(labels);
@@ -27,12 +32,13 @@ AddInExam::AddInExam(int index,QWidget *parent) :
 
     int recordsNumber =0;
 
+
     for (int i=0;i<tableCandidats->rowCount();i++) {
 
 
-        Form *pWidget=new Form;
-
         tableCandidats->setCurrentRow(i);
+
+        Form *pWidget=new Form;
 
         QString id =                QString::number(tableCandidats->getid());
         QString DOSSIER =           tableCandidats->getDOSSIER();
@@ -56,9 +62,11 @@ AddInExam::AddInExam(int index,QWidget *parent) :
 
         recordsNumber++;
 
-    }
 
+    }
 }
+
+
 
 AddInExam::~AddInExam()
 {

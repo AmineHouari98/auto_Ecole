@@ -24,10 +24,8 @@ class detailsExam : public QDialog,public MyParentObject
     Q_OBJECT
 
 public:
-    explicit detailsExam(QWidget *parent = 0);
+    explicit detailsExam(int index =-1,QWidget *parent = 0);
     ~detailsExam();
-    void setValuesOnLineEdit(int);
-    void executeQuery(int);
 
 public slots:
     void on_pushButton_modifier_clicked();
@@ -52,6 +50,8 @@ private:
 
 
 
+    void setValuesOnLineEdit();
+    void executeQuery();
     void setEditable(bool);
     void modifyOnDatabase();
     void changeButtonState(QString,bool);

@@ -94,7 +94,7 @@ addCandidat::~addCandidat()
 void addCandidat::setUpLineEdits()
 {
     // tbaya3 of textfields
-     ui->lineEdit_numTelephone->setText("");
+    ui->lineEdit_numTelephone->setText("");
     ui->lineEdit_numTelephone->setInputMask("09 99 99 99 99");
 
 
@@ -134,10 +134,13 @@ void addCandidat::on_pushButton_Valider_clicked()
         candidatsTable.setDOSSIER             (ui->lineEdit_numDossier->text());
         candidatsTable.setDATE_INSCRIPTION    (QDate::currentDate());
 
-
+        candidatsTable.insert() ;
+        candidatsTable.select();
+        candidatsTable.setCurrentRow(candidatsTable.rowCount()-1);
 
         documentsTable->setCurrentRow(-1);
 
+        documentsTable->setidCandidat(candidatsTable.getid());
         documentsTable->setAutorisation_Paternel(ui->checkBox_APaternel->checkState());
         documentsTable->setCIN(ui->checkBox_CIN->checkState());
         documentsTable->setGroupage(ui->checkBox_Groupage->checkState());
@@ -146,7 +149,6 @@ void addCandidat::on_pushButton_Valider_clicked()
         documentsTable->setTimbre(ui->checkBox_Timbre->checkState());
 
 
-        candidatsTable.insert() ;
         documentsTable->insert();
 
         close();
